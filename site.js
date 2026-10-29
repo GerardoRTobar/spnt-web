@@ -68,10 +68,15 @@
   var bulk = false;
   var toggle = document.querySelector('[data-toggle-all]');
   function allOpen() { return sections.every(function (d) { return d.open; }); }
+  var LABELS = {
+    es: ['Abrir todo', 'Cerrar todo'], en: ['Expand all', 'Collapse all'], pt: ['Abrir tudo', 'Fechar tudo'],
+    fr: ['Tout ouvrir', 'Tout fermer'], de: ['Alle öffnen', 'Alle schließen'], ru: ['Развернуть всё', 'Свернуть всё']
+  };
+  var labels = LABELS[document.documentElement.lang] || LABELS.es;
   function syncToggle() {
     if (!toggle) return;
     var open = allOpen();
-    toggle.textContent = open ? 'Cerrar todo' : 'Abrir todo';
+    toggle.textContent = labels[open ? 1 : 0];
     toggle.setAttribute('aria-expanded', String(open));
   }
   if (toggle) {

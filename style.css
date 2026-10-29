@@ -10,6 +10,7 @@
   --dot: #5b4fe9;
   --ok: #1f9e5c;
   --header: rgba(255, 255, 255, 0.82);
+  --frame-line: transparent;
   color-scheme: light dark;
 }
 @media (prefers-color-scheme: dark) {
@@ -24,6 +25,7 @@
     --dot: #8f85ff;
     --ok: #4cc488;
     --header: rgba(18, 18, 22, 0.82);
+    --frame-line: #2a2933;
   }
 }
 
@@ -75,6 +77,70 @@ nav a:hover, nav a[aria-current="page"] { color: var(--text); background: var(--
   display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 999px;
   background: var(--text); color: var(--bg); font-weight: 600; font-size: 15px;
 }
+/* iPhone estilo Apple: borde de titanio, pantalla negra, isla dinámica y botones.
+   Todo en em, así el marco escala con --w. */
+body { overflow-x: clip; }
+.iphone {
+  --w: 260px;
+  position: relative; flex: none; width: var(--w); font-size: calc(var(--w) / 40);
+  padding: 0.28em; border-radius: 6.6em;
+  background: linear-gradient(150deg, #e3e3e6 0%, #8d8d93 22%, #d5d5d9 48%, #7a7a80 76%, #c9c9ce 100%);
+  box-shadow: 0 2.5em 5em -2em rgba(18, 18, 22, .38), 0 0.6em 1.2em -0.6em rgba(18, 18, 22, .25);
+}
+.iphone img {
+  display: block; width: 100%; height: auto;
+  border: 0.95em solid #050506; border-radius: 6.3em; background: #050506;
+}
+.iphone::before {
+  /* Botones: acción y volumen a la izquierda; encendido (dos tramos) a la derecha */
+  content: ""; position: absolute; left: -0.24em; top: 17%; width: 0.32em; height: 3.6em;
+  border-radius: 0.2em; background: #9a9aa0;
+  box-shadow: 0 5em 0 #9a9aa0, 0 10em 0 #9a9aa0,
+              calc(var(--w) + 0.16em) 6em 0 #9a9aa0, calc(var(--w) + 0.16em) 8.5em 0 #9a9aa0;
+}
+.iphone::after {
+  /* Isla dinámica */
+  content: ""; position: absolute; top: 2.15em; left: 50%; transform: translateX(-50%);
+  width: 11.2em; height: 3.3em; border-radius: 2em; background: #050506;
+}
+
+/* Escenario del inicio: tres iPhones, el del centro más grande */
+.stage { display: flex; justify-content: center; align-items: flex-end; gap: 28px; padding: 8px 20px 72px; }
+.stage .main { --w: min(300px, 74vw); z-index: 1; }
+.stage .side { --w: 236px; margin-bottom: 36px; }
+@media (max-width: 760px) { .stage .side { display: none; } }
+
+/* Secciones de puntos fuertes, alternadas */
+.wrap-wide { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+.center { text-align: center; }
+.center p { margin-left: auto; margin-right: auto; }
+.point { display: grid; grid-template-columns: 1fr 1.15fr; align-items: center; gap: 56px; padding: 72px 20px; border-top: 1px solid var(--line); }
+.point.flip .copy { order: 2; }
+.point h2 { font-size: clamp(30px, 4.6vw, 46px); line-height: 1.08; letter-spacing: -0.035em; margin: 0 0 16px; }
+.point .copy > p:not(.eyebrow) { font-size: 19px; color: var(--muted); margin: 0 0 22px; }
+.phones { display: flex; justify-content: center; align-items: flex-start; gap: 28px; }
+.phones .iphone { --w: 252px; }
+.phones .iphone:nth-child(2) { margin-top: 64px; }
+.ticks { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.ticks li { position: relative; padding-left: 28px; line-height: 1.45; }
+.ticks li::before {
+  content: ""; position: absolute; left: 2px; top: 0.42em; width: 14px; height: 8px;
+  border-left: 2.2px solid var(--brand); border-bottom: 2.2px solid var(--brand); transform: rotate(-45deg);
+}
+@media (max-width: 860px) {
+  .point { grid-template-columns: 1fr; gap: 36px; padding: 56px 20px; }
+  .point.flip .copy { order: 0; }
+  .phones { gap: 16px; }
+  .phones .iphone { --w: min(252px, 66vw); }
+  .phones .iphone + .iphone { --w: min(252px, 43vw); }
+  .phones:has(.iphone + .iphone) .iphone { --w: min(232px, 43vw); }
+  .phones .iphone:nth-child(2) { margin-top: 40px; }
+}
+
+/* Idiomas en el pie */
+footer .langs { margin-top: 18px; gap: 6px 16px; justify-content: flex-start; }
+footer .langs a[aria-current] { color: var(--text); font-weight: 600; }
+
 .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; padding: 24px 0 32px; }
 .feature { background: var(--card); border-radius: 18px; padding: 22px; }
 .feature .ico { color: var(--brand); width: 26px; height: 26px; margin-bottom: 12px; display: block; }

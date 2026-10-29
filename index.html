@@ -4,17 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SPNT · Tus gastos y tarjetas, claros</title>
-  <meta name="description" content="SPNT es una app para iPhone que te muestra en qué se va tu dinero: gastos, tarjetas de crédito, estados de cuenta y varias monedas.">
+  <meta name="description" content="SPNT es una app para iPhone que te muestra en qué se va tu dinero: cuentas, tarjetas, estados de cuenta, préstamos, análisis y varias monedas.">
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#121216" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="SPNT">
   <meta property="og:title" content="SPNT · Sabé en qué se te va el dinero">
-  <meta property="og:description" content="Gastos, tarjetas y estados de cuenta en un solo lugar. Simple, rápido y privado.">
+  <meta property="og:description" content="Cuentas, tarjetas, préstamos y gastos en un solo lugar. Simple, rápido y privado.">
   <meta property="og:url" content="https://spnt.money/">
   <meta property="og:image" content="https://spnt.money/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://spnt.money/">
+  <link rel="alternate" hreflang="es" href="https://spnt.money/">
+  <link rel="alternate" hreflang="en" href="https://spnt.money/en/">
+  <link rel="alternate" hreflang="pt" href="https://spnt.money/pt/">
+  <link rel="alternate" hreflang="fr" href="https://spnt.money/fr/">
+  <link rel="alternate" hreflang="de" href="https://spnt.money/de/">
+  <link rel="alternate" hreflang="ru" href="https://spnt.money/ru/">
+  <link rel="alternate" hreflang="x-default" href="https://spnt.money/">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="/style.css">
@@ -31,52 +38,140 @@
     </div>
   </header>
 
-  <main id="contenido" class="wrap">
-    <section class="hero">
+  <main id="contenido">
+    <section class="hero wrap center">
       <p class="eyebrow">App para iPhone</p>
       <h1>Sabé en qué se te va el dinero.</h1>
-      <p>SPNT lleva tus gastos, tus tarjetas y tus estados de cuenta en un solo lugar. Simple, rápido y privado.</p>
+      <p>Cuentas, tarjetas, préstamos y gastos en un solo lugar. Simple, rápido y privado.</p>
       <span class="badge">Próximamente en la App Store</span>
     </section>
 
-    <section class="features" aria-label="Funciones">
-      <div class="feature">
-        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M2.5 9.5h19M6 15h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-        <h3>Tarjetas y estados de cuenta</h3>
-        <p>Cada compra cae en su corte. Sabés cuánto debés y cuándo pagar.</p>
+    <div class="stage" aria-hidden="true">
+      <div class="iphone side"><img src="/img/es/analisis.jpg" width="598" height="1300" alt=""></div>
+      <div class="iphone main"><img src="/img/es/inicio.jpg" width="598" height="1300" alt=""></div>
+      <div class="iphone side"><img src="/img/es/tarjetas.jpg" width="598" height="1300" alt=""></div>
+    </div>
+
+    <section class="point wrap-wide" id="cuentas">
+      <div class="copy">
+        <p class="eyebrow">Cuentas y tarjetas</p>
+        <h2>Todo tu dinero, en un solo lugar.</h2>
+        <p>Tus cuentas de banco, efectivo, tarjetas de crédito y préstamos, juntos. De un vistazo sabés cuánto tenés, cuánto debés y cómo va tu patrimonio.</p>
+        <ul class="ticks">
+          <li>Patrimonio neto con su historia</li>
+          <li>Crédito usado y lo pagado de cada corte</li>
+          <li>Ingresos y gastos del mes, con lo que falta</li>
+        </ul>
       </div>
-      <div class="feature">
-        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h13l-3.5-3.5M20 16H7l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <h3>Varias monedas</h3>
-        <p>Registrá en cualquier moneda con la tasa del día.</p>
-      </div>
-      <div class="feature">
-        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V12M12 20V5M19 20v-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
-        <h3>Reportes</h3>
-        <p>Análisis por categoría, reporte en PDF y exportación a Excel o CSV.</p>
-      </div>
-      <div class="feature">
-        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6L12 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.8 12.2l2.2 2.2 4.2-4.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <h3>Privado</h3>
-        <p>Sin anuncios ni rastreo. Ocultá los montos y mostralos con Face ID.</p>
+      <div class="phones">
+        <div class="iphone"><img src="/img/es/inicio.jpg" width="598" height="1300" alt="Inicio: patrimonio neto con su gráfica, y los ingresos y gastos del mes." loading="lazy"></div>
+        <div class="iphone"><img src="/img/es/tarjetas.jpg" width="598" height="1300" alt="Tarjetas con su estado de cuenta y un préstamo con su avance." loading="lazy"></div>
       </div>
     </section>
 
-    <section class="band" aria-labelledby="tus-datos">
-      <h2 id="tus-datos">Tus datos son tuyos<span>.</span></h2>
-      <ul class="checks">
-        <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor" opacity=".2"/><path d="M6 10.2l2.6 2.6L14 7.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Sin cuenta, nada sale de tu iPhone.</li>
-        <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor" opacity=".2"/><path d="M6 10.2l2.6 2.6L14 7.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>No se conecta a tu banco ni lee tus correos.</li>
-        <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor" opacity=".2"/><path d="M6 10.2l2.6 2.6L14 7.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>No vendemos datos, no hay anuncios ni rastreo.</li>
-      </ul>
-      <a class="more" href="/privacidad/">Leé la política de privacidad →</a>
+    <section class="point wrap-wide flip" id="estados-de-cuenta">
+      <div class="copy">
+        <p class="eyebrow">Estados de cuenta</p>
+        <h2>Cada compra cae en su corte.</h2>
+        <p>SPNT arma los estados de cuenta de tus tarjetas con sus fechas de corte y de pago. Sabés cuánto pagar, cuándo, y si ya quedó saldado.</p>
+        <ul class="ticks">
+          <li>Saldo anterior, compras y pagos, cuadrados</li>
+          <li>Contracargos y cargos recurrentes</li>
+          <li>Los estados pagados no cambian sin tu permiso</li>
+        </ul>
+      </div>
+      <div class="phones">
+        <div class="iphone"><img src="/img/es/estado-de-cuenta.jpg" width="598" height="1300" alt="Estado de cuenta de octubre: saldo anterior, compras, pagos y total." loading="lazy"></div>
+      </div>
     </section>
+
+    <section class="point wrap-wide" id="prestamos">
+      <div class="copy">
+        <p class="eyebrow">Préstamos</p>
+        <h2>Mirá cuánto te ahorrás abonando a capital.</h2>
+        <p>Llevá tus préstamos cuota por cuota: capital, interés y seguro. Antes de abonar, simulá cuántos intereses y cuántos meses te ahorrás.</p>
+        <ul class="ticks">
+          <li>Tabla de amortización completa</li>
+          <li>Abonos únicos o mensuales</li>
+          <li>Elegí si reducir el plazo o la cuota</li>
+        </ul>
+      </div>
+      <div class="phones">
+        <div class="iphone"><img src="/img/es/prestamo.jpg" width="598" height="1300" alt="Préstamo: próxima cuota separada en capital, interés y seguro." loading="lazy"></div>
+        <div class="iphone"><img src="/img/es/simulador.jpg" width="598" height="1300" alt="Simulador: un abono a capital y lo que ahorra en intereses y plazo." loading="lazy"></div>
+      </div>
+    </section>
+
+    <section class="point wrap-wide flip" id="analisis">
+      <div class="copy">
+        <p class="eyebrow">Análisis</p>
+        <h2>Entendé en qué se te va.</h2>
+        <p>Compará ingresos y gastos mes contra mes, mirá tu tasa de ahorro y qué categorías crecieron. El ritmo del mes te dice si vas gastando más de lo normal.</p>
+        <ul class="ticks">
+          <li>Por mes, trimestre, año o un rango</li>
+          <li>Gasto por categoría y lo que lo movió</li>
+          <li>Reporte en PDF y exportación a Excel o CSV</li>
+        </ul>
+      </div>
+      <div class="phones">
+        <div class="iphone"><img src="/img/es/analisis.jpg" width="598" height="1300" alt="Análisis del mes: ingresos, gastos, neto, tasa de ahorro y gráfica de ingresos contra gastos." loading="lazy"></div>
+        <div class="iphone"><img src="/img/es/categorias.jpg" width="598" height="1300" alt="Ritmo de gasto del mes contra lo típico, y gasto por categoría." loading="lazy"></div>
+      </div>
+    </section>
+
+    <section class="point wrap-wide" id="divisas">
+      <div class="copy">
+        <p class="eyebrow">Divisas</p>
+        <h2>Cualquier moneda, con la tasa del día.</h2>
+        <p>¿Compraste en línea o andás de viaje? Registrá el monto en su moneda original y SPNT lo convierte a la tuya con el tipo de cambio de ese día.</p>
+        <ul class="ticks">
+          <li>Tipos de cambio actualizados a diario</li>
+          <li>Ajustá la tasa o poné lo que cobró tu banco</li>
+          <li>Vos elegís tu moneda base</li>
+        </ul>
+      </div>
+      <div class="phones">
+        <div class="iphone"><img src="/img/es/divisas.jpg" width="598" height="1300" alt="Una compra en euros convertida a dólares con la tasa del día." loading="lazy"></div>
+      </div>
+    </section>
+
+    <section class="point wrap-wide flip" id="movimientos">
+      <div class="copy">
+        <p class="eyebrow">Movimientos</p>
+        <h2>Lo pagado y lo pendiente, claro.</h2>
+        <p>Registrá un gasto en segundos. Lo que se repite cada mes se agrega solo, y siempre ves lo que ya pagaste y lo que falta.</p>
+        <ul class="ticks">
+          <li>Gastos e ingresos recurrentes</li>
+          <li>Categorías, etiquetas y filtros guardados</li>
+          <li>Búsqueda en todo tu historial</li>
+        </ul>
+      </div>
+      <div class="phones">
+        <div class="iphone"><img src="/img/es/movimientos.jpg" width="598" height="1300" alt="Lista de movimientos del mes con lo recibido, lo pagado y lo pendiente." loading="lazy"></div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <section class="band" aria-labelledby="tus-datos">
+        <h2 id="tus-datos">Tus datos son tuyos<span>.</span></h2>
+        <ul class="checks">
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor" opacity=".2"/><path d="M6 10.2l2.6 2.6L14 7.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Sin cuenta, nada sale de tu iPhone.</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor" opacity=".2"/><path d="M6 10.2l2.6 2.6L14 7.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>No se conecta a tu banco ni lee tus correos.</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor" opacity=".2"/><path d="M6 10.2l2.6 2.6L14 7.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Ocultá los montos y mostralos con Face ID.</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor" opacity=".2"/><path d="M6 10.2l2.6 2.6L14 7.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>No vendemos datos, no hay anuncios ni rastreo.</li>
+        </ul>
+        <a class="more" href="/privacidad/">Leé la política de privacidad →</a>
+      </section>
+    </div>
   </main>
 
   <footer>
     <div class="wrap">
       <div class="links"><a href="/soporte/">Soporte</a><a href="/privacidad/">Privacidad</a><a href="mailto:hola@spnt.money">hola@spnt.money</a></div>
       <span>© 2026 SPNT</span>
+    </div>
+    <div class="wrap langs" aria-label="Idioma">
+      <a href="/" lang="es" aria-current="true">Español</a><a href="/en/" lang="en">English</a><a href="/pt/" lang="pt">Português</a><a href="/fr/" lang="fr">Français</a><a href="/de/" lang="de">Deutsch</a><a href="/ru/" lang="ru">Русский</a>
     </div>
   </footer>
 </body>
