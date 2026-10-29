@@ -15,10 +15,13 @@
     var id = decodeURIComponent(location.hash.slice(1));
     var target = id && document.getElementById(id);
     var details = target && (target.tagName === 'DETAILS' ? target : target.closest('details'));
-    if (details) {
-      details.open = true;
-      details.scrollIntoView();
-    }
+    if (!details) return;
+    details.open = true;
+    // En una carga nueva el navegador ya saltó con la sección cerrada; se
+    // vuelve a saltar sin animación cuando termina de cargar.
+    var jump = function () { details.scrollIntoView({ behavior: 'instant' }); };
+    if (document.readyState === 'complete') jump();
+    else window.addEventListener('load', function () { requestAnimationFrame(jump); });
   }
   window.addEventListener('hashchange', openFromHash);
   openFromHash();
