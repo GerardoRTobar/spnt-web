@@ -4,43 +4,92 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Soporte · SPNT</title>
+  <meta name="description" content="Ayuda con SPNT: suscripciones, cambiar de iPhone, exportar o borrar tus datos.">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121216" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="Soporte · SPNT">
+  <meta property="og:description" content="Ayuda con SPNT: suscripciones, cambiar de iPhone, exportar o borrar tus datos.">
+  <meta property="og:url" content="https://spnt.money/soporte/">
+  <meta property="og:image" content="https://spnt.money/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://spnt.money/soporte/">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="/style.css">
+  <script src="/site.js" defer></script>
 </head>
 <body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
   <header>
     <div class="wrap">
-      <a class="logo" href="/">spnt<span>.</span></a>
-      <nav><a href="/soporte/">Soporte</a><a href="/privacidad/">Privacidad</a></nav>
+      <a class="logo" href="/" aria-label="SPNT, inicio">
+        <svg class="wordmark" viewBox="0 -335 1022 422" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="58" stroke-linejoin="round"><path d="M142 -195.5A60 48 0 1 0 89 -125A60 48 0 1 1 36 -54.5"/><path d="M247 -250V85M247 -125A96 96 0 1 1 439 -125A96 96 0 1 1 247 -125"/><path d="M537 0V-250M537 -132.68A88.32 88.32 0 0 1 713.64 -132.68V0"/><path d="M857.64 -330V0M782.64 -221H921.39"/></g><circle cx="990.39" cy="-29" r="29" fill="var(--dot)"/></svg>
+      </a>
+      <nav><a href="/soporte/" aria-current="page">Soporte</a><a href="/privacidad/">Privacidad</a></nav>
     </div>
   </header>
 
-  <main class="wrap doc">
+  <main id="contenido" class="wrap doc">
     <h1>Soporte</h1>
-    <p class="date">¿Algo no funciona o tenés una idea? Escribinos a <a href="mailto:soporte@spnt.money">soporte@spnt.money</a> y te respondemos lo antes posible.</p>
+    <p class="date">Respuestas rápidas a lo más común.</p>
 
-    <h2>¿Cómo cancelo mi suscripción?</h2>
-    <p>Las suscripciones se manejan desde tu cuenta de Apple. En tu iPhone, andá a Ajustes → tu nombre → Suscripciones → SPNT. También podés abrir <a href="https://apps.apple.com/account/subscriptions">apps.apple.com/account/subscriptions</a>.</p>
+    <section class="contact top" aria-label="Contacto">
+      <div>
+        <p><b>¿Algo no funciona o tenés una idea?</b></p>
+        <p class="muted">Escribinos y te respondemos lo antes posible.</p>
+      </div>
+      <a class="button" href="mailto:soporte@spnt.money"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2.5" y="4.5" width="15" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 5.5l7 5.5 7-5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>soporte@spnt.money</a>
+    </section>
 
-    <h2>Cambié de iPhone y no veo Premium</h2>
-    <p>Abrí la pantalla de planes en la app y tocá «Restaurar compras». Usá el mismo Apple ID con el que pagaste.</p>
+    <h2 class="group-title">Suscripción</h2>
+    <div class="accordion">
+      <details id="cancelar">
+        <summary><span class="q"><b>¿Cómo cancelo mi suscripción?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <p>Las suscripciones se manejan desde tu cuenta de Apple. En tu iPhone, andá a Ajustes → tu nombre → Suscripciones → SPNT. También podés abrir <a href="https://apps.apple.com/account/subscriptions">apps.apple.com/account/subscriptions</a>.</p>
+        </div>
+      </details>
+      <details id="restaurar">
+        <summary><span class="q"><b>Cambié de iPhone y no veo Premium</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <p>Abrí la pantalla de planes en la app y tocá «Restaurar compras». Usá el mismo Apple ID con el que pagaste.</p>
+        </div>
+      </details>
+    </div>
 
-    <h2>¿Cómo paso mis datos a otro iPhone?</h2>
-    <p>Iniciá sesión con la misma cuenta en los dos dispositivos. Con Premium, tus datos se sincronizan solos.</p>
-
-    <h2>¿Cómo exporto mis datos?</h2>
-    <p>Desde la app podés exportar tus movimientos a Excel o CSV, o generar un reporte en PDF.</p>
-
-    <h2>¿Cómo borro mi cuenta?</h2>
-    <p>En la app, andá a Ajustes, tocá tu perfil arriba y elegí «Eliminar cuenta». Se eliminan tu cuenta y tus datos en la nube. Más detalles en la <a href="/privacidad/">política de privacidad</a>.</p>
-
-    <h2>¿SPNT se conecta a mi banco?</h2>
-    <p>No. SPNT solo conoce lo que vos registrás. No pide usuarios ni contraseñas de tu banco.</p>
+    <h2 class="group-title">Tus datos</h2>
+    <div class="accordion">
+      <details id="otro-iphone">
+        <summary><span class="q"><b>¿Cómo paso mis datos a otro iPhone?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <p>Iniciá sesión con la misma cuenta en los dos dispositivos. Con Premium, tus datos se sincronizan solos.</p>
+        </div>
+      </details>
+      <details id="exportar">
+        <summary><span class="q"><b>¿Cómo exporto mis datos?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <p>Desde la app podés exportar tus movimientos a Excel o CSV, o generar un reporte en PDF.</p>
+        </div>
+      </details>
+      <details id="borrar-cuenta">
+        <summary><span class="q"><b>¿Cómo borro mi cuenta?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <p>En la app, andá a Ajustes, tocá tu perfil arriba y elegí «Eliminar cuenta». Se eliminan tu cuenta y tus datos en la nube. Más detalles en la <a href="/privacidad/#borrar-datos">política de privacidad</a>.</p>
+        </div>
+      </details>
+      <details id="banco">
+        <summary><span class="q"><b>¿SPNT se conecta a mi banco?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <p>No. SPNT solo conoce lo que vos registrás. No pide usuarios ni contraseñas de tu banco.</p>
+        </div>
+      </details>
+    </div>
   </main>
 
   <footer>
     <div class="wrap">
-      <a href="/">Inicio</a><a href="/privacidad/">Privacidad</a><a href="mailto:hola@spnt.money">hola@spnt.money</a>
+      <div class="links"><a href="/">Inicio</a><a href="/soporte/">Soporte</a><a href="/privacidad/">Privacidad</a><a href="mailto:hola@spnt.money">hola@spnt.money</a></div>
+      <span>© 2026 SPNT</span>
     </div>
   </footer>
 </body>
