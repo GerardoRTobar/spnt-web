@@ -43,6 +43,22 @@
     }
   }
 
+  // Videos de las secciones (loops de la app en el iPhone): se cargan cuando se acercan a la pantalla y
+  // corren solo mientras se ven. Con "reducir movimiento" se queda el póster (la captura del primer cuadro).
+  var loops = Array.prototype.slice.call(document.querySelectorAll('video.loop'));
+  if (loops.length && 'IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        var v = e.target;
+        if (e.isIntersecting) {
+          if (!v.getAttribute('src')) v.src = v.getAttribute('data-loop') + '.mp4';
+          v.play().catch(function () {});
+        } else v.pause();
+      });
+    }, { rootMargin: '150px 0px', threshold: 0.2 });
+    loops.forEach(function (v) { io.observe(v); });
+  }
+
   var sections = Array.prototype.slice.call(document.querySelectorAll('.accordion details'));
   if (!sections.length) return;
 

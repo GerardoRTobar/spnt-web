@@ -87,8 +87,8 @@ body { overflow-x: clip; }
   background: linear-gradient(150deg, #e3e3e6 0%, #8d8d93 22%, #d5d5d9 48%, #7a7a80 76%, #c9c9ce 100%);
   box-shadow: 0 2.5em 5em -2em rgba(18, 18, 22, .38), 0 0.6em 1.2em -0.6em rgba(18, 18, 22, .25);
 }
-.iphone img {
-  display: block; width: 100%; height: auto;
+.iphone img, .iphone video {
+  display: block; width: 100%; height: auto; aspect-ratio: 598 / 1300; object-fit: cover;
   border: 0.95em solid #050506; border-radius: 6.3em; background: #050506;
 }
 .iphone::before {
