@@ -312,6 +312,11 @@ footer .wordmark { height: 16px; color: var(--text); }
 .plan .price { margin: 0; line-height: 1; }
 .plan .price b { font-size: 46px; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; }
 .plan .price span { font-size: 17px; color: var(--muted); margin-left: 2px; }
+.plan .save {
+  font-style: normal; font-size: 13px; font-weight: 700; color: var(--ok); vertical-align: 8px;
+  background: color-mix(in srgb, var(--ok) 14%, transparent); padding: 4px 9px; border-radius: 999px; margin-left: 10px; white-space: nowrap;
+}
+.plan .sub strong { color: var(--text); font-weight: 600; }
 .plan .sub { color: var(--muted); font-size: 15px; margin: 10px 0 22px; min-height: 1.6em; }
 .plan .lead { font-weight: 600; font-size: 15px; margin: 0 0 12px; }
 .plan .ticks { font-size: 15px; }
@@ -333,3 +338,9 @@ footer .wordmark { height: 16px; color: var(--text); }
 .faq-more { margin: 22px 0 0; }
 .faq-more a { font-weight: 600; text-decoration: none; }
 .faq-more a:hover { text-decoration: underline; }
+
+/* Menú en pantallas de menos de 350 px (francés y ruso son los más largos) */
+@media (max-width: 350px) {
+  nav a { font-size: 12.5px; padding: 7px 5px; }
+  .wordmark { height: 19px; }
+}
