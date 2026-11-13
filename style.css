@@ -137,9 +137,34 @@ body { overflow-x: clip; }
   .phones .iphone:nth-child(2) { margin-top: 40px; }
 }
 
-/* Idiomas en el pie */
-footer .langs { margin-top: 18px; gap: 6px 16px; justify-content: flex-start; }
-footer .langs a[aria-current] { color: var(--text); font-weight: 600; }
+/* Selector de idioma en el menú (dropdown sobre <details>) */
+nav { align-items: center; }
+.lang { position: relative; }
+.lang summary {
+  list-style: none; cursor: pointer; display: flex; align-items: center; gap: 5px;
+  color: var(--muted); font-size: 14px; font-weight: 600; letter-spacing: .02em;
+  padding: 8px 10px; border-radius: 999px; user-select: none; -webkit-user-select: none;
+}
+.lang summary::-webkit-details-marker { display: none; }
+.lang summary:hover, .lang[open] summary { color: var(--text); background: var(--card); }
+.lang .globe { width: 17px; height: 17px; }
+.lang .chev { width: 13px; height: 13px; transition: transform .28s cubic-bezier(0.16, 1, 0.3, 1); }
+.lang[open] .chev { transform: rotate(180deg); }
+.lang .menu {
+  position: absolute; right: 0; top: calc(100% + 8px); min-width: 168px; padding: 6px;
+  display: grid; background: var(--bg); border: 1px solid var(--line); border-radius: 16px;
+  box-shadow: 0 18px 40px -12px rgba(18, 18, 22, .28), 0 4px 10px -4px rgba(18, 18, 22, .12);
+  transform-origin: top right; animation: lang-in .22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+nav .lang .menu a { display: flex; justify-content: space-between; align-items: center; padding: 9px 12px; border-radius: 10px; font-size: 15px; }
+nav .lang .menu a[aria-current] { color: var(--text); background: none; }
+nav .lang .menu a[aria-current]::after {
+  content: ""; width: 12px; height: 7px; margin: -4px 2px 0 12px;
+  border-left: 2px solid var(--brand); border-bottom: 2px solid var(--brand); transform: rotate(-45deg);
+}
+nav .lang .menu a:hover { color: var(--text); background: var(--card); }
+@keyframes lang-in { from { opacity: 0; transform: scale(.94) translateY(-4px); } }
+@media (prefers-reduced-motion: reduce) { .lang .menu { animation: none; } }
 
 .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; padding: 24px 0 32px; }
 .feature { background: var(--card); border-radius: 18px; padding: 22px; }
@@ -245,4 +270,12 @@ footer .wordmark { height: 16px; color: var(--text); }
 @media (max-width: 480px) {
   nav { gap: 0; margin-right: -8px; }
   nav a { font-size: 14px; padding: 7px 9px; }
+  .lang summary { padding: 7px 6px; gap: 2px; }
+}
+@media (max-width: 400px) {
+  header .wrap { padding: 0 16px; }
+  .wordmark { height: 21px; }
+  nav a { font-size: 13.5px; padding: 7px 6px; }
+  .lang .chev { display: none; }
+  .lang summary span { display: none; }
 }

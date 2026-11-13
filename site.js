@@ -7,6 +7,15 @@
     onScroll();
   }
 
+  // Selector de idioma: se cierra al tocar fuera o con Escape.
+  var lang = document.querySelector('details.lang');
+  if (lang) {
+    document.addEventListener('click', function (e) { if (lang.open && !lang.contains(e.target)) lang.open = false; });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && lang.open) { lang.open = false; lang.querySelector('summary').focus(); }
+    });
+  }
+
   var sections = Array.prototype.slice.call(document.querySelectorAll('.accordion details'));
   if (!sections.length) return;
 
