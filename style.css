@@ -295,7 +295,8 @@ footer .wordmark { height: 16px; color: var(--text); }
 }
 
 /* Inicio: link a precios bajo el badge */
-.hero-more { margin: 16px auto 0 !important; font-size: 15px !important; }
+.hero-more { margin: 16px auto 0 !important; font-size: 15px !important; color: var(--muted); }
+.hero-more b { color: var(--text); font-weight: 600; }
 .hero-more a { font-weight: 600; text-decoration: none; }
 .hero-more a:hover { text-decoration: underline; }
 
