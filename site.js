@@ -16,6 +16,33 @@
     });
   }
 
+  // Video del inicio: elige 16:9 o 9:16 según el ancho y claro u oscuro según el tema; se reproduce
+  // solo mientras está a la vista y respeta "reducir movimiento" (queda el póster con controles).
+  var video = document.querySelector('.pitch-video');
+  if (video) {
+    var wide = window.matchMedia('(min-width: 761px)');
+    var dark = window.matchMedia('(prefers-color-scheme: dark)');
+    var still = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var visible = false;
+    var pick = function () {
+      var name = video.getAttribute('data-src') + '-' + (wide.matches ? 'h' : 'v') + '-' + (dark.matches ? 'dark' : 'light');
+      if (video.getAttribute('data-current') === name) return;
+      video.setAttribute('data-current', name);
+      video.poster = name + '.jpg';
+      video.src = name + '.mp4';
+      if (visible && !still.matches) video.play().catch(function () {});
+    };
+    [wide, dark].forEach(function (m) { m.addEventListener ? m.addEventListener('change', pick) : m.addListener(pick); });
+    if (still.matches) { video.autoplay = false; video.controls = true; video.preload = 'metadata'; }
+    pick();
+    if ('IntersectionObserver' in window && !still.matches) {
+      new IntersectionObserver(function (entries) {
+        visible = entries[0].isIntersecting;
+        if (visible) video.play().catch(function () {}); else video.pause();
+      }, { threshold: 0.25 }).observe(video);
+    }
+  }
+
   var sections = Array.prototype.slice.call(document.querySelectorAll('.accordion details'));
   if (!sections.length) return;
 
