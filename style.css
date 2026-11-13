@@ -157,7 +157,7 @@ nav { align-items: center; }
 }
 .lang summary::-webkit-details-marker { display: none; }
 .lang summary:hover, .lang[open] summary { color: var(--text); background: var(--card); }
-.lang .globe { width: 17px; height: 17px; }
+.lang summary .flag { margin-right: 3px; }   /* el botón muestra la bandera del idioma activo */
 .lang .chev { width: 13px; height: 13px; transition: transform .28s cubic-bezier(0.16, 1, 0.3, 1); }
 .lang[open] .chev { transform: rotate(180deg); }
 .lang .menu {
