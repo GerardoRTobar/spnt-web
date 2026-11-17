@@ -294,6 +294,12 @@ footer .wordmark { height: 16px; color: var(--text); }
   .lang summary span { display: none; }
 }
 
+/* Inicio: el badge como botón a la App Store */
+a.badge.store { text-decoration: none; transition: transform .15s ease, opacity .15s ease; }
+a.badge.store:hover { opacity: .88; }
+a.badge.store:active { transform: scale(.97); }
+a.badge.store:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+
 /* Inicio: link a precios bajo el badge */
 .hero-more { margin: 16px auto 0 !important; font-size: 15px !important; color: var(--muted); }
 .hero-more b { color: var(--text); font-weight: 600; }
