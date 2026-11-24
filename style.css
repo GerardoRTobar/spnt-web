@@ -136,6 +136,9 @@ body { overflow-x: clip; }
 .phones .iphone:nth-child(2) { margin-top: 64px; }
 .ticks { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .ticks li { position: relative; padding-left: 28px; line-height: 1.45; }
+.point .copy > p.point-more { margin: 24px 0 0; font-size: 17px; }
+.point-more a { font-weight: 600; text-decoration: none; }
+.point-more a:hover { text-decoration: underline; }
 .ticks li::before {
   content: ""; position: absolute; left: 2px; top: 0.42em; width: 14px; height: 8px;
   border-left: 2.2px solid var(--brand); border-bottom: 2.2px solid var(--brand); transform: rotate(-45deg);
