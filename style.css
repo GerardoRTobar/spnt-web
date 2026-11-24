@@ -362,3 +362,7 @@ footer .wordmark { height: 16px; color: var(--text); }
   nav a { font-size: 12.5px; padding: 7px 5px; }
   .wordmark { height: 19px; }
 }
+
+/* Pie: Instagram */
+footer .social { display: inline-flex; align-items: center; gap: 6px; }
+footer .social svg { width: 16px; height: 16px; flex: none; }
