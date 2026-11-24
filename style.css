@@ -362,3 +362,9 @@ footer .wordmark { height: 16px; color: var(--text); }
   nav a { font-size: 12.5px; padding: 7px 5px; }
   .wordmark { height: 19px; }
 }
+
+/* Importar: ejemplo de archivo y pasos */
+.doc pre.code { background: var(--card); border-radius: 14px; padding: 16px 18px; overflow-x: auto; font-size: 13px; line-height: 1.6; margin: 12px 0 0; }
+.doc code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92em; }
+.doc ol.steps { padding-left: 22px; }
+.doc ol.steps li { margin: 8px 0; }
