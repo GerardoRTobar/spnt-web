@@ -371,3 +371,7 @@ footer .wordmark { height: 16px; color: var(--text); }
 .doc code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92em; }
 .doc ol.steps { padding-left: 22px; }
 .doc ol.steps li { margin: 8px 0; }
+
+/* Pie: Instagram */
+footer .social { display: inline-flex; align-items: center; gap: 6px; }
+footer .social svg { width: 16px; height: 16px; flex: none; }
