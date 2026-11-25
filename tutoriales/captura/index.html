@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compras que entran solas · SPNT</title>
+  <meta name="description" content="Cómo hacer que las alertas del banco y los pagos con Apple Pay entren solos a SPNT: pegar el SMS, el atajo de Apple Pay y la automatización de Mensajes, en iOS 27 y anteriores.">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121216" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="Compras que entran solas · SPNT">
+  <meta property="og:description" content="Cómo hacer que las alertas del banco y los pagos con Apple Pay entren solos a SPNT: pegar el SMS, el atajo de Apple Pay y la automatización de Mensajes, en iOS 27 y anteriores.">
+  <meta property="og:url" content="https://spnt.money/tutoriales/captura/">
+  <meta property="og:image" content="https://spnt.money/og/es.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://spnt.money/tutoriales/captura/">
+  <link rel="alternate" hreflang="es" href="https://spnt.money/tutoriales/captura/">
+  <link rel="alternate" hreflang="en" href="https://spnt.money/en/tutoriales/captura/">
+  <link rel="alternate" hreflang="pt" href="https://spnt.money/pt/tutoriales/captura/">
+  <link rel="alternate" hreflang="fr" href="https://spnt.money/fr/tutoriales/captura/">
+  <link rel="alternate" hreflang="de" href="https://spnt.money/de/tutoriales/captura/">
+  <link rel="alternate" hreflang="ru" href="https://spnt.money/ru/tutoriales/captura/">
+  <link rel="alternate" hreflang="x-default" href="https://spnt.money/tutoriales/captura/">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/site.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header>
+    <div class="wrap">
+      <a class="logo" href="/" aria-label="SPNT, inicio">
+        <svg class="wordmark" viewBox="0 -335 1022 422" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="58" stroke-linejoin="round"><path d="M142 -195.5A60 48 0 1 0 89 -125A60 48 0 1 1 36 -54.5"/><path d="M247 -250V85M247 -125A96 96 0 1 1 439 -125A96 96 0 1 1 247 -125"/><path d="M537 0V-250M537 -132.68A88.32 88.32 0 0 1 713.64 -132.68V0"/><path d="M857.64 -330V0M782.64 -221H921.39"/></g><circle cx="990.39" cy="-29" r="29" fill="var(--dot)"/></svg>
+      </a>
+      <nav><a href="/">Inicio</a><a href="/soporte/">Soporte</a><a href="/privacidad/">Privacidad</a><details class="lang"><summary aria-label="Idioma: Español"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><path fill="#006847" d="M0 0h10v20H0z"/><path fill="#fff" d="M10 0h10v20H10z"/><path fill="#ce1126" d="M20 0h10v20H20z"/><ellipse cx="15" cy="10" rx="2.6" ry="2.3" fill="#8a5a2b"/><path d="M12.6 11.6q2.4 2.2 4.8 0" fill="none" stroke="#3b7a3b" stroke-width=".9"/></svg><span>ES</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="menu"><a href="/tutoriales/captura/" lang="es" hreflang="es" aria-current="true"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><path fill="#006847" d="M0 0h10v20H0z"/><path fill="#fff" d="M10 0h10v20H10z"/><path fill="#ce1126" d="M20 0h10v20H20z"/><ellipse cx="15" cy="10" rx="2.6" ry="2.3" fill="#8a5a2b"/><path d="M12.6 11.6q2.4 2.2 4.8 0" fill="none" stroke="#3b7a3b" stroke-width=".9"/></svg><span>Español</span></a><a href="/en/tutoriales/captura/" lang="en" hreflang="en"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><path fill="#fff" d="M0 0h30v20H0z"/><path fill="#b22234" d="M0 0.000h30v1.538H0z"/><path fill="#b22234" d="M0 3.077h30v1.538H0z"/><path fill="#b22234" d="M0 6.154h30v1.538H0z"/><path fill="#b22234" d="M0 9.231h30v1.538H0z"/><path fill="#b22234" d="M0 12.308h30v1.538H0z"/><path fill="#b22234" d="M0 15.385h30v1.538H0z"/><path fill="#b22234" d="M0 18.462h30v1.538H0z"/><path fill="#3c3b6e" d="M0 0h12v10.769H0z"/><g fill="#fff"><circle cx="1.4" cy="1.3" r=".45"/><circle cx="3.6" cy="1.3" r=".45"/><circle cx="5.8" cy="1.3" r=".45"/><circle cx="8.0" cy="1.3" r=".45"/><circle cx="10.2" cy="1.3" r=".45"/><circle cx="1.4" cy="3.4" r=".45"/><circle cx="3.6" cy="3.4" r=".45"/><circle cx="5.8" cy="3.4" r=".45"/><circle cx="8.0" cy="3.4" r=".45"/><circle cx="10.2" cy="3.4" r=".45"/><circle cx="1.4" cy="5.5" r=".45"/><circle cx="3.6" cy="5.5" r=".45"/><circle cx="5.8" cy="5.5" r=".45"/><circle cx="8.0" cy="5.5" r=".45"/><circle cx="10.2" cy="5.5" r=".45"/><circle cx="1.4" cy="7.6" r=".45"/><circle cx="3.6" cy="7.6" r=".45"/><circle cx="5.8" cy="7.6" r=".45"/><circle cx="8.0" cy="7.6" r=".45"/><circle cx="10.2" cy="7.6" r=".45"/><circle cx="1.4" cy="9.7" r=".45"/><circle cx="3.6" cy="9.7" r=".45"/><circle cx="5.8" cy="9.7" r=".45"/><circle cx="8.0" cy="9.7" r=".45"/><circle cx="10.2" cy="9.7" r=".45"/></g></svg><span>English</span></a><a href="/pt/tutoriales/captura/" lang="pt" hreflang="pt"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><path fill="#009c3b" d="M0 0h30v20H0z"/><path fill="#ffdf00" d="M15 1.8 27.6 10 15 18.2 2.4 10z"/><circle cx="15" cy="10" r="5" fill="#002776"/><path d="M10.2 9.1q5-1.6 9.7 1.4" fill="none" stroke="#fff" stroke-width=".9"/></svg><span>Português</span></a><a href="/fr/tutoriales/captura/" lang="fr" hreflang="fr"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><path fill="#0055a4" d="M0 0h10v20H0z"/><path fill="#fff" d="M10 0h10v20H10z"/><path fill="#ef4135" d="M20 0h10v20H20z"/></svg><span>Français</span></a><a href="/de/tutoriales/captura/" lang="de" hreflang="de"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><path fill="#000" d="M0 0h30v6.67H0z"/><path fill="#dd0000" d="M0 6.67h30v6.66H0z"/><path fill="#ffce00" d="M0 13.33h30V20H0z"/></svg><span>Deutsch</span></a><a href="/ru/tutoriales/captura/" lang="ru" hreflang="ru"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><path fill="#fff" d="M0 0h30v6.67H0z"/><path fill="#0039a6" d="M0 6.67h30v6.66H0z"/><path fill="#d52b1e" d="M0 13.33h30V20H0z"/></svg><span>Русский</span></a></div></details></nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="wrap doc">
+    <h1>Compras que entran solas</h1>
+    <p class="date">Alertas del banco y pagos con Apple Pay directo a SPNT.</p>
+    <p class="lead">Cuando te llega la alerta del banco o pagás con Apple Pay, SPNT la lee en tu iPhone y te deja el movimiento en «Por revisar» con monto, comercio, fecha y tarjeta. Lo confirmás con un toque. Nada se guarda sin que lo veas.</p>
+
+    <nav class="paths" aria-label="Elegí cómo">
+      <a class="path" href="#pegar"><span class="n">1</span><b>Pegar el SMS</b><small>Sin configurar nada</small></a>
+      <a class="path" href="#apple-pay"><span class="n">2</span><b>Apple Pay automático</b><small>1 minuto, con un atajo</small></a>
+      <a class="path" href="#sms"><span class="n">3</span><b>SMS del banco automático</b><small>2 minutos, paso a paso</small></a>
+    </nav>
+    <p class="hint">Necesitás SPNT 1.1 o posterior. Podés usar uno, dos o los tres.</p>
+
+    <h2 class="group-title" id="pegar">1 · Pegar el SMS</h2>
+    <p>Funciona en cualquier iPhone y no hay que configurar nada.</p>
+    <ol class="steps">
+      <li>En Mensajes, mantené presionada la alerta del banco y tocá <b>Copiar</b>.</li>
+      <li>En SPNT, abrí <b>Ajustes › Datos › Registrar desde mensajes</b>. Se abre «Por revisar».</li>
+      <li>Tocá <b>Pegar</b>. Se abre el formulario ya lleno: revisalo y guardá.</li>
+    </ol>
+    <p class="hint">La primera vez, SPNT te pide permiso para mandarte notificaciones: aceptalo para que los pasos 2 y 3 te avisen cuando entra algo.</p>
+    <div class="shots">
+      <figure class="shot" data-img="/img/es/captura.jpg"><span>captura.jpg<br>598×1300</span><figcaption>«Por revisar» con dos compras listas para confirmar.</figcaption></figure>
+    </div>
+
+    <h2 class="group-title" id="apple-pay">2 · Apple Pay automático</h2>
+    <p>Cada pago con Apple Pay entra solo. Los pasos cambian según tu versión de iOS: la ves en Ajustes › General › Información.</p>
+
+    <h3><span class="os">iOS 27</span>Con el atajo listo</h3>
+    <div class="cta">
+      <!-- ATAJO APPLE PAY: reemplazar ENLACE-PROD-PENDIENTE por el id del enlace de iCloud armado con «spnt» (no «spnt dev»), en los 6 idiomas. -->
+      <a class="button big" href="https://www.icloud.com/shortcuts/ENLACE-PROD-PENDIENTE" data-atajo="apple-pay"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Agregar atajo</a>
+      <p class="muted">Abrilo en tu iPhone. Se abre Atajos con «spnt Apple Pay».</p>
+    </div>
+    <ol class="steps">
+      <li>Tocá <b>Agregar atajo</b> en la app Atajos.</li>
+      <li>Abrí el atajo «spnt Apple Pay» y tocá el bloque <b>Cuando se use…</b> y elegí <b>tus tarjetas</b> (las de Wallet que querés registrar). Dejá <b>Automatización</b> encendido y <b>Notificar</b> apagado.</li>
+      <li>Tocá <b>ⓘ</b> en la barra de abajo › <b>Privacidad</b> y encendé <b>Permitir ejecución en dispositivo bloqueado</b> y <b>spnt</b>.</li>
+    </ol>
+    <p>Listo. En tu próximo pago con Apple Pay te llega «De Apple Pay: $12.50 en Comercio». La primera vez con cada tarjeta, SPNT te pregunta cuál es; después ya sale sola.</p>
+    <div class="shots">
+      <figure class="shot" data-img="/img/es/atajos/ios27-tarjetas.jpg"><span>atajos/ios27-tarjetas.jpg<br>598×1300</span><figcaption>El bloque «Cuando se use…» con las tarjetas elegidas.</figcaption></figure>
+      <figure class="shot" data-img="/img/es/atajos/ios27-privacidad.jpg"><span>atajos/ios27-privacidad.jpg<br>598×1300</span><figcaption>ⓘ › Privacidad, con la ejecución en dispositivo bloqueado encendida.</figcaption></figure>
+    </div>
+
+    <div class="accordion">
+      <details id="apple-pay-a-mano">
+        <summary><span class="q"><b>Hacerlo a mano en iOS 27</b><small>Si preferís armar el atajo vos.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <ol class="steps">
+            <li>En Atajos, tocá <b>+</b> para un atajo nuevo y ponele un nombre, por ejemplo «spnt Apple Pay».</li>
+            <li>Agregá el activador <b>Wallet</b> («Al realizar un pago sin contacto con mi tarjeta o pase…»). También sale en el buscador de Atajos, en la sección Automatización. Queda como «Cuando se use <i>tus tarjetas</i>».</li>
+            <li><b>Agregar acción</b> › buscá <b>spnt</b> › <b>Registrar compra de Wallet</b>. En cada campo elegí la variable del pago, para que quede «Registrar <b>Cantidad</b> USD en <b>Comercio</b> con <b>Tarjeta o pase</b>».</li>
+            <li>Tocá la flecha del bloque «Cuando se use…»: Categorías en <b>Cualquier categoría</b>, Comercios en <b>Cualquier comercio</b>, <b>Automatización</b> encendido y <b>Notificar</b> apagado. En la acción, apagá <b>Mostrar al ejecutar</b>.</li>
+            <li><b>ⓘ</b> › <b>Privacidad</b>: encendé <b>Permitir ejecución en dispositivo bloqueado</b> y <b>spnt</b>.</li>
+          </ol>
+        </div>
+      </details>
+    </div>
+
+    <h3><span class="os">iOS 18 a 26</span>Desde Automatización</h3>
+    <p>En estas versiones, Apple no deja compartir automatizaciones por enlace, así que se arma a mano:</p>
+    <ol class="steps">
+      <li>En Atajos, abrí la pestaña <b>Automatización</b> y tocá <b>+</b>.</li>
+      <li>Elegí <b>Wallet</b>. Marcá tus tarjetas, dejá cualquier categoría, elegí <b>Ejecutar inmediatamente</b> y tocá <b>Siguiente</b>.</li>
+      <li>Tocá <b>Nueva automatización en blanco</b> › <b>Agregar acción</b> › buscá <b>spnt</b> › <b>Registrar compra de Wallet</b>.</li>
+      <li>En cada campo, tocá y elegí el dato del pago: el monto, el comercio y la tarjeta. Tocá <b>OK</b>.</li>
+    </ol>
+
+    <h2 class="group-title" id="sms">3 · SMS del banco automático</h2>
+    <p>Cada alerta de compra que te manda tu banco entra sola. No hay un enlace para esto: el remitente es distinto para cada banco, así que se arma en 2 minutos. Si tenés varios bancos, repetilo para cada uno.</p>
+
+    <h3><span class="os">iOS 27</span>Con un atajo nuevo</h3>
+    <ol class="steps">
+      <li>En Atajos, tocá <b>+</b> para un atajo nuevo y ponele un nombre, por ejemplo «spnt SMS del banco».</li>
+      <li>Agregá el activador <b>Mensaje</b> (también sale en el buscador de Atajos, en la sección Automatización). En <b>Remitente</b>, elegí el número o el nombre con el que te escribe tu banco.</li>
+      <li><b>Agregar acción</b> › buscá <b>spnt</b> › <b>Registrar desde un mensaje</b>. Tocá «Mensaje» en la acción y elegí la variable <b>Mensaje</b>.</li>
+      <li>En el bloque del activador, dejá <b>Automatización</b> encendido y <b>Notificar</b> apagado. En la acción, apagá <b>Mostrar al ejecutar</b>.</li>
+      <li><b>ⓘ</b> › <b>Privacidad</b>: encendé <b>Permitir ejecución en dispositivo bloqueado</b> y <b>spnt</b>.</li>
+    </ol>
+
+    <h3><span class="os">iOS 18 a 26</span>Desde Automatización</h3>
+    <ol class="steps">
+      <li>En Atajos, abrí la pestaña <b>Automatización</b> y tocá <b>+</b>.</li>
+      <li>Elegí <b>Mensaje</b>. En <b>Remitente</b>, elegí el número o el nombre de tu banco. Elegí <b>Ejecutar inmediatamente</b> y tocá <b>Siguiente</b>.</li>
+      <li>Tocá <b>Nueva automatización en blanco</b> › <b>Agregar acción</b> › buscá <b>spnt</b> › <b>Registrar desde un mensaje</b>.</li>
+      <li>Tocá «Mensaje» en la acción y elegí la variable <b>Mensaje</b> (la entrada del atajo). Tocá <b>OK</b>.</li>
+    </ol>
+    <div class="shots">
+      <figure class="shot" data-img="/img/es/atajos/ios26-mensaje.jpg"><span>atajos/ios26-mensaje.jpg<br>598×1300</span><figcaption>La automatización de Mensaje con el remitente del banco y «Ejecutar inmediatamente».</figcaption></figure>
+    </div>
+    <p>No hace falta filtrar: los códigos, promociones y otros mensajes del banco sin monto se ignoran.</p>
+    <p>Para probarlo, hacé una compra con esa tarjeta. Cuando llegue el SMS te llega «Del SMS: $12.50 en Comercio», aunque el iPhone esté bloqueado.</p>
+
+    <h2 class="group-title">Preguntas</h2>
+    <div class="accordion">
+      <details id="privacidad">
+        <summary><span class="q"><b>¿Mis mensajes salen del iPhone?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <p>No. SPNT lee el texto en tu iPhone, sin internet y sin IA. Atajos le pasa solo los mensajes del remitente que elegiste, no los demás. El texto queda guardado solo hasta que confirmás o descartás el borrador, y los borradores no se sincronizan: lo que se sincroniza es el movimiento que guardás, como siempre.</p>
+        </div>
+      </details>
+      <details id="revisar">
+        <summary><span class="q"><b>¿Se guarda algo sin que lo vea?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <p>No. Todo entra como borrador en «Por revisar». Tocalo para revisarlo y guardarlo, o deslizalo para descartarlo. En Inicio ves cuántos tenés pendientes.</p>
+        </div>
+      </details>
+      <details id="moneda">
+        <summary><span class="q"><b>¿Y si pago en otra moneda?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <p>Si la alerta del banco dice la moneda, por ejemplo «EUR 30,00», SPNT la detecta y el formulario la convierte con la tasa del día. En el atajo de Apple Pay, la moneda queda fija en USD: una compra en otra moneda entra como dólares, así que cambiala en el formulario antes de guardar.</p>
+        </div>
+      </details>
+      <details id="sms-y-apple-pay">
+        <summary><span class="q"><b>¿Y si llegan el SMS y el pago de Apple Pay de la misma compra?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <p>Quedan en un solo borrador, con el comercio de Wallet y los dígitos de la tarjeta del SMS, y te llega una sola notificación. Si el SMS llega más de 15 minutos después del pago pueden quedar dos: SPNT te avisa «Ya hay uno igual» y descartás uno.</p>
+        </div>
+      </details>
+      <details id="tarjeta">
+        <summary><span class="q"><b>¿Por qué me pregunta qué tarjeta es?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <p>Para aprender. Elegila una vez y las siguientes compras con esa tarjeta ya salen con ella. Si todavía no la tenés en SPNT, «Crear tarjeta» la arma con el nombre y los dígitos ya puestos.</p>
+          <p>Si te reponen una tarjeta y la usás con Apple Pay, la nueva entra a Wallet como otra tarjeta: marcala en el atajo (en el bloque «Cuando se use…», o en la automatización de Wallet en iOS 18 a 26) para que sus pagos sigan llegando.</p>
+        </div>
+      </details>
+      <details id="no-llega">
+        <summary><span class="q"><b>No me llega nada</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <ul>
+            <li>Revisá que esté encendido <b>Permitir ejecución en dispositivo bloqueado</b> (iOS 27) o elegido <b>Ejecutar inmediatamente</b> (iOS 18 a 26).</li>
+            <li>Revisá que la acción sea de <b>spnt</b> y, para el SMS, que el remitente sea el de tu banco.</li>
+            <li>Si entra el borrador pero no el aviso: revisá las notificaciones de SPNT en Ajustes del iPhone y el interruptor <b>Avisarme cuando llegue algo</b> en «Por revisar».</li>
+          </ul>
+          <p>Si una alerta tuya se lee mal, mandanos el texto a <a href="mailto:soporte@spnt.money">soporte@spnt.money</a> (podés tapar el nombre o la autorización) y la sumamos.</p>
+        </div>
+      </details>
+      <details id="apagar">
+        <summary><span class="q"><b>¿Cómo lo apago?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <p><b>iOS 27:</b> en Atajos, mantené presionado el atajo y tocá <b>Eliminar</b>, o abrilo y apagá <b>Automatización</b> en el bloque del activador.</p>
+          <p><b>iOS 18 a 26:</b> en Atajos › Automatización, tocá la automatización y apagala, o deslizala a la izquierda para eliminarla.</p>
+          <p>Lo que ya está en «Por revisar» se queda ahí hasta que lo descartes; el menú ⋯ tiene «Descartar todos». Si solo querés que no te avise, apagá <b>Avisarme cuando llegue algo</b>.</p>
+        </div>
+      </details>
+    </div>
+  </main>
+
+
+  <footer>
+    <div class="wrap">
+      <div class="links"><a href="/">Inicio</a><a href="/soporte/">Soporte</a><a href="/privacidad/">Privacidad</a><a href="mailto:hola@spnt.money">hola@spnt.money</a><a class="social" href="https://www.instagram.com/spnt.money/" rel="me noopener" target="_blank" aria-label="Instagram @spnt.money"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2.75" y="2.75" width="14.5" height="14.5" rx="4.25" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="10" cy="10" r="3.4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="14.4" cy="5.6" r="1" fill="currentColor"/></svg>@spnt.money</a></div>
+      <span>© 2026 SPNT</span>
+    </div>
+  </footer>
+</body>
+</html>

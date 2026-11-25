@@ -375,3 +375,46 @@ footer .wordmark { height: 16px; color: var(--text); }
 /* Pie: Instagram */
 footer .social { display: inline-flex; align-items: center; gap: 6px; }
 footer .social svg { width: 16px; height: 16px; flex: none; }
+
+/* Captura automática: los tres caminos, versión de iOS, botón del atajo y lugares para capturas */
+.doc h3 { font-size: 19px; letter-spacing: -0.01em; line-height: 1.3; margin: 28px 0 8px; }
+.doc .hint { color: var(--muted); font-size: 15px; }
+.paths { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 8px 0 12px; }
+.path { display: block; background: var(--card); border-radius: 16px; padding: 16px 18px; color: var(--text); text-decoration: none; transition: transform .15s ease; }
+.path:hover b { color: var(--brand); }
+.path:active { transform: scale(.98); }
+.path .n {
+  display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; margin-bottom: 10px;
+  background: var(--brand); color: var(--brand-ink); font-size: 13px; font-weight: 700;
+}
+.path b { display: block; font-size: 16px; line-height: 1.3; transition: color .15s; }
+.path small { display: block; color: var(--muted); font-size: 14px; margin-top: 2px; }
+@media (max-width: 620px) {
+  .paths { grid-template-columns: 1fr; gap: 8px; }
+  .path { display: grid; grid-template-columns: 24px 1fr; column-gap: 14px; padding: 14px 16px; }
+  .path .n { grid-row: span 2; margin: 0; }
+}
+.os {
+  display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .02em; padding: 3px 9px; border-radius: 999px;
+  margin-right: 10px; vertical-align: 2px; color: var(--brand); background: color-mix(in srgb, var(--brand) 14%, transparent);
+}
+.cta { display: flex; align-items: center; gap: 14px 18px; flex-wrap: wrap; background: var(--card); border-radius: 18px; padding: 20px 22px; margin: 12px 0 8px; }
+.cta .muted { margin: 0; color: var(--muted); font-size: 15px; flex: 1 1 14em; }
+.button.big { font-size: 17px; padding: 14px 24px; }
+.button.big svg { width: 20px; height: 20px; }
+.doc .accordion { margin-top: 8px; }
+/* Lugar reservado para una captura: se reemplaza por <div class="iphone"><img …></div> cuando exista. */
+.shots { display: flex; gap: 20px; flex-wrap: wrap; margin: 18px 0 8px; }
+.shot { margin: 0; width: 190px; }
+.shot span {
+  display: flex; align-items: center; justify-content: center; text-align: center; aspect-ratio: 598 / 1300;
+  border: 2px dashed var(--line); border-radius: 28px; padding: 12px; color: var(--muted);
+  font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; word-break: break-all;
+}
+.shot figcaption { color: var(--muted); font-size: 13px; line-height: 1.4; margin-top: 8px; }
+@media (max-width: 420px) { .shot { width: calc(50% - 10px); } }
+.point .ph {
+  display: flex; align-items: center; justify-content: center; text-align: center; aspect-ratio: 598 / 1300;
+  border: 0.95em solid #050506; border-radius: 6.3em; background: var(--card); color: var(--muted);
+  font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; padding: 20px;
+}
