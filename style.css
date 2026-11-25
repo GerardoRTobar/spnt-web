@@ -376,28 +376,46 @@ footer .wordmark { height: 16px; color: var(--text); }
 footer .social { display: inline-flex; align-items: center; gap: 6px; }
 footer .social svg { width: 16px; height: 16px; flex: none; }
 
-/* Captura automática: los tres caminos, versión de iOS, botón del atajo y lugares para capturas */
-.doc h3 { font-size: 19px; letter-spacing: -0.01em; line-height: 1.3; margin: 28px 0 8px; }
+/* Captura automática: método (tarjeta desplegable) › versión de iOS (selector) › pasos */
+.doc h3 { font-size: 18px; letter-spacing: -0.01em; line-height: 1.3; margin: 22px 0 8px; }
 .doc .hint { color: var(--muted); font-size: 15px; }
-.paths { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 8px 0 12px; }
-.path { display: block; background: var(--card); border-radius: 16px; padding: 16px 18px; color: var(--text); text-decoration: none; transition: transform .15s ease; }
-.path:hover b { color: var(--brand); }
-.path:active { transform: scale(.98); }
-.path .n {
-  display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; margin-bottom: 10px;
-  background: var(--brand); color: var(--brand-ink); font-size: 13px; font-weight: 700;
+.methods { border-top: 0; display: grid; gap: 12px; margin: 20px 0 8px; }
+.methods > details { border: 1px solid var(--line); border-radius: 20px; background: var(--bg); transition: border-color .2s; }
+.methods > details[open]:not(.closing) { border-color: color-mix(in srgb, var(--brand) 45%, var(--line)); }
+.methods > details > summary { padding: 18px 18px; border-radius: 20px; }
+.methods > details > summary .q b { font-size: 18px; }
+.methods > details > .body { padding: 0 18px 22px 64px; }
+.mnum {
+  flex: none; width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center;
+  font-size: 15px; font-weight: 700; background: var(--card); color: var(--text); transition: background .15s, color .15s;
 }
-.path b { display: block; font-size: 16px; line-height: 1.3; transition: color .15s; }
-.path small { display: block; color: var(--muted); font-size: 14px; margin-top: 2px; }
-@media (max-width: 620px) {
-  .paths { grid-template-columns: 1fr; gap: 8px; }
-  .path { display: grid; grid-template-columns: 24px 1fr; column-gap: 14px; padding: 14px 16px; }
-  .path .n { grid-row: span 2; margin: 0; }
+.methods > details[open]:not(.closing) > summary .mnum { background: var(--brand); color: var(--brand-ink); }
+@media (max-width: 520px) {
+  .methods > details > summary { padding: 16px 14px; gap: 12px; }
+  .methods > details > .body { padding: 0 14px 20px; }
 }
-.os {
-  display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .02em; padding: 3px 9px; border-radius: 999px;
-  margin-right: 10px; vertical-align: 2px; color: var(--brand); background: color-mix(in srgb, var(--brand) 14%, transparent);
+/* Selector de versión: las dos versiones van en paralelo, se ve una a la vez */
+.ios { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin: 18px 0 0; }
+.ios > input { position: absolute; opacity: 0; pointer-events: none; }
+.ios > label {
+  font-size: 14px; font-weight: 600; padding: 8px 16px; border-radius: 999px; cursor: pointer;
+  background: var(--card); color: var(--muted); transition: background .15s, color .15s;
 }
+.ios > label:hover { color: var(--text); }
+.ios > input:checked + label { background: var(--brand); color: var(--brand-ink); }
+.ios > input:focus-visible + label { outline: 2px solid var(--brand); outline-offset: 2px; }
+.ios .ios-which { flex: 1 1 100%; margin: 8px 0 0; color: var(--muted); font-size: 13px; }
+.ios > .panel { display: none; flex: 1 1 100%; min-width: 0; border-left: 2px solid var(--line); padding-left: 16px; margin-top: 14px; }
+.ios > input:nth-of-type(1):checked ~ .panel:nth-of-type(1),
+.ios > input:nth-of-type(2):checked ~ .panel:nth-of-type(2) { display: block; }
+.ios > .panel > h3:first-child { margin-top: 0; }
+@media print { .ios > .panel { display: block; } }
+/* Variante dentro de una versión (p. ej. «Hacerlo a mano») */
+.doc .accordion.sub { margin-top: 18px; border-top: 1px solid var(--line); }
+.accordion.sub details:last-child { border-bottom: 0; }
+.accordion.sub summary { padding: 14px 0; }
+.accordion.sub .q b { font-size: 16px; }
+.accordion.sub .body { padding: 0 0 8px; }
 .cta { display: flex; align-items: center; gap: 14px 18px; flex-wrap: wrap; background: var(--card); border-radius: 18px; padding: 20px 22px; margin: 12px 0 8px; }
 .cta .muted { margin: 0; color: var(--muted); font-size: 15px; flex: 1 1 14em; }
 .button.big { font-size: 17px; padding: 14px 24px; }

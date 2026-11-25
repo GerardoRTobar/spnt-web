@@ -59,6 +59,24 @@
     loops.forEach(function (v) { io.observe(v); });
   }
 
+  // Selector de versión de iOS (tutorial de captura): elegir una versión la elige en todos los métodos
+  // y se recuerda en este navegador.
+  var iosGroups = Array.prototype.slice.call(document.querySelectorAll('.ios'));
+  if (iosGroups.length) {
+    var pickIos = function (idx) {
+      iosGroups.forEach(function (g) { var r = g.querySelectorAll('input')[idx]; if (r) r.checked = true; });
+    };
+    try { var saved = localStorage.getItem('spnt-ios'); if (saved) pickIos(+saved); } catch (e) {}
+    iosGroups.forEach(function (g) {
+      Array.prototype.forEach.call(g.querySelectorAll('input'), function (r, idx) {
+        r.addEventListener('change', function () {
+          pickIos(idx);
+          try { localStorage.setItem('spnt-ios', String(idx)); } catch (e) {}
+        });
+      });
+    });
+  }
+
   var sections = Array.prototype.slice.call(document.querySelectorAll('.accordion details'));
   if (!sections.length) return;
 
@@ -68,7 +86,8 @@
     var target = id && document.getElementById(id);
     var details = target && (target.tagName === 'DETAILS' ? target : target.closest('details'));
     if (!details) return;
-    details.open = true;
+    // También abre los desplegables que lo contienen (p. ej. el método que tiene «Hacerlo a mano»).
+    for (var d = details; d; d = d.parentElement && d.parentElement.closest('details')) d.open = true;
     // En una carga nueva el navegador ya saltó con la sección cerrada; se
     // vuelve a saltar sin animación cuando termina de cargar.
     var jump = function () { details.scrollIntoView({ behavior: 'instant' }); };

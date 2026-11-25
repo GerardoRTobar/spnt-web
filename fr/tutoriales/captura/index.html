@@ -43,93 +43,115 @@
     <p class="date">Alertes de la banque et paiements Apple Pay, directement dans SPNT.</p>
     <p class="lead">Quand ta banque t’envoie une alerte ou que tu paies avec Apple Pay, SPNT la lit sur ton iPhone et dépose la transaction dans « À vérifier » avec le montant, le commerçant, la date et la carte. Tu confirmes d’un toucher. Rien n’est enregistré sans que tu le voies.</p>
 
-    <nav class="paths" aria-label="Choisis comment">
-      <a class="path" href="#pegar"><span class="n">1</span><b>Coller le SMS</b><small>Rien à configurer</small></a>
-      <a class="path" href="#apple-pay"><span class="n">2</span><b>Apple Pay automatique</b><small>1 minute, avec un raccourci</small></a>
-      <a class="path" href="#sms"><span class="n">3</span><b>SMS de la banque automatique</b><small>2 minutes, pas à pas</small></a>
-    </nav>
     <p class="hint">Il te faut SPNT 1.1 ou version ultérieure. Utilise une, deux ou les trois.</p>
 
-    <h2 class="group-title" id="pegar">1 · Coller le SMS</h2>
-    <p>Ça marche sur n’importe quel iPhone, sans rien configurer.</p>
-    <ol class="steps">
-      <li>Dans Messages, maintiens le doigt sur l’alerte de la banque et touche <b>Copier</b>.</li>
-      <li>Dans SPNT, ouvre <b>Réglages › Données › Enregistrer depuis les messages</b>. « À vérifier » s’ouvre.</li>
-      <li>Touche <b>Coller</b>. Le formulaire s’ouvre déjà rempli : vérifie-le et enregistre.</li>
-    </ol>
-    <p class="hint">La première fois, SPNT demande l’autorisation de t’envoyer des notifications : accepte pour que les options 2 et 3 te préviennent quand quelque chose arrive.</p>
-    <div class="shots">
-      <figure class="shot" data-img="/img/fr/captura.jpg"><span>captura.jpg<br>598×1300</span><figcaption>« À vérifier » avec deux achats prêts à confirmer.</figcaption></figure>
-    </div>
-
-    <h2 class="group-title" id="apple-pay">2 · Apple Pay automatique</h2>
-    <p>Chaque paiement Apple Pay arrive tout seul. Les étapes dépendent de ta version d’iOS : regarde dans Réglages › Général › Informations.</p>
-
-    <h3><span class="os">iOS 27</span>Avec le raccourci prêt</h3>
-    <div class="cta">
-      <!-- ATAJO APPLE PAY: reemplazar ENLACE-PROD-PENDIENTE por el id del enlace de iCloud armado con «spnt» (no «spnt dev»), en los 6 idiomas. -->
-      <a class="button big" href="https://www.icloud.com/shortcuts/ENLACE-PROD-PENDIENTE" data-atajo="apple-pay"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Ajouter le raccourci</a>
-      <p class="muted">Ouvre-le sur ton iPhone. Raccourcis s’ouvre avec « spnt Apple Pay ».</p>
-    </div>
-    <ol class="steps">
-      <li>Touche <b>Ajouter le raccourci</b> dans l’app Raccourcis.</li>
-      <li>Ouvre le raccourci « spnt Apple Pay » et touche le bloc <b>Lorsque … est utilisé</b>. Choisis <b>tes cartes</b> (celles de Wallet que tu veux enregistrer). Laisse <b>Automatisation</b> activé et <b>Notifier</b> désactivé.</li>
-      <li>Touche <b>ⓘ</b> dans la barre du bas › <b>Confidentialité</b> et active <b>Autoriser l’exécution lorsque l’appareil est verrouillé</b> et <b>spnt</b>.</li>
-    </ol>
-    <p>C’est prêt. À ton prochain paiement Apple Pay, tu reçois « D’Apple Pay : 12,50 $ chez Commerçant ». La première fois avec chaque carte, SPNT te demande laquelle c’est ; ensuite elle est choisie toute seule.</p>
-    <div class="shots">
-      <figure class="shot" data-img="/img/fr/atajos/ios27-tarjetas.jpg"><span>atajos/ios27-tarjetas.jpg<br>598×1300</span><figcaption>Le bloc « Lorsque … est utilisé » avec les cartes choisies.</figcaption></figure>
-      <figure class="shot" data-img="/img/fr/atajos/ios27-privacidad.jpg"><span>atajos/ios27-privacidad.jpg<br>598×1300</span><figcaption>ⓘ › Confidentialité, avec l’exécution appareil verrouillé activée.</figcaption></figure>
-    </div>
-
-    <div class="accordion">
-      <details id="apple-pay-a-mano">
-        <summary><span class="q"><b>Le faire à la main sur iOS 27</b><small>Si tu préfères créer le raccourci toi-même.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="accordion methods">
+      <details id="pegar">
+        <summary><span class="mnum">1</span><span class="q"><b>Coller le SMS</b><small>Rien à configurer</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
-          <ol class="steps">
-            <li>Dans Raccourcis, touche <b>+</b> pour un nouveau raccourci et nomme-le, par exemple « spnt Apple Pay ».</li>
-            <li>Ajoute le déclencheur <b>Wallet</b> (« Lorsque je paie sans contact avec ma carte ou mon titre… »). Il apparaît aussi dans la recherche de Raccourcis, section Automatisation. Il devient « Lorsque <i>tes cartes</i> est utilisé ».</li>
-            <li><b>Ajouter une action</b> › cherche <b>spnt</b> › <b>Enregistrer un achat Wallet</b>. Dans chaque champ, choisis la variable du paiement, pour obtenir « Enregistrer <b>Montant</b> USD chez <b>Commerçant</b> avec <b>Carte ou titre</b> ».</li>
-            <li>Touche la flèche du bloc « Lorsque … est utilisé » : Catégories sur <b>N’importe quelle catégorie</b>, Commerçants sur <b>N’importe quel commerçant</b>, <b>Automatisation</b> activé et <b>Notifier</b> désactivé. Dans l’action, désactive <b>Afficher lors de l’exécution</b>.</li>
-            <li><b>ⓘ</b> › <b>Confidentialité</b> : active <b>Autoriser l’exécution lorsque l’appareil est verrouillé</b> et <b>spnt</b>.</li>
-          </ol>
+      <p>Ça marche sur n’importe quel iPhone, sans rien configurer.</p>
+      <ol class="steps">
+        <li>Dans Messages, maintiens le doigt sur l’alerte de la banque et touche <b>Copier</b>.</li>
+        <li>Dans SPNT, ouvre <b>Réglages › Données › Enregistrer depuis les messages</b>. « À vérifier » s’ouvre.</li>
+        <li>Touche <b>Coller</b>. Le formulaire s’ouvre déjà rempli : vérifie-le et enregistre.</li>
+      </ol>
+      <p class="hint">La première fois, SPNT demande l’autorisation de t’envoyer des notifications : accepte pour que les options 2 et 3 te préviennent quand quelque chose arrive.</p>
+      <div class="shots">
+        <figure class="shot" data-img="/img/fr/captura.jpg"><span>captura.jpg<br>598×1300</span><figcaption>« À vérifier » avec deux achats prêts à confirmer.</figcaption></figure>
+      </div>
+        </div>
+      </details>
+      <details id="apple-pay">
+        <summary><span class="mnum">2</span><span class="q"><b>Apple Pay automatique</b><small>1 minute, avec un raccourci</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+      <p>Chaque paiement Apple Pay arrive tout seul.</p>
+        <div class="ios" role="group" aria-label="iOS">
+          <input type="radio" name="ios-ap" id="ios-ap-0" checked><label for="ios-ap-0">iOS 27</label>
+          <input type="radio" name="ios-ap" id="ios-ap-1"><label for="ios-ap-1">iOS 18 à 26</label>
+          <p class="ios-which">Ta version est dans Réglages › Général › Informations.</p>
+          <div class="panel">
+            <h3>Avec le raccourci prêt</h3>
+            <div class="cta">
+              <!-- ATAJO APPLE PAY: reemplazar ENLACE-PROD-PENDIENTE por el id del enlace de iCloud armado con «spnt» (no «spnt dev»), en los 6 idiomas. -->
+              <a class="button big" href="https://www.icloud.com/shortcuts/ENLACE-PROD-PENDIENTE" data-atajo="apple-pay"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Ajouter le raccourci</a>
+              <p class="muted">Ouvre-le sur ton iPhone. Raccourcis s’ouvre avec « spnt Apple Pay ».</p>
+            </div>
+            <ol class="steps">
+              <li>Touche <b>Ajouter le raccourci</b> dans l’app Raccourcis.</li>
+              <li>Ouvre le raccourci « spnt Apple Pay » et touche le bloc <b>Lorsque … est utilisé</b>. Choisis <b>tes cartes</b> (celles de Wallet que tu veux enregistrer). Laisse <b>Automatisation</b> activé et <b>Notifier</b> désactivé.</li>
+              <li>Touche <b>ⓘ</b> dans la barre du bas › <b>Confidentialité</b> et active <b>Autoriser l’exécution lorsque l’appareil est verrouillé</b> et <b>spnt</b>.</li>
+            </ol>
+            <p>C’est prêt. À ton prochain paiement Apple Pay, tu reçois « D’Apple Pay : 12,50 $ chez Commerçant ». La première fois avec chaque carte, SPNT te demande laquelle c’est ; ensuite elle est choisie toute seule.</p>
+            <div class="shots">
+              <figure class="shot" data-img="/img/fr/atajos/ios27-tarjetas.jpg"><span>atajos/ios27-tarjetas.jpg<br>598×1300</span><figcaption>Le bloc « Lorsque … est utilisé » avec les cartes choisies.</figcaption></figure>
+              <figure class="shot" data-img="/img/fr/atajos/ios27-privacidad.jpg"><span>atajos/ios27-privacidad.jpg<br>598×1300</span><figcaption>ⓘ › Confidentialité, avec l’exécution appareil verrouillé activée.</figcaption></figure>
+            </div>
+      
+            <div class=\"accordion sub\">
+              <details id="apple-pay-a-mano">
+                <summary><span class="q"><b>Le faire à la main sur iOS 27</b><small>Si tu préfères créer le raccourci toi-même.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+                <div class="body">
+                  <ol class="steps">
+                    <li>Dans Raccourcis, touche <b>+</b> pour un nouveau raccourci et nomme-le, par exemple « spnt Apple Pay ».</li>
+                    <li>Ajoute le déclencheur <b>Wallet</b> (« Lorsque je paie sans contact avec ma carte ou mon titre… »). Il apparaît aussi dans la recherche de Raccourcis, section Automatisation. Il devient « Lorsque <i>tes cartes</i> est utilisé ».</li>
+                    <li><b>Ajouter une action</b> › cherche <b>spnt</b> › <b>Enregistrer un achat Wallet</b>. Dans chaque champ, choisis la variable du paiement, pour obtenir « Enregistrer <b>Montant</b> USD chez <b>Commerçant</b> avec <b>Carte ou titre</b> ».</li>
+                    <li>Touche la flèche du bloc « Lorsque … est utilisé » : Catégories sur <b>N’importe quelle catégorie</b>, Commerçants sur <b>N’importe quel commerçant</b>, <b>Automatisation</b> activé et <b>Notifier</b> désactivé. Dans l’action, désactive <b>Afficher lors de l’exécution</b>.</li>
+                    <li><b>ⓘ</b> › <b>Confidentialité</b> : active <b>Autoriser l’exécution lorsque l’appareil est verrouillé</b> et <b>spnt</b>.</li>
+                  </ol>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="panel">
+            <h3>Depuis Automatisation</h3>
+            <p>Sur ces versions, Apple ne permet pas de partager des automatisations par lien, donc on la crée à la main :</p>
+            <ol class="steps">
+              <li>Dans Raccourcis, ouvre l’onglet <b>Automatisation</b> et touche <b>+</b>.</li>
+              <li>Choisis <b>Wallet</b>. Coche tes cartes, laisse n’importe quelle catégorie, choisis <b>Exécuter immédiatement</b> et touche <b>Suivant</b>.</li>
+              <li>Touche <b>Nouvelle automatisation vierge</b> › <b>Ajouter une action</b> › cherche <b>spnt</b> › <b>Enregistrer un achat Wallet</b>.</li>
+              <li>Touche chaque champ et choisis la donnée du paiement : le montant, le commerçant et la carte. Touche <b>OK</b>.</li>
+            </ol>
+          </div>
+        </div>
+        </div>
+      </details>
+      <details id="sms">
+        <summary><span class="mnum">3</span><span class="q"><b>SMS de la banque automatique</b><small>2 minutes, pas à pas</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+      <p>Chaque alerte d’achat que ta banque t’envoie arrive toute seule. Il n’y a pas de lien pour ça : l’expéditeur change d’une banque à l’autre, donc ça se crée en 2 minutes. Si tu as plusieurs banques, répète pour chacune.</p>
+        <div class="ios" role="group" aria-label="iOS">
+          <input type="radio" name="ios-sms" id="ios-sms-0" checked><label for="ios-sms-0">iOS 27</label>
+          <input type="radio" name="ios-sms" id="ios-sms-1"><label for="ios-sms-1">iOS 18 à 26</label>
+          <p class="ios-which">Ta version est dans Réglages › Général › Informations.</p>
+          <div class="panel">
+            <h3>Avec un nouveau raccourci</h3>
+            <ol class="steps">
+              <li>Dans Raccourcis, touche <b>+</b> pour un nouveau raccourci et nomme-le, par exemple « spnt SMS banque ».</li>
+              <li>Ajoute le déclencheur <b>Message</b> (il apparaît aussi dans la recherche de Raccourcis, section Automatisation). Dans <b>Expéditeur</b>, choisis le numéro ou le nom avec lequel ta banque t’écrit.</li>
+              <li><b>Ajouter une action</b> › cherche <b>spnt</b> › <b>Enregistrer depuis un message</b>. Touche « Message » dans l’action et choisis la variable <b>Message</b>.</li>
+              <li>Dans le bloc du déclencheur, laisse <b>Automatisation</b> activé et <b>Notifier</b> désactivé. Dans l’action, désactive <b>Afficher lors de l’exécution</b>.</li>
+              <li><b>ⓘ</b> › <b>Confidentialité</b> : active <b>Autoriser l’exécution lorsque l’appareil est verrouillé</b> et <b>spnt</b>.</li>
+            </ol>
+          </div>
+          <div class="panel">
+            <h3>Depuis Automatisation</h3>
+            <ol class="steps">
+              <li>Dans Raccourcis, ouvre l’onglet <b>Automatisation</b> et touche <b>+</b>.</li>
+              <li>Choisis <b>Message</b>. Dans <b>Expéditeur</b>, choisis le numéro ou le nom de ta banque. Choisis <b>Exécuter immédiatement</b> et touche <b>Suivant</b>.</li>
+              <li>Touche <b>Nouvelle automatisation vierge</b> › <b>Ajouter une action</b> › cherche <b>spnt</b> › <b>Enregistrer depuis un message</b>.</li>
+              <li>Touche « Message » dans l’action et choisis la variable <b>Message</b> (l’entrée du raccourci). Touche <b>OK</b>.</li>
+            </ol>
+            <div class="shots">
+              <figure class="shot" data-img="/img/fr/atajos/ios26-mensaje.jpg"><span>atajos/ios26-mensaje.jpg<br>598×1300</span><figcaption>L’automatisation Message avec la banque comme expéditeur et « Exécuter immédiatement ».</figcaption></figure>
+            </div>
+          </div>
+        </div>
+  
+      <p>Pas besoin de filtrer : les codes, les promotions et les autres SMS de la banque sans montant sont ignorés.</p>
+      <p>Pour tester, fais un achat avec cette carte. Quand le SMS arrive, tu reçois « D’un SMS : 12,50 $ chez Commerçant », même iPhone verrouillé.</p>
         </div>
       </details>
     </div>
-
-    <h3><span class="os">iOS 18 à 26</span>Depuis Automatisation</h3>
-    <p>Sur ces versions, Apple ne permet pas de partager des automatisations par lien, donc on la crée à la main :</p>
-    <ol class="steps">
-      <li>Dans Raccourcis, ouvre l’onglet <b>Automatisation</b> et touche <b>+</b>.</li>
-      <li>Choisis <b>Wallet</b>. Coche tes cartes, laisse n’importe quelle catégorie, choisis <b>Exécuter immédiatement</b> et touche <b>Suivant</b>.</li>
-      <li>Touche <b>Nouvelle automatisation vierge</b> › <b>Ajouter une action</b> › cherche <b>spnt</b> › <b>Enregistrer un achat Wallet</b>.</li>
-      <li>Touche chaque champ et choisis la donnée du paiement : le montant, le commerçant et la carte. Touche <b>OK</b>.</li>
-    </ol>
-
-    <h2 class="group-title" id="sms">3 · SMS de la banque automatique</h2>
-    <p>Chaque alerte d’achat que ta banque t’envoie arrive toute seule. Il n’y a pas de lien pour ça : l’expéditeur change d’une banque à l’autre, donc ça se crée en 2 minutes. Si tu as plusieurs banques, répète pour chacune.</p>
-
-    <h3><span class="os">iOS 27</span>Avec un nouveau raccourci</h3>
-    <ol class="steps">
-      <li>Dans Raccourcis, touche <b>+</b> pour un nouveau raccourci et nomme-le, par exemple « spnt SMS banque ».</li>
-      <li>Ajoute le déclencheur <b>Message</b> (il apparaît aussi dans la recherche de Raccourcis, section Automatisation). Dans <b>Expéditeur</b>, choisis le numéro ou le nom avec lequel ta banque t’écrit.</li>
-      <li><b>Ajouter une action</b> › cherche <b>spnt</b> › <b>Enregistrer depuis un message</b>. Touche « Message » dans l’action et choisis la variable <b>Message</b>.</li>
-      <li>Dans le bloc du déclencheur, laisse <b>Automatisation</b> activé et <b>Notifier</b> désactivé. Dans l’action, désactive <b>Afficher lors de l’exécution</b>.</li>
-      <li><b>ⓘ</b> › <b>Confidentialité</b> : active <b>Autoriser l’exécution lorsque l’appareil est verrouillé</b> et <b>spnt</b>.</li>
-    </ol>
-
-    <h3><span class="os">iOS 18 à 26</span>Depuis Automatisation</h3>
-    <ol class="steps">
-      <li>Dans Raccourcis, ouvre l’onglet <b>Automatisation</b> et touche <b>+</b>.</li>
-      <li>Choisis <b>Message</b>. Dans <b>Expéditeur</b>, choisis le numéro ou le nom de ta banque. Choisis <b>Exécuter immédiatement</b> et touche <b>Suivant</b>.</li>
-      <li>Touche <b>Nouvelle automatisation vierge</b> › <b>Ajouter une action</b> › cherche <b>spnt</b> › <b>Enregistrer depuis un message</b>.</li>
-      <li>Touche « Message » dans l’action et choisis la variable <b>Message</b> (l’entrée du raccourci). Touche <b>OK</b>.</li>
-    </ol>
-    <div class="shots">
-      <figure class="shot" data-img="/img/fr/atajos/ios26-mensaje.jpg"><span>atajos/ios26-mensaje.jpg<br>598×1300</span><figcaption>L’automatisation Message avec la banque comme expéditeur et « Exécuter immédiatement ».</figcaption></figure>
-    </div>
-    <p>Pas besoin de filtrer : les codes, les promotions et les autres SMS de la banque sans montant sont ignorés.</p>
-    <p>Pour tester, fais un achat avec cette carte. Quand le SMS arrive, tu reçois « D’un SMS : 12,50 $ chez Commerçant », même iPhone verrouillé.</p>
 
     <h2 class="group-title">Questions</h2>
     <div class="accordion">

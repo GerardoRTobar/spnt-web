@@ -43,93 +43,115 @@
     <p class="date">Bank-SMS und Apple-Pay-Zahlungen direkt in SPNT.</p>
     <p class="lead">Wenn deine Bank dir eine SMS schickt oder du mit Apple Pay zahlst, liest SPNT sie auf deinem iPhone und legt die Buchung unter „Zu prüfen“ ab, mit Betrag, Händler, Datum und Karte. Du bestätigst mit einem Tippen. Nichts wird gespeichert, ohne dass du es siehst.</p>
 
-    <nav class="paths" aria-label="Wähle, wie">
-      <a class="path" href="#pegar"><span class="n">1</span><b>SMS einfügen</b><small>Nichts einzurichten</small></a>
-      <a class="path" href="#apple-pay"><span class="n">2</span><b>Apple Pay automatisch</b><small>1 Minute, mit einem Kurzbefehl</small></a>
-      <a class="path" href="#sms"><span class="n">3</span><b>Bank-SMS automatisch</b><small>2 Minuten, Schritt für Schritt</small></a>
-    </nav>
     <p class="hint">Du brauchst SPNT 1.1 oder neuer. Nutze einen, zwei oder alle drei Wege.</p>
 
-    <h2 class="group-title" id="pegar">1 · SMS einfügen</h2>
-    <p>Funktioniert auf jedem iPhone, ohne etwas einzurichten.</p>
-    <ol class="steps">
-      <li>Halte in Nachrichten die SMS deiner Bank gedrückt und tippe auf <b>Kopieren</b>.</li>
-      <li>Öffne in SPNT <b>Einstellungen › Daten › Aus Nachrichten erfassen</b>. „Zu prüfen“ öffnet sich.</li>
-      <li>Tippe auf <b>Einfügen</b>. Das Formular ist schon ausgefüllt: prüfe es und speichere.</li>
-    </ol>
-    <p class="hint">Beim ersten Mal fragt SPNT, ob es dir Mitteilungen schicken darf: erlaube es, damit dich die Wege 2 und 3 benachrichtigen, wenn etwas ankommt.</p>
-    <div class="shots">
-      <figure class="shot" data-img="/img/de/captura.jpg"><span>captura.jpg<br>598×1300</span><figcaption>„Zu prüfen“ mit zwei Käufen, bereit zum Bestätigen.</figcaption></figure>
-    </div>
-
-    <h2 class="group-title" id="apple-pay">2 · Apple Pay automatisch</h2>
-    <p>Jede Apple-Pay-Zahlung kommt von selbst an. Die Schritte hängen von deiner iOS-Version ab: Du findest sie unter Einstellungen › Allgemein › Info.</p>
-
-    <h3><span class="os">iOS 27</span>Mit dem fertigen Kurzbefehl</h3>
-    <div class="cta">
-      <!-- ATAJO APPLE PAY: reemplazar ENLACE-PROD-PENDIENTE por el id del enlace de iCloud armado con «spnt» (no «spnt dev»), en los 6 idiomas. -->
-      <a class="button big" href="https://www.icloud.com/shortcuts/ENLACE-PROD-PENDIENTE" data-atajo="apple-pay"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Kurzbefehl hinzufügen</a>
-      <p class="muted">Öffne den Link auf deinem iPhone. Kurzbefehle öffnet sich mit „spnt Apple Pay“.</p>
-    </div>
-    <ol class="steps">
-      <li>Tippe in der App Kurzbefehle auf <b>Kurzbefehl hinzufügen</b>.</li>
-      <li>Öffne den Kurzbefehl „spnt Apple Pay“ und tippe auf den Block <b>Wenn … verwendet wird</b>. Wähle <b>deine Karten</b> (die Wallet-Karten, die du erfassen willst). Lass <b>Automation</b> an und <b>Mitteilen</b> aus.</li>
-      <li>Tippe unten auf <b>ⓘ</b> › <b>Datenschutz</b> und schalte <b>Ausführen bei gesperrtem Gerät erlauben</b> und <b>spnt</b> ein.</li>
-    </ol>
-    <p>Fertig. Bei deiner nächsten Apple-Pay-Zahlung kommt „Von Apple Pay: 12,50 $ bei Händler“. Beim ersten Mal mit jeder Karte fragt SPNT, welche es ist; danach ist sie schon gewählt.</p>
-    <div class="shots">
-      <figure class="shot" data-img="/img/de/atajos/ios27-tarjetas.jpg"><span>atajos/ios27-tarjetas.jpg<br>598×1300</span><figcaption>Der Block „Wenn … verwendet wird“ mit den gewählten Karten.</figcaption></figure>
-      <figure class="shot" data-img="/img/de/atajos/ios27-privacidad.jpg"><span>atajos/ios27-privacidad.jpg<br>598×1300</span><figcaption>ⓘ › Datenschutz, mit Ausführen bei gesperrtem Gerät an.</figcaption></figure>
-    </div>
-
-    <div class="accordion">
-      <details id="apple-pay-a-mano">
-        <summary><span class="q"><b>Von Hand unter iOS 27</b><small>Wenn du den Kurzbefehl lieber selbst baust.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+    <div class="accordion methods">
+      <details id="pegar">
+        <summary><span class="mnum">1</span><span class="q"><b>SMS einfügen</b><small>Nichts einzurichten</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
-          <ol class="steps">
-            <li>Tippe in Kurzbefehle auf <b>+</b> für einen neuen Kurzbefehl und gib ihm einen Namen, zum Beispiel „spnt Apple Pay“.</li>
-            <li>Füge den Auslöser <b>Wallet</b> hinzu („Wenn ich kontaktlos mit meiner Karte oder meinem Pass bezahle …“). Er erscheint auch in der Suche von Kurzbefehle, im Bereich Automation. Er lautet dann „Wenn <i>deine Karten</i> verwendet wird“.</li>
-            <li><b>Aktion hinzufügen</b> › suche nach <b>spnt</b> › <b>Wallet-Kauf erfassen</b>. Wähle in jedem Feld die Variable der Zahlung, sodass dort steht: „<b>Betrag</b> USD bei <b>Händler</b> mit <b>Karte oder Pass</b> erfassen“.</li>
-            <li>Tippe auf den Pfeil am Block „Wenn … verwendet wird“: Kategorien auf <b>Beliebige Kategorie</b>, Händler auf <b>Beliebiger Händler</b>, <b>Automation</b> an und <b>Mitteilen</b> aus. Schalte in der Aktion <b>Beim Ausführen anzeigen</b> aus.</li>
-            <li><b>ⓘ</b> › <b>Datenschutz</b>: schalte <b>Ausführen bei gesperrtem Gerät erlauben</b> und <b>spnt</b> ein.</li>
-          </ol>
+      <p>Funktioniert auf jedem iPhone, ohne etwas einzurichten.</p>
+      <ol class="steps">
+        <li>Halte in Nachrichten die SMS deiner Bank gedrückt und tippe auf <b>Kopieren</b>.</li>
+        <li>Öffne in SPNT <b>Einstellungen › Daten › Aus Nachrichten erfassen</b>. „Zu prüfen“ öffnet sich.</li>
+        <li>Tippe auf <b>Einfügen</b>. Das Formular ist schon ausgefüllt: prüfe es und speichere.</li>
+      </ol>
+      <p class="hint">Beim ersten Mal fragt SPNT, ob es dir Mitteilungen schicken darf: erlaube es, damit dich die Wege 2 und 3 benachrichtigen, wenn etwas ankommt.</p>
+      <div class="shots">
+        <figure class="shot" data-img="/img/de/captura.jpg"><span>captura.jpg<br>598×1300</span><figcaption>„Zu prüfen“ mit zwei Käufen, bereit zum Bestätigen.</figcaption></figure>
+      </div>
+        </div>
+      </details>
+      <details id="apple-pay">
+        <summary><span class="mnum">2</span><span class="q"><b>Apple Pay automatisch</b><small>1 Minute, mit einem Kurzbefehl</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+      <p>Jede Apple-Pay-Zahlung kommt von selbst an.</p>
+        <div class="ios" role="group" aria-label="iOS">
+          <input type="radio" name="ios-ap" id="ios-ap-0" checked><label for="ios-ap-0">iOS 27</label>
+          <input type="radio" name="ios-ap" id="ios-ap-1"><label for="ios-ap-1">iOS 18 bis 26</label>
+          <p class="ios-which">Deine Version steht unter Einstellungen › Allgemein › Info.</p>
+          <div class="panel">
+            <h3>Mit dem fertigen Kurzbefehl</h3>
+            <div class="cta">
+              <!-- ATAJO APPLE PAY: reemplazar ENLACE-PROD-PENDIENTE por el id del enlace de iCloud armado con «spnt» (no «spnt dev»), en los 6 idiomas. -->
+              <a class="button big" href="https://www.icloud.com/shortcuts/ENLACE-PROD-PENDIENTE" data-atajo="apple-pay"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Kurzbefehl hinzufügen</a>
+              <p class="muted">Öffne den Link auf deinem iPhone. Kurzbefehle öffnet sich mit „spnt Apple Pay“.</p>
+            </div>
+            <ol class="steps">
+              <li>Tippe in der App Kurzbefehle auf <b>Kurzbefehl hinzufügen</b>.</li>
+              <li>Öffne den Kurzbefehl „spnt Apple Pay“ und tippe auf den Block <b>Wenn … verwendet wird</b>. Wähle <b>deine Karten</b> (die Wallet-Karten, die du erfassen willst). Lass <b>Automation</b> an und <b>Mitteilen</b> aus.</li>
+              <li>Tippe unten auf <b>ⓘ</b> › <b>Datenschutz</b> und schalte <b>Ausführen bei gesperrtem Gerät erlauben</b> und <b>spnt</b> ein.</li>
+            </ol>
+            <p>Fertig. Bei deiner nächsten Apple-Pay-Zahlung kommt „Von Apple Pay: 12,50 $ bei Händler“. Beim ersten Mal mit jeder Karte fragt SPNT, welche es ist; danach ist sie schon gewählt.</p>
+            <div class="shots">
+              <figure class="shot" data-img="/img/de/atajos/ios27-tarjetas.jpg"><span>atajos/ios27-tarjetas.jpg<br>598×1300</span><figcaption>Der Block „Wenn … verwendet wird“ mit den gewählten Karten.</figcaption></figure>
+              <figure class="shot" data-img="/img/de/atajos/ios27-privacidad.jpg"><span>atajos/ios27-privacidad.jpg<br>598×1300</span><figcaption>ⓘ › Datenschutz, mit Ausführen bei gesperrtem Gerät an.</figcaption></figure>
+            </div>
+      
+            <div class=\"accordion sub\">
+              <details id="apple-pay-a-mano">
+                <summary><span class="q"><b>Von Hand unter iOS 27</b><small>Wenn du den Kurzbefehl lieber selbst baust.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+                <div class="body">
+                  <ol class="steps">
+                    <li>Tippe in Kurzbefehle auf <b>+</b> für einen neuen Kurzbefehl und gib ihm einen Namen, zum Beispiel „spnt Apple Pay“.</li>
+                    <li>Füge den Auslöser <b>Wallet</b> hinzu („Wenn ich kontaktlos mit meiner Karte oder meinem Pass bezahle …“). Er erscheint auch in der Suche von Kurzbefehle, im Bereich Automation. Er lautet dann „Wenn <i>deine Karten</i> verwendet wird“.</li>
+                    <li><b>Aktion hinzufügen</b> › suche nach <b>spnt</b> › <b>Wallet-Kauf erfassen</b>. Wähle in jedem Feld die Variable der Zahlung, sodass dort steht: „<b>Betrag</b> USD bei <b>Händler</b> mit <b>Karte oder Pass</b> erfassen“.</li>
+                    <li>Tippe auf den Pfeil am Block „Wenn … verwendet wird“: Kategorien auf <b>Beliebige Kategorie</b>, Händler auf <b>Beliebiger Händler</b>, <b>Automation</b> an und <b>Mitteilen</b> aus. Schalte in der Aktion <b>Beim Ausführen anzeigen</b> aus.</li>
+                    <li><b>ⓘ</b> › <b>Datenschutz</b>: schalte <b>Ausführen bei gesperrtem Gerät erlauben</b> und <b>spnt</b> ein.</li>
+                  </ol>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="panel">
+            <h3>Über Automation</h3>
+            <p>In diesen Versionen lässt Apple Automationen nicht per Link teilen, deshalb geht es von Hand:</p>
+            <ol class="steps">
+              <li>Öffne in Kurzbefehle den Tab <b>Automation</b> und tippe auf <b>+</b>.</li>
+              <li>Wähle <b>Wallet</b>. Markiere deine Karten, lass beliebige Kategorien, wähle <b>Sofort ausführen</b> und tippe auf <b>Weiter</b>.</li>
+              <li>Tippe auf <b>Neue leere Automation</b> › <b>Aktion hinzufügen</b> › suche nach <b>spnt</b> › <b>Wallet-Kauf erfassen</b>.</li>
+              <li>Tippe auf jedes Feld und wähle die Angabe der Zahlung: Betrag, Händler und Karte. Tippe auf <b>Fertig</b>.</li>
+            </ol>
+          </div>
+        </div>
+        </div>
+      </details>
+      <details id="sms">
+        <summary><span class="mnum">3</span><span class="q"><b>Bank-SMS automatisch</b><small>2 Minuten, Schritt für Schritt</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+      <p>Jede Kauf-SMS deiner Bank kommt von selbst an. Dafür gibt es keinen Link: Der Absender ist bei jeder Bank anders, deshalb richtest du es in 2 Minuten ein. Hast du mehrere Banken, wiederhole es für jede.</p>
+        <div class="ios" role="group" aria-label="iOS">
+          <input type="radio" name="ios-sms" id="ios-sms-0" checked><label for="ios-sms-0">iOS 27</label>
+          <input type="radio" name="ios-sms" id="ios-sms-1"><label for="ios-sms-1">iOS 18 bis 26</label>
+          <p class="ios-which">Deine Version steht unter Einstellungen › Allgemein › Info.</p>
+          <div class="panel">
+            <h3>Mit einem neuen Kurzbefehl</h3>
+            <ol class="steps">
+              <li>Tippe in Kurzbefehle auf <b>+</b> für einen neuen Kurzbefehl und gib ihm einen Namen, zum Beispiel „spnt Bank-SMS“.</li>
+              <li>Füge den Auslöser <b>Nachricht</b> hinzu (er erscheint auch in der Suche von Kurzbefehle, im Bereich Automation). Wähle unter <b>Absender</b> die Nummer oder den Namen, unter dem dir deine Bank schreibt.</li>
+              <li><b>Aktion hinzufügen</b> › suche nach <b>spnt</b> › <b>Aus einer Nachricht erfassen</b>. Tippe in der Aktion auf „Nachricht“ und wähle die Variable <b>Nachricht</b>.</li>
+              <li>Lass im Block des Auslösers <b>Automation</b> an und <b>Mitteilen</b> aus. Schalte in der Aktion <b>Beim Ausführen anzeigen</b> aus.</li>
+              <li><b>ⓘ</b> › <b>Datenschutz</b>: schalte <b>Ausführen bei gesperrtem Gerät erlauben</b> und <b>spnt</b> ein.</li>
+            </ol>
+          </div>
+          <div class="panel">
+            <h3>Über Automation</h3>
+            <ol class="steps">
+              <li>Öffne in Kurzbefehle den Tab <b>Automation</b> und tippe auf <b>+</b>.</li>
+              <li>Wähle <b>Nachricht</b>. Wähle unter <b>Absender</b> die Nummer oder den Namen deiner Bank. Wähle <b>Sofort ausführen</b> und tippe auf <b>Weiter</b>.</li>
+              <li>Tippe auf <b>Neue leere Automation</b> › <b>Aktion hinzufügen</b> › suche nach <b>spnt</b> › <b>Aus einer Nachricht erfassen</b>.</li>
+              <li>Tippe in der Aktion auf „Nachricht“ und wähle die Variable <b>Nachricht</b> (die Kurzbefehleingabe). Tippe auf <b>Fertig</b>.</li>
+            </ol>
+            <div class="shots">
+              <figure class="shot" data-img="/img/de/atajos/ios26-mensaje.jpg"><span>atajos/ios26-mensaje.jpg<br>598×1300</span><figcaption>Die Nachricht-Automation mit der Bank als Absender und „Sofort ausführen“.</figcaption></figure>
+            </div>
+          </div>
+        </div>
+  
+      <p>Filtern ist nicht nötig: Codes, Werbung und andere Bank-SMS ohne Betrag werden ignoriert.</p>
+      <p>Zum Testen kauf etwas mit dieser Karte. Wenn die SMS ankommt, bekommst du „Aus einer SMS: 12,50 $ bei Händler“, auch bei gesperrtem iPhone.</p>
         </div>
       </details>
     </div>
-
-    <h3><span class="os">iOS 18 bis 26</span>Über Automation</h3>
-    <p>In diesen Versionen lässt Apple Automationen nicht per Link teilen, deshalb geht es von Hand:</p>
-    <ol class="steps">
-      <li>Öffne in Kurzbefehle den Tab <b>Automation</b> und tippe auf <b>+</b>.</li>
-      <li>Wähle <b>Wallet</b>. Markiere deine Karten, lass beliebige Kategorien, wähle <b>Sofort ausführen</b> und tippe auf <b>Weiter</b>.</li>
-      <li>Tippe auf <b>Neue leere Automation</b> › <b>Aktion hinzufügen</b> › suche nach <b>spnt</b> › <b>Wallet-Kauf erfassen</b>.</li>
-      <li>Tippe auf jedes Feld und wähle die Angabe der Zahlung: Betrag, Händler und Karte. Tippe auf <b>Fertig</b>.</li>
-    </ol>
-
-    <h2 class="group-title" id="sms">3 · Bank-SMS automatisch</h2>
-    <p>Jede Kauf-SMS deiner Bank kommt von selbst an. Dafür gibt es keinen Link: Der Absender ist bei jeder Bank anders, deshalb richtest du es in 2 Minuten ein. Hast du mehrere Banken, wiederhole es für jede.</p>
-
-    <h3><span class="os">iOS 27</span>Mit einem neuen Kurzbefehl</h3>
-    <ol class="steps">
-      <li>Tippe in Kurzbefehle auf <b>+</b> für einen neuen Kurzbefehl und gib ihm einen Namen, zum Beispiel „spnt Bank-SMS“.</li>
-      <li>Füge den Auslöser <b>Nachricht</b> hinzu (er erscheint auch in der Suche von Kurzbefehle, im Bereich Automation). Wähle unter <b>Absender</b> die Nummer oder den Namen, unter dem dir deine Bank schreibt.</li>
-      <li><b>Aktion hinzufügen</b> › suche nach <b>spnt</b> › <b>Aus einer Nachricht erfassen</b>. Tippe in der Aktion auf „Nachricht“ und wähle die Variable <b>Nachricht</b>.</li>
-      <li>Lass im Block des Auslösers <b>Automation</b> an und <b>Mitteilen</b> aus. Schalte in der Aktion <b>Beim Ausführen anzeigen</b> aus.</li>
-      <li><b>ⓘ</b> › <b>Datenschutz</b>: schalte <b>Ausführen bei gesperrtem Gerät erlauben</b> und <b>spnt</b> ein.</li>
-    </ol>
-
-    <h3><span class="os">iOS 18 bis 26</span>Über Automation</h3>
-    <ol class="steps">
-      <li>Öffne in Kurzbefehle den Tab <b>Automation</b> und tippe auf <b>+</b>.</li>
-      <li>Wähle <b>Nachricht</b>. Wähle unter <b>Absender</b> die Nummer oder den Namen deiner Bank. Wähle <b>Sofort ausführen</b> und tippe auf <b>Weiter</b>.</li>
-      <li>Tippe auf <b>Neue leere Automation</b> › <b>Aktion hinzufügen</b> › suche nach <b>spnt</b> › <b>Aus einer Nachricht erfassen</b>.</li>
-      <li>Tippe in der Aktion auf „Nachricht“ und wähle die Variable <b>Nachricht</b> (die Kurzbefehleingabe). Tippe auf <b>Fertig</b>.</li>
-    </ol>
-    <div class="shots">
-      <figure class="shot" data-img="/img/de/atajos/ios26-mensaje.jpg"><span>atajos/ios26-mensaje.jpg<br>598×1300</span><figcaption>Die Nachricht-Automation mit der Bank als Absender und „Sofort ausführen“.</figcaption></figure>
-    </div>
-    <p>Filtern ist nicht nötig: Codes, Werbung und andere Bank-SMS ohne Betrag werden ignoriert.</p>
-    <p>Zum Testen kauf etwas mit dieser Karte. Wenn die SMS ankommt, bekommst du „Aus einer SMS: 12,50 $ bei Händler“, auch bei gesperrtem iPhone.</p>
 
     <h2 class="group-title">Fragen</h2>
     <div class="accordion">
