@@ -43,7 +43,7 @@
     <p class="date">Alertas do banco e pagamentos com Apple Pay direto no SPNT.</p>
     <p class="lead">Quando chega o alerta do banco ou você paga com Apple Pay, o SPNT lê no seu iPhone e deixa a transação em “A revisar” com valor, estabelecimento, data e cartão. Você confirma com um toque. Nada é salvo sem você ver.</p>
 
-    <p class="hint">Você precisa do SPNT 1.1 ou posterior. Use um, dois ou os três.</p>
+    <p class="hint">Você precisa do SPNT 1.1 ou posterior. Use um, dois ou os três. Os passos também estão no app, em Ajustes › Dados › Automações.</p>
 
     <div class="accordion methods">
       <details id="pegar">
@@ -52,7 +52,7 @@
           <p>Funciona em qualquer iPhone e não precisa configurar nada.</p>
           <ol class="steps">
             <li>No Mensagens, mantenha pressionado o alerta do banco e toque em <b>Copiar</b>.</li>
-            <li>No SPNT, toque em <b>+</b> e escolha <b>Colar alerta</b>, em cima no centro. Se o que você copiou tem um valor, aparece “Pronto para colar”.</li>
+            <li>No SPNT, toque em <b>+</b> e escolha <b>Colar SMS</b>, em cima no centro. Se o que você copiou tem um valor, aparece “Pronto para colar”.</li>
             <li>Aparece <b>Ficaria assim</b>, com valor, estabelecimento, cartão e data. Toque em <b>Salvar</b>, ou em <b>Editar</b> para mudar algo.</li>
           </ol>
           <p class="hint">Se falta decidir algo, como o cartão, o botão diz <b>Revisar e salvar</b> e abre o formulário preenchido.</p>
@@ -195,7 +195,12 @@
         <summary><span class="q"><b>Por que ele pergunta qual é o cartão?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>Para aprender. Escolha uma vez e as próximas compras com esse cartão já vêm com ele. Se o cartão ainda não está no SPNT, “Criar cartão” monta com o nome e os dígitos já preenchidos.</p>
-          <p>Se o seu cartão for substituído e você usa com Apple Pay, o novo entra na Wallet como outro cartão: marque no atalho (no bloco “Quando … for usado”, ou na automação de Wallet no iOS 18 a 26) para os pagamentos continuarem chegando.</p>
+        </div>
+      </details>
+      <details id="reposicion">
+        <summary><span class="q"><b>Se um cartão for substituído</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <p>No primeiro SMS do novo, o SPNT oferece trocar os últimos dígitos. Se você usa com Apple Pay, o novo entra na Wallet como outro cartão: marque-o também no atalho (“spnt Apple Pay” › “Quando … for usado”; no iOS 18 a 26, na automação de Wallet). Ele só roda com os cartões escolhidos.</p>
         </div>
       </details>
       <details id="no-llega">

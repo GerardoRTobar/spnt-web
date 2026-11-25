@@ -43,7 +43,7 @@
     <p class="date">Bank alerts and Apple Pay payments, straight into SPNT.</p>
     <p class="lead">When your bank texts you or you pay with Apple Pay, SPNT reads it on your iPhone and leaves the transaction in “To review” with the amount, merchant, date and card. You confirm it with one tap. Nothing is saved without you seeing it.</p>
 
-    <p class="hint">You need SPNT 1.1 or later. Use one, two or all three.</p>
+    <p class="hint">You need SPNT 1.1 or later. Use one, two or all three. The steps are also in the app, under Settings › Data › Automations.</p>
 
     <div class="accordion methods">
       <details id="pegar">
@@ -52,7 +52,7 @@
           <p>Works on any iPhone, with nothing to set up.</p>
           <ol class="steps">
             <li>In Messages, touch and hold your bank’s alert and tap <b>Copy</b>.</li>
-            <li>In SPNT, tap <b>+</b> and choose <b>Paste alert</b>, at the top center. If what you copied has an amount, it says “Ready to paste”.</li>
+            <li>In SPNT, tap <b>+</b> and choose <b>Paste text</b>, at the top center. If what you copied has an amount, it says “Ready to paste”.</li>
             <li><b>Here’s how it’d look</b> appears, with the amount, merchant, card and date. Tap <b>Save</b>, or <b>Edit</b> to change something.</li>
           </ol>
           <p class="hint">If something still needs deciding, like the card, the button says <b>Review and save</b> and opens the filled-in form.</p>
@@ -195,7 +195,12 @@
         <summary><span class="q"><b>Why does it ask which card it is?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>To learn. Pick it once and the next purchases with that card come in with it. If the card isn’t in SPNT yet, “Create card” sets it up with the name and digits filled in.</p>
-          <p>If your card is replaced and you use it with Apple Pay, the new one enters Wallet as a different card: select it in the shortcut (in the “When … is used” block, or in the Wallet automation on iOS 18 to 26) so its payments keep coming in.</p>
+        </div>
+      </details>
+      <details id="reposicion">
+        <summary><span class="q"><b>If a card is replaced</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <p>With the first text from the new one, SPNT offers to change its last digits. If you use it with Apple Pay, the new card enters Wallet as a different card: also select it in the shortcut (“spnt Apple Pay” › “When … is used”; on iOS 18 to 26, in the Wallet automation). It only runs for the cards you chose.</p>
         </div>
       </details>
       <details id="no-llega">

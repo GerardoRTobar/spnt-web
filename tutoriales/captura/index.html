@@ -43,7 +43,7 @@
     <p class="date">Alertas del banco y pagos con Apple Pay directo a SPNT.</p>
     <p class="lead">Cuando te llega la alerta del banco o pagás con Apple Pay, SPNT la lee en tu iPhone y te deja el movimiento en «Por revisar» con monto, comercio, fecha y tarjeta. Lo confirmás con un toque. Nada se guarda sin que lo veas.</p>
 
-    <p class="hint">Necesitás SPNT 1.1 o posterior. Podés usar uno, dos o los tres.</p>
+    <p class="hint">Necesitás SPNT 1.1 o posterior. Podés usar uno, dos o los tres. Los pasos también están en la app, en Ajustes › Datos › Automatizaciones.</p>
 
     <div class="accordion methods">
       <details id="pegar">
@@ -52,7 +52,7 @@
           <p>Funciona en cualquier iPhone y no hay que configurar nada.</p>
           <ol class="steps">
             <li>En Mensajes, mantené presionada la alerta del banco y tocá <b>Copiar</b>.</li>
-            <li>En SPNT, tocá <b>+</b> y elegí <b>Pegar alerta</b>, arriba al centro. Si lo copiado trae un monto, dice «Listo para pegar».</li>
+            <li>En SPNT, tocá <b>+</b> y elegí <b>Pegar SMS</b>, arriba al centro. Si lo copiado trae un monto, dice «Listo para pegar».</li>
             <li>Aparece <b>Así quedaría</b>, con monto, comercio, tarjeta y fecha. Tocá <b>Guardar</b>, o <b>Editar</b> si querés cambiar algo.</li>
           </ol>
           <p class="hint">Si falta decidir algo, como la tarjeta, el botón dice <b>Revisar y guardar</b> y abre el formulario lleno.</p>
@@ -63,7 +63,7 @@
             </figure>
             <svg class="flow-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <figure class="flow-item">
-              <div class="iphone"><video class="loop" data-loop="/video/es/clip-pegar" poster="/video/es/clip-pegar.jpg" width="600" height="1304" muted loop playsinline preload="none" aria-label="Video: en SPNT se toca +, luego Pegar alerta; aparece Así quedaría con Cafe Central por USD 8.75 y se toca Guardar."></video></div>
+              <div class="iphone"><video class="loop" data-loop="/video/es/clip-pegar" poster="/video/es/clip-pegar.jpg" width="600" height="1304" muted loop playsinline preload="none" aria-label="Video: en SPNT se toca +, luego Pegar SMS; aparece Así quedaría con Cafe Central por USD 8.75 y se toca Guardar."></video></div>
               <figcaption>La pegás en SPNT y la guardás.</figcaption>
             </figure>
           </div>
@@ -191,7 +191,12 @@
         <summary><span class="q"><b>¿Por qué me pregunta qué tarjeta es?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>Para aprender. Elegila una vez y las siguientes compras con esa tarjeta ya salen con ella. Si todavía no la tenés en SPNT, «Crear tarjeta» la arma con el nombre y los dígitos ya puestos.</p>
-          <p>Si te reponen una tarjeta y la usás con Apple Pay, la nueva entra a Wallet como otra tarjeta: marcala en el atajo (en el bloque «Cuando se use…», o en la automatización de Wallet en iOS 18 a 26) para que sus pagos sigan llegando.</p>
+        </div>
+      </details>
+      <details id="reposicion">
+        <summary><span class="q"><b>Si te reponen una tarjeta</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <p>Con el primer SMS de la nueva, SPNT te ofrece cambiar sus últimos dígitos. Si la usás con Apple Pay, la nueva entra a Wallet como otra tarjeta: marcala también en el atajo («spnt Apple Pay» › «Cuando se use»; en iOS 18 a 26, en la automatización de Wallet). Solo corre con las tarjetas que elegiste.</p>
         </div>
       </details>
       <details id="no-llega">

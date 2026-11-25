@@ -43,7 +43,7 @@
     <p class="date">Alertes de la banque et paiements Apple Pay, directement dans SPNT.</p>
     <p class="lead">Quand ta banque t’envoie une alerte ou que tu paies avec Apple Pay, SPNT la lit sur ton iPhone et dépose la transaction dans « À vérifier » avec le montant, le commerçant, la date et la carte. Tu confirmes d’un toucher. Rien n’est enregistré sans que tu le voies.</p>
 
-    <p class="hint">Il te faut SPNT 1.1 ou version ultérieure. Utilise une, deux ou les trois.</p>
+    <p class="hint">Il te faut SPNT 1.1 ou version ultérieure. Utilise une, deux ou les trois. Les étapes sont aussi dans l’app, dans Réglages › Données › Automatisations.</p>
 
     <div class="accordion methods">
       <details id="pegar">
@@ -52,7 +52,7 @@
           <p>Ça marche sur n’importe quel iPhone, sans rien configurer.</p>
           <ol class="steps">
             <li>Dans Messages, maintiens le doigt sur l’alerte de la banque et touche <b>Copier</b>.</li>
-            <li>Dans SPNT, touche <b>+</b> et choisis <b>Coller l’alerte</b>, en haut au centre. Si ce que tu as copié contient un montant, c’est marqué « Prêt à coller ».</li>
+            <li>Dans SPNT, touche <b>+</b> et choisis <b>Coller le SMS</b>, en haut au centre. Si ce que tu as copié contient un montant, c’est marqué « Prêt à coller ».</li>
             <li><b>Voici ce que ça donnerait</b> apparaît, avec le montant, le commerçant, la carte et la date. Touche <b>Enregistrer</b>, ou <b>Modifier</b> pour changer quelque chose.</li>
           </ol>
           <p class="hint">S’il reste quelque chose à choisir, comme la carte, le bouton devient <b>Vérifier et enregistrer</b> et ouvre le formulaire rempli.</p>
@@ -195,7 +195,12 @@
         <summary><span class="q"><b>Pourquoi me demande-t-il quelle carte c’est ?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>Pour apprendre. Choisis-la une fois et les achats suivants avec cette carte arrivent avec elle. Si la carte n’est pas encore dans SPNT, « Créer une carte » la prépare avec le nom et les chiffres déjà remplis.</p>
-          <p>Si ta carte est remplacée et que tu l’utilises avec Apple Pay, la nouvelle entre dans Wallet comme une autre carte : coche-la dans le raccourci (dans le bloc « Lorsque … est utilisé », ou dans l’automatisation Wallet sur iOS 18 à 26) pour que ses paiements continuent d’arriver.</p>
+        </div>
+      </details>
+      <details id="reposicion">
+        <summary><span class="q"><b>Si une carte est remplacée</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <p>Au premier SMS de la nouvelle, SPNT te propose de changer ses derniers chiffres. Si tu l’utilises avec Apple Pay, la nouvelle entre dans Wallet comme une autre carte : coche-la aussi dans le raccourci (« spnt Apple Pay » › « Lorsque … est utilisé » ; sur iOS 18 à 26, dans l’automatisation Wallet). Il ne tourne qu’avec les cartes choisies.</p>
         </div>
       </details>
       <details id="no-llega">

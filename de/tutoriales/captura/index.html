@@ -43,7 +43,7 @@
     <p class="date">Bank-SMS und Apple-Pay-Zahlungen direkt in SPNT.</p>
     <p class="lead">Wenn deine Bank dir eine SMS schickt oder du mit Apple Pay zahlst, liest SPNT sie auf deinem iPhone und legt die Buchung unter „Zu prüfen“ ab, mit Betrag, Händler, Datum und Karte. Du bestätigst mit einem Tippen. Nichts wird gespeichert, ohne dass du es siehst.</p>
 
-    <p class="hint">Du brauchst SPNT 1.1 oder neuer. Nutze einen, zwei oder alle drei Wege.</p>
+    <p class="hint">Du brauchst SPNT 1.1 oder neuer. Nutze einen, zwei oder alle drei Wege. Die Schritte stehen auch in der App unter Einstellungen › Daten › Automationen.</p>
 
     <div class="accordion methods">
       <details id="pegar">
@@ -195,7 +195,12 @@
         <summary><span class="q"><b>Warum fragt es, welche Karte das ist?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>Um zu lernen. Wähle sie einmal, und die nächsten Käufe mit dieser Karte kommen schon mit ihr an. Ist die Karte noch nicht in SPNT, legt „Karte erstellen“ sie mit Namen und Ziffern schon ausgefüllt an.</p>
-          <p>Wird deine Karte ersetzt und du nutzt sie mit Apple Pay, kommt die neue als andere Karte in Wallet: Markiere sie im Kurzbefehl (im Block „Wenn … verwendet wird“ oder unter iOS 18 bis 26 in der Wallet-Automation), damit ihre Zahlungen weiter ankommen.</p>
+        </div>
+      </details>
+      <details id="reposicion">
+        <summary><span class="q"><b>Wenn eine Karte ersetzt wird</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <p>Mit der ersten SMS der neuen bietet SPNT an, die letzten Ziffern zu ändern. Nutzt du sie mit Apple Pay, kommt die neue als andere Karte in Wallet: Markiere sie auch im Kurzbefehl („spnt Apple Pay“ › „Wenn … verwendet wird“; unter iOS 18 bis 26 in der Wallet-Automation). Er läuft nur für die gewählten Karten.</p>
         </div>
       </details>
       <details id="no-llega">

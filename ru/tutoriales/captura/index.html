@@ -43,7 +43,7 @@
     <p class="date">SMS банка и оплаты Apple Pay — сразу в SPNT.</p>
     <p class="lead">Когда приходит SMS от банка или ты платишь через Apple Pay, SPNT читает его на твоём iPhone и кладёт операцию в раздел «На проверку» с суммой, магазином, датой и картой. Ты подтверждаешь одним касанием. Ничего не сохраняется без тебя.</p>
 
-    <p class="hint">Нужен SPNT 1.1 или новее. Можно пользоваться одним, двумя или всеми тремя способами.</p>
+    <p class="hint">Нужен SPNT 1.1 или новее. Можно пользоваться одним, двумя или всеми тремя способами. Эти шаги есть и в приложении: «Настройки › Данные › Автоматизации».</p>
 
     <div class="accordion methods">
       <details id="pegar">
@@ -195,7 +195,12 @@
         <summary><span class="q"><b>Почему он спрашивает, какая это карта?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>Чтобы запомнить. Выбери её один раз, и следующие покупки этой картой придут уже с ней. Если карты ещё нет в SPNT, «Создать карту» создаст её с уже заполненными названием и цифрами.</p>
-          <p>Если карту перевыпустили и ты платишь ей через Apple Pay, новая попадает в Wallet как другая карта: отметь её в команде (в блоке «Когда используется …» или в автоматизации Wallet в iOS 18–26), чтобы её оплаты продолжали приходить.</p>
+        </div>
+      </details>
+      <details id="reposicion">
+        <summary><span class="q"><b>Если карту перевыпустили</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <p>С первым SMS по новой карте SPNT предложит заменить последние цифры. Если ты платишь ею через Apple Pay, новая карта попадает в Wallet как другая: отметь её и в команде («spnt Apple Pay» › «Когда используется …»; в iOS 18–26 — в автоматизации Wallet). Она работает только с выбранными картами.</p>
         </div>
       </details>
       <details id="no-llega">
