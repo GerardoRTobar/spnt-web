@@ -436,7 +436,7 @@ footer .social svg { width: 16px; height: 16px; flex: none; }
   border: 0.95em solid #050506; border-radius: 6.3em; background: var(--card); color: var(--muted);
   font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; padding: 20px;
 }
-.shot img { display: block; width: 100%; height: auto; border-radius: 28px; border: 1px solid var(--line); }
+.shot img, .shot video { display: block; width: 100%; height: auto; aspect-ratio: 600 / 1304; object-fit: cover; border-radius: 28px; border: 1px solid var(--line); background: var(--card); }
 /* Método 1: la alerta del banco (ilustración) → flecha → spnt, a la par */
 .flow { display: grid; grid-template-columns: 1fr auto 1fr; align-items: start; gap: 12px; max-width: 470px; margin: 18px 0 8px; }
 .flow .shot { width: auto; }
