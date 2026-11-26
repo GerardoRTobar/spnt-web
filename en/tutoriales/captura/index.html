@@ -75,13 +75,12 @@
           <div class="panel">
             <h3>With the ready-made shortcut</h3>
             <div class="cta">
-              <!-- ATAJO APPLE PAY: reemplazar ENLACE-PROD-PENDIENTE por el id del enlace de iCloud armado con «spnt» (no «spnt dev»), en los 6 idiomas. -->
-              <a class="button big" href="https://www.icloud.com/shortcuts/ENLACE-PROD-PENDIENTE" data-atajo="apple-pay"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Add shortcut</a>
-              <p class="muted">Open it on your iPhone. Shortcuts opens with “spnt Apple Pay”.</p>
+              <a class="button big" href="https://www.icloud.com/shortcuts/a22f1f256ad3457688f54f175823e09b" data-atajo="apple-pay"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Add shortcut</a>
+              <p class="muted">Open it on your iPhone. Shortcuts opens with “Apple Pay spnt”.</p>
             </div>
             <ol class="steps">
               <li>Tap <b>Add Shortcut</b> in the Shortcuts app.</li>
-              <li>Open the “spnt Apple Pay” shortcut and tap the <b>When … is used</b> block. Pick <b>your cards</b> (the Wallet cards you want to log). Leave <b>Automation</b> on and <b>Notify</b> off.</li>
+              <li>Open the “Apple Pay spnt” shortcut and tap the <b>When … is used</b> block. Pick <b>your cards</b> (the Wallet cards you want to log). Leave <b>Automation</b> on and <b>Notify</b> off.</li>
               <li>Tap <b>ⓘ</b> in the bottom bar › <b>Privacy</b> and turn on <b>Allow Running When Locked</b> and <b>spnt</b>.</li>
             </ol>
             <p>Done. On your next Apple Pay payment you get “From Apple Pay: $12.50 at Merchant”. The first time with each card, SPNT asks which one it is; after that it’s picked for you.</p>
@@ -95,7 +94,7 @@
                 <summary><span class="q"><b>Do it by hand on iOS 27</b><small>If you’d rather build the shortcut yourself.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
                 <div class="body">
                   <ol class="steps">
-                    <li>In Shortcuts, tap <b>+</b> for a new shortcut and name it, for example “spnt Apple Pay”.</li>
+                    <li>In Shortcuts, tap <b>+</b> for a new shortcut and name it, for example “Apple Pay spnt”.</li>
                     <li>Add the <b>Wallet</b> trigger (“When I tap my card or pass to pay…”). It also shows up in the Shortcuts search, under Automation. It reads “When <i>your cards</i> is used”.</li>
                     <li><b>Add Action</b> › search for <b>spnt</b> › <b>Log Wallet purchase</b>. In each field pick the payment’s variable, so it reads “Log <b>Amount</b> USD at <b>Merchant</b> with <b>Card or Pass</b>”.</li>
                     <li>Tap the arrow on the “When … is used” block: Categories to <b>Any Category</b>, Merchants to <b>Any Merchant</b>, <b>Automation</b> on and <b>Notify</b> off. In the action, turn off <b>Show When Run</b>.</li>
@@ -191,7 +190,7 @@
       <details id="reposicion">
         <summary><span class="q"><b>If a card is replaced</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
-          <p>With the first text from the new one, SPNT offers to change its last digits. If you use it with Apple Pay, the new card enters Wallet as a different card: also select it in the shortcut (“spnt Apple Pay” › “When … is used”; on iOS 18 to 26, in the Wallet automation). It only runs for the cards you chose.</p>
+          <p>With the first text from the new one, SPNT offers to change its last digits. If you use it with Apple Pay, the new card enters Wallet as a different card: also select it in the shortcut (“Apple Pay spnt” › “When … is used”; on iOS 18 to 26, in the Wallet automation). It only runs for the cards you chose.</p>
         </div>
       </details>
       <details id="no-llega">
