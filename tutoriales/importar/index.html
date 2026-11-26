@@ -51,11 +51,11 @@
 
   <main id="contenido" class="wrap doc">
     <h1>Importar movimientos <span class="pronto">Llega con la 1.1</span></h1>
-    <p class="date">Cómo armar el archivo para agregar movimientos a SPNT.</p>
+    <p class="dek">Cómo armar el archivo para agregar movimientos a SPNT.</p>
     <p class="lead">En la app, Ajustes › Datos › Importar movimientos agrega movimientos desde un CSV sin borrar nada de lo que ya tenés. Antes de agregar ves qué entra, qué parece repetido y qué tiene errores.</p>
 
     <h2 class="group-title">El archivo</h2>
-    <p>Un CSV en UTF-8 con una fila por movimiento. La primera fila es el encabezado. Se aceptan comas o punto y coma, y el orden de las columnas no importa.</p>
+    <p>Un CSV en UTF-8 con una fila por movimiento. La primera fila es el encabezado. Se aceptan comas o punto y coma, y el orden de las columnas no importa. Los nombres de las columnas van en inglés, como en la tabla.</p>
 
     <h2 class="group-title">Columnas</h2>
     <div class="table-wrap">
@@ -80,13 +80,13 @@
 
     <h2 class="group-title">Ejemplo</h2>
     <pre class="code"><code>date,amount,kind,account,destination,category,subcategory,note,tags,currency,external_id
-2026-11-20,-12.50,,Visa,,Comida,Restaurantes,Pizza Hut,,,gmail:18c3f2a9b
-2026-11-21,-8.99,,Visa,,Suscripciones,,NETFLIX.COM,,,gmail:18c3f9d01
-2026-11-22,100,transfer,Planilla,Ahorro,,,,,,
-2026-11-23,1200,,Planilla,,Salario,,Quincena,,,</code></pre>
+2026-11-20,-12.50,,Visa,,Alimentación,Restaurantes,Pizza Hut,,,gmail:18c3f2a9b
+2026-11-21,-8.99,,Visa,,Entretenimiento,Streaming,NETFLIX.COM,,,gmail:18c3f9d01
+2026-11-22,100,transfer,Planilla,Ahorros,,,,,,
+2026-11-23,1200,,Planilla,,Salario,Sueldo,Quincena,,,</code></pre>
 
     <h2 class="group-title">Con tu asistente</h2>
-    <p>Si ya tenés un agente que lee tus correos del banco, o usás ChatGPT o Claude, pediles el archivo:</p>
+    <p>Si querés, tu asistente de IA (ChatGPT, Claude…) te arma el archivo. Lo que le pases queda en ese servicio, con sus reglas:</p>
     <ol class="steps">
       <li>En la app, abrí Ajustes › Datos › Importar movimientos y tocá «Que tu IA lo arme por ti». Se copian las indicaciones, con tus cuentas, tarjetas y categorías.</li>
       <li>Pegalas en tu asistente junto con tus correos, estados de cuenta o lo que tengas.</li>
@@ -118,44 +118,51 @@ Categorías de ingresos: [tus categorías de ingresos]</code></pre></div>
 
 
     <h2 class="group-title">Si importás mucho historial</h2>
-    <p>Lo más simple es importar lo que falta desde que empezaste a usar spnt. Si querés traer meses o años anteriores, tené en cuenta dos cosas:</p>
+    <p>Lo más simple es importar lo que falta desde que empezaste a usar SPNT. Si querés traer meses o años anteriores, tené en cuenta dos cosas:</p>
     <p><b>Cuentas.</b> El saldo de una cuenta es su saldo inicial más sus movimientos. Si creaste la cuenta con el saldo de hoy e importás meses anteriores, esos gastos se descuentan otra vez. Para un historial completo, poné como saldo inicial el que tenía la cuenta el primer día del historial.</p>
     <p><b>Tarjetas.</b> Cada compra va al corte de su fecha, aunque ya esté cerrado. Incluí también los pagos de tarjeta de esos meses: si faltan, esos cortes quedan con saldo pendiente. Las compras de un corte que ya pagaste quedan aparte y no entran salvo que las marqués: si el corte está cuadrado, lo más probable es que sobren.</p>
     <p>Antes de agregar, la vista previa te avisa de las dos cosas.</p>
 
     <h2 class="group-title">Preguntas</h2>
     <div class="accordion">
-      <details>
+      <details id="borrar">
         <summary><span class="q"><b>¿Borra lo que ya tengo?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>No. Importar movimientos solo agrega. Y si algo no quedó bien, cada importación se puede abrir para revisar y editar sus movimientos, o deshacerla entera.</p>
         </div>
       </details>
-      <details>
+      <details id="dos-veces">
         <summary><span class="q"><b>¿Y si importo dos veces el mismo archivo?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>Las filas con el mismo external_id se saltan. Las que no lo tienen y se parecen a algo que ya está (mismo monto, misma cuenta, fechas cercanas) aparecen como posibles duplicados y no entran salvo que las marques.</p>
         </div>
       </details>
-      <details>
+      <details id="deshacer">
         <summary><span class="q"><b>¿Cómo deshago una importación?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>En la misma pantalla, bajo «Importaciones», cada una tiene «Deshacer», que borra los movimientos que agregó.</p>
         </div>
       </details>
-      <details>
+      <details id="no-existe">
         <summary><span class="q"><b>¿Y si una cuenta o categoría no existe en la app?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>La vista previa te deja elegir una que ya tenés, crearla u omitir esas filas. La app recuerda lo que elegiste para la próxima vez.</p>
         </div>
       </details>
-      <details>
+      <details id="precio">
         <summary><span class="q"><b>¿Cuesta algo?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>Importar es gratis. Lo que importás respeta tu plan: más de 2 cuentas o tarjetas y otras monedas son parte de Premium.</p>
         </div>
       </details>
     </div>
+    <section class="get-box" aria-labelledby="descargar">
+      <div>
+        <h2 id="descargar">¿Todavía no tenés SPNT?</h2>
+        <p>Es gratis para empezar y no necesitás crear una cuenta. Para iPhone con iOS 18 o posterior.</p>
+      </div>
+      <a class="badge" href="https://apps.apple.com/app/id6834027908">Descargar en el App Store</a>
+    </section>
   </main>
 
 

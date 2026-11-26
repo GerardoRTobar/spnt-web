@@ -51,11 +51,12 @@
 
   <main id="contenido" class="wrap doc">
     <h1>Automatizar o registro de transações</h1>
-    <p class="date">Anotar cada compra à mão? Que preguiça. Apple Pay e os alertas do seu banco entram sozinhos no SPNT; você só confirma.</p>
+    <p class="dek">Anotar cada compra à mão? Que preguiça. Apple Pay e os alertas do seu banco entram sozinhos no SPNT; você só confirma.</p>
     <p class="lead">Quando chega o alerta do banco ou você paga com Apple Pay, o SPNT lê no seu iPhone e deixa a transação em “A revisar” com valor, estabelecimento, data e cartão. Você confirma com um toque. Nada é salvo sem você ver.</p>
 
     <p class="hint">Você precisa do SPNT 1.1 ou posterior. Use um, dois ou os três. Os passos também estão no app, em Ajustes › Dados › Automações.</p>
 
+    <h2 class="visually-hidden">Métodos</h2>
     <div class="accordion methods">
       <details id="pegar">
         <summary><span class="mnum">1</span><span class="q"><b>Colar o SMS</b><small>Sem configurar nada</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
@@ -84,6 +85,7 @@
         <summary><span class="mnum">2</span><span class="q"><b>Apple Pay automático</b><small>1 minuto, com um atalho</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
       <p>Cada pagamento com Apple Pay entra sozinho.</p>
+      <p class="hint">O atalho envia os valores em dólares (USD). Se você paga em reais ou em outra moeda, troque a moeda no formulário antes de salvar (<a href="#moneda">detalhes</a>).</p>
         <div class="ios" role="group" aria-label="iOS">
           <input type="radio" name="ios-ap" id="ios-ap-0" checked><label for="ios-ap-0">iOS 27</label>
           <input type="radio" name="ios-ap" id="ios-ap-1"><label for="ios-ap-1">iOS 18 a 26</label>
@@ -111,7 +113,7 @@
                 <div class="body">
                   <ol class="steps">
                     <li>No Atalhos, toque em <b>+</b> para um atalho novo e dê um nome, por exemplo “Apple Pay spnt”.</li>
-                    <li>Adicione o gatilho <b>Wallet</b> (“Ao fazer um pagamento por aproximação com meu cartão ou passe…”). Ele também aparece na busca do Atalhos, na seção Automação. Fica como “Quando <i>seus cartões</i> for usado”.</li>
+                    <li>Adicione o gatilho <b>Wallet</b> (“Ao fazer um pagamento por aproximação com meu cartão ou passe…”). Ele também aparece na busca do Atalhos, na seção Automação. O bloco fica como “Quando … for usado”, com os seus cartões no lugar dos pontos.</li>
                     <li><b>Adicionar Ação</b> › busque <b>spnt</b> › <b>Registrar compra da Wallet</b>. Em cada campo escolha a variável do pagamento, para ficar “Registrar <b>Valor</b> USD em <b>Estabelecimento</b> com <b>Cartão ou Passe</b>”.</li>
                     <li>Toque na seta do bloco “Quando … for usado”: Categorias em <b>Qualquer categoria</b>, Estabelecimentos em <b>Qualquer estabelecimento</b>, <b>Automação</b> ativado e <b>Notificar</b> desativado. Na ação, desative <b>Mostrar ao Executar</b>.</li>
                     <li><b>ⓘ</b> › <b>Privacidade</b>: ative <b>Permitir execução com o dispositivo bloqueado</b> e <b>spnt</b>.</li>
@@ -185,7 +187,7 @@
       <details id="moneda">
         <summary><span class="q"><b>E se eu pagar em outra moeda?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
-          <p>Se o alerta do banco diz a moeda, por exemplo “EUR 30,00”, o SPNT detecta e o formulário converte com a cotação do dia. No atalho do Apple Pay a moeda fica fixa em USD: uma compra em outra moeda entra como dólares, então troque no formulário antes de salvar.</p>
+          <p>Se o alerta do banco diz a moeda, por exemplo “EUR 30,00”, o SPNT detecta e o formulário converte com a cotação do dia. Já o atalho do Apple Pay sempre envia o valor em dólares (USD), mesmo que você tenha pago em outra moeda: antes de salvar, toque no rascunho e troque a moeda no formulário.</p>
         </div>
       </details>
       <details id="sms-y-apple-pay">
@@ -226,6 +228,13 @@
         </div>
       </details>
     </div>
+    <section class="get-box" aria-labelledby="descargar">
+      <div>
+        <h2 id="descargar">Ainda não tem o SPNT?</h2>
+        <p>É grátis para começar e você não precisa criar conta. Para iPhone com iOS 18 ou posterior.</p>
+      </div>
+      <a class="badge" href="https://apps.apple.com/app/id6834027908">Baixar na App Store</a>
+    </section>
   </main>
 
 

@@ -51,11 +51,11 @@
 
   <main id="contenido" class="wrap doc">
     <h1>Buchungen importieren <span class="pronto">Kommt mit 1.1</span></h1>
-    <p class="date">So baust du die Datei, um Buchungen zu SPNT hinzuzufügen.</p>
+    <p class="dek">So baust du die Datei, um Buchungen zu SPNT hinzuzufügen.</p>
     <p class="lead">In der App fügt Einstellungen › Daten › Buchungen importieren Buchungen aus einer CSV-Datei hinzu, ohne etwas Vorhandenes zu löschen. Vorher siehst du, was übernommen wird, was doppelt aussieht und was Fehler hat.</p>
 
     <h2 class="group-title">Die Datei</h2>
-    <p>Eine CSV-Datei in UTF-8 mit einer Zeile pro Buchung. Die erste Zeile ist die Kopfzeile. Kommas oder Semikolons gehen beide, die Reihenfolge der Spalten ist egal.</p>
+    <p>Eine CSV-Datei in UTF-8 mit einer Zeile pro Buchung. Die erste Zeile ist die Kopfzeile. Kommas oder Semikolons gehen beide, die Reihenfolge der Spalten ist egal. Die Spaltennamen bleiben englisch, genau wie in der Tabelle.</p>
 
     <h2 class="group-title">Spalten</h2>
     <div class="table-wrap">
@@ -71,7 +71,7 @@
           <tr><td><code>note</code></td><td>Nein</td><td>Die Beschreibung, zum Beispiel der Händler.</td></tr>
           <tr><td><code>tags</code></td><td>Nein</td><td>Tags, getrennt durch |.</td></tr>
           <tr><td><code>currency</code></td><td>Nein</td><td>Ein dreistelliger Code wie EUR. Leer: deine Hauptwährung.</td></tr>
-          <tr><td><code>statement</code></td><td>Nein</td><td>Nur Karten: das Abschlussdatum des Kontoauszugs, wenn du ihn wählen willst.</td></tr>
+          <tr><td><code>statement</code></td><td>Nein</td><td>Nur Karten: das Abschlussdatum der Kreditkartenabrechnung, wenn du sie wählen willst.</td></tr>
           <tr><td><code>pending</code></td><td>Nein</td><td>true, wenn noch zu zahlen.</td></tr>
           <tr><td><code>external_id</code></td><td>Nein, aber empfohlen</td><td>Eine feste Kennung aus der Quelle: die ID der E-Mail oder die Autorisierungsnummer. Damit entstehen beim erneuten Import derselben Datei keine Duplikate.</td></tr>
         </tbody>
@@ -80,13 +80,13 @@
 
     <h2 class="group-title">Beispiel</h2>
     <pre class="code"><code>date,amount,kind,account,destination,category,subcategory,note,tags,currency,external_id
-2026-11-20,-12.50,,Visa,,Comida,Restaurantes,Pizza Hut,,,gmail:18c3f2a9b
-2026-11-21,-8.99,,Visa,,Suscripciones,,NETFLIX.COM,,,gmail:18c3f9d01
-2026-11-22,100,transfer,Planilla,Ahorro,,,,,,
-2026-11-23,1200,,Planilla,,Salario,,Quincena,,,</code></pre>
+2026-11-20,-12.50,,Visa,,Lebensmittel,Restaurants,Pizza Hut,,,gmail:18c3f2a9b
+2026-11-21,-8.99,,Visa,,Unterhaltung,Streaming,NETFLIX.COM,,,gmail:18c3f9d01
+2026-11-22,100,transfer,Hauptbank,Ersparnisse,,,,,,
+2026-11-23,1200,,Hauptbank,,Gehalt,Lohn,Gehalt November,,,</code></pre>
 
     <h2 class="group-title">Mit deinem Assistenten</h2>
-    <p>Wenn du schon einen Agenten hast, der deine Bank-E-Mails liest, oder ChatGPT oder Claude nutzt, lass ihn die Datei erstellen:</p>
+    <p>Wenn du magst, erstellt dir dein KI-Assistent (ChatGPT, Claude…) die Datei. Was du ihm gibst, bleibt bei diesem Dienst, nach dessen Regeln:</p>
     <ol class="steps">
       <li>Öffne in der App Einstellungen › Daten › Buchungen importieren und tippe auf „Lass deine KI sie erstellen“. Die Anleitung wird kopiert, mit deinen Konten, Karten und Kategorien.</li>
       <li>Füge sie zusammen mit deinen E-Mails, Kontoauszügen oder was du hast in deinen Assistenten ein.</li>
@@ -118,44 +118,51 @@ Einnahmenkategorien: [deine Einnahmenkategorien]</code></pre></div>
 
 
     <h2 class="group-title">Wenn du viel Verlauf importierst</h2>
-    <p>Am einfachsten importierst du, was seit deinem Start mit spnt fehlt. Willst du frühere Monate oder Jahre übernehmen, beachte zwei Dinge:</p>
+    <p>Am einfachsten importierst du, was seit deinem Start mit SPNT fehlt. Willst du frühere Monate oder Jahre übernehmen, beachte zwei Dinge:</p>
     <p><b>Konten.</b> Der Kontostand ist der Anfangssaldo plus die Buchungen. Hast du das Konto mit dem heutigen Stand angelegt und importierst frühere Monate, werden diese Ausgaben noch einmal abgezogen. Für einen vollständigen Verlauf setz als Anfangssaldo den Stand am ersten Tag des Verlaufs.</p>
     <p><b>Karten.</b> Jeder Kauf landet in der Abrechnung seines Datums, auch wenn sie schon abgeschlossen ist. Nimm auch die Kartenzahlungen dieser Monate auf: Fehlen sie, bleibt in diesen Abrechnungen ein offener Betrag. Käufe aus einer schon bezahlten Abrechnung werden beiseitegelegt und nur hinzugefügt, wenn du sie markierst: Ist die Abrechnung ausgeglichen, sind sie höchstwahrscheinlich überflüssig.</p>
     <p>Vor dem Hinzufügen weist dich die Vorschau auf beides hin.</p>
 
     <h2 class="group-title">Fragen</h2>
     <div class="accordion">
-      <details>
-        <summary><span class="q"><b>Löscht das, was ich schon habe?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <details id="borrar">
+        <summary><span class="q"><b>Wird dabei gelöscht, was ich schon habe?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>Nein. Buchungen importieren fügt nur hinzu. Und wenn etwas nicht stimmt, kannst du jeden Import öffnen, um seine Buchungen zu prüfen und zu bearbeiten, oder ihn ganz rückgängig machen.</p>
         </div>
       </details>
-      <details>
+      <details id="dos-veces">
         <summary><span class="q"><b>Was, wenn ich dieselbe Datei zweimal importiere?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>Zeilen mit derselben external_id werden übersprungen. Zeilen ohne, die etwas Vorhandenem ähneln (gleicher Betrag, gleiches Konto, nahe Daten), erscheinen als mögliche Duplikate und werden nur übernommen, wenn du sie einschaltest.</p>
         </div>
       </details>
-      <details>
+      <details id="deshacer">
         <summary><span class="q"><b>Wie mache ich einen Import rückgängig?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>Auf demselben Bildschirm hat unter „Importe“ jeder Import „Rückgängig“, das die hinzugefügten Buchungen löscht.</p>
         </div>
       </details>
-      <details>
+      <details id="no-existe">
         <summary><span class="q"><b>Was, wenn es ein Konto oder eine Kategorie in der App nicht gibt?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>In der Vorschau wählst du ein vorhandenes, erstellst es oder überspringst diese Zeilen. Die App merkt sich deine Wahl.</p>
         </div>
       </details>
-      <details>
+      <details id="precio">
         <summary><span class="q"><b>Kostet das etwas?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>Importieren ist kostenlos. Was du importierst, folgt deinem Plan: mehr als 2 Konten oder Karten und andere Währungen gehören zu Premium.</p>
         </div>
       </details>
     </div>
+    <section class="get-box" aria-labelledby="descargar">
+      <div>
+        <h2 id="descargar">Du hast SPNT noch nicht?</h2>
+        <p>Kostenlos starten, ohne Konto. Für iPhone mit iOS 18 oder neuer.</p>
+      </div>
+      <a class="badge" href="https://apps.apple.com/app/id6834027908">Laden im App Store</a>
+    </section>
   </main>
 
 

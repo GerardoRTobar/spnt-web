@@ -51,11 +51,11 @@
 
   <main id="contenido" class="wrap doc">
     <h1>Import transactions <span class="pronto">Coming in 1.1</span></h1>
-    <p class="date">How to build the file to add transactions to SPNT.</p>
+    <p class="dek">How to build the file to add transactions to SPNT.</p>
     <p class="lead">In the app, Settings › Data › Import transactions adds transactions from a CSV without deleting anything you already have. Before adding, you see what goes in, what looks repeated and what has errors.</p>
 
     <h2 class="group-title">The file</h2>
-    <p>A UTF-8 CSV with one row per transaction. The first row is the header. Commas or semicolons both work, and column order doesn’t matter.</p>
+    <p>A UTF-8 CSV with one row per transaction. The first row is the header. Commas or semicolons both work, and column order doesn’t matter. Column names are in English, exactly as in the table.</p>
 
     <h2 class="group-title">Columns</h2>
     <div class="table-wrap">
@@ -80,13 +80,13 @@
 
     <h2 class="group-title">Example</h2>
     <pre class="code"><code>date,amount,kind,account,destination,category,subcategory,note,tags,currency,external_id
-2026-11-20,-12.50,,Visa,,Comida,Restaurantes,Pizza Hut,,,gmail:18c3f2a9b
-2026-11-21,-8.99,,Visa,,Suscripciones,,NETFLIX.COM,,,gmail:18c3f9d01
-2026-11-22,100,transfer,Planilla,Ahorro,,,,,,
-2026-11-23,1200,,Planilla,,Salario,,Quincena,,,</code></pre>
+2026-11-20,-12.50,,Visa,,Food,Restaurants,Pizza Hut,,,gmail:18c3f2a9b
+2026-11-21,-8.99,,Visa,,Entertainment,Streaming,NETFLIX.COM,,,gmail:18c3f9d01
+2026-11-22,100,transfer,Main Bank,Savings,,,,,,
+2026-11-23,1200,,Main Bank,,Salary,,Paycheck,,,</code></pre>
 
     <h2 class="group-title">With your assistant</h2>
-    <p>If you already have an agent that reads your bank emails, or you use ChatGPT or Claude, ask it for the file:</p>
+    <p>If you like, your AI assistant (ChatGPT, Claude…) can build the file for you. Whatever you give it stays with that service, under its rules:</p>
     <ol class="steps">
       <li>In the app, open Settings › Data › Import transactions and tap “Let your AI build it for you”. It copies the instructions, with your accounts, cards and categories.</li>
       <li>Paste them into your assistant along with your emails, statements or whatever you have.</li>
@@ -118,44 +118,51 @@ Income categories: [your income categories]</code></pre></div>
 
 
     <h2 class="group-title">If you import a lot of history</h2>
-    <p>The simplest is to import what’s missing since you started using spnt. If you want to bring in earlier months or years, keep two things in mind:</p>
+    <p>The simplest is to import what’s missing since you started using SPNT. If you want to bring in earlier months or years, keep two things in mind:</p>
     <p><b>Accounts.</b> An account’s balance is its opening balance plus its transactions. If you created the account with today’s balance and import earlier months, those expenses are subtracted again. For a full history, set the opening balance to what the account had on the first day of that history.</p>
     <p><b>Cards.</b> Each purchase goes to the statement of its date, even if it’s already closed. Include the card payments for those months too: without them, those statements show a balance due. Purchases in a statement you already paid are set apart and left out unless you mark them: if the statement is settled, they most likely don’t belong.</p>
     <p>Before adding, the preview warns you about both.</p>
 
     <h2 class="group-title">Questions</h2>
     <div class="accordion">
-      <details>
+      <details id="borrar">
         <summary><span class="q"><b>Does it delete what I already have?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>No. Import transactions only adds. And if something didn’t come out right, you can open each import to review and edit its transactions, or undo it entirely.</p>
         </div>
       </details>
-      <details>
+      <details id="dos-veces">
         <summary><span class="q"><b>What if I import the same file twice?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>Rows with the same external_id are skipped. Rows without one that look like something already there (same amount, same account, nearby dates) show up as possible duplicates and don’t go in unless you turn them on.</p>
         </div>
       </details>
-      <details>
+      <details id="deshacer">
         <summary><span class="q"><b>How do I undo an import?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>On the same screen, under “Imports”, each one has “Undo”, which deletes the transactions it added.</p>
         </div>
       </details>
-      <details>
+      <details id="no-existe">
         <summary><span class="q"><b>What if an account or category doesn’t exist in the app?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>The preview lets you pick one you have, create it or skip those rows. The app remembers your choice for next time.</p>
         </div>
       </details>
-      <details>
+      <details id="precio">
         <summary><span class="q"><b>Does it cost anything?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>Importing is free. What you import follows your plan: more than 2 accounts or cards and other currencies are part of Premium.</p>
         </div>
       </details>
     </div>
+    <section class="get-box" aria-labelledby="descargar">
+      <div>
+        <h2 id="descargar">Don’t have SPNT yet?</h2>
+        <p>It’s free to start, and you don’t need an account. For iPhone with iOS 18 or later.</p>
+      </div>
+      <a class="badge" href="https://apps.apple.com/app/id6834027908">Download on the App Store</a>
+    </section>
   </main>
 
 

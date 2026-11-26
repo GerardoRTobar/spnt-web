@@ -6,13 +6,13 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="apple-itunes-app" content="app-id=6834027908">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Automatizar el ingreso de transacciones · SPNT</title>
+  <title>Registrar tus compras sin escribir · SPNT</title>
   <meta name="description" content="Cómo hacer que las alertas del banco y los pagos con Apple Pay entren solos a SPNT: pegar el SMS, el atajo de Apple Pay y la automatización de Mensajes, en iOS 27 y anteriores.">
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#121216" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="SPNT">
-  <meta property="og:title" content="Automatizar el ingreso de transacciones · SPNT">
+  <meta property="og:title" content="Registrar tus compras sin escribir · SPNT">
   <meta property="og:description" content="Cómo hacer que las alertas del banco y los pagos con Apple Pay entren solos a SPNT: pegar el SMS, el atajo de Apple Pay y la automatización de Mensajes, en iOS 27 y anteriores.">
   <meta property="og:url" content="https://spnt.money/tutoriales/captura/">
   <meta property="og:locale" content="es_LA">
@@ -50,12 +50,13 @@
   </header>
 
   <main id="contenido" class="wrap doc">
-    <h1>Automatizar el ingreso de transacciones</h1>
-    <p class="date">¿Anotar cada compra a mano? Qué pereza. Apple Pay y las alertas de tu banco entran solas a SPNT; vos solo confirmás.</p>
+    <h1>Registrar tus compras sin escribir</h1>
+    <p class="dek">¿Anotar cada compra a mano? Qué pereza. Apple Pay y las alertas de tu banco entran solas a SPNT; vos solo confirmás.</p>
     <p class="lead">Cuando te llega la alerta del banco o pagás con Apple Pay, SPNT la lee en tu iPhone y te deja el movimiento en «Por revisar» con monto, comercio, fecha y tarjeta. Lo confirmás con un toque. Nada se guarda sin que lo veas.</p>
 
     <p class="hint">Necesitás SPNT 1.1 o posterior. Podés usar uno, dos o los tres. Los pasos también están en la app, en Ajustes › Datos › Automatizaciones.</p>
 
+    <h2 class="visually-hidden">Métodos</h2>
     <div class="accordion methods">
       <details id="pegar">
         <summary><span class="mnum">1</span><span class="q"><b>Pegar el SMS</b><small>Sin configurar nada</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
@@ -111,7 +112,7 @@
                 <div class="body">
                   <ol class="steps">
                     <li>En Atajos, tocá <b>+</b> para un atajo nuevo y ponele un nombre, por ejemplo «Apple Pay spnt».</li>
-                    <li>Agregá el activador <b>Wallet</b> («Al realizar un pago sin contacto con mi tarjeta o pase…»). También sale en el buscador de Atajos, en la sección Automatización. Queda como «Cuando se use <i>tus tarjetas</i>».</li>
+                    <li>Agregá el activador <b>Wallet</b> («Al realizar un pago sin contacto con mi tarjeta o pase…»). También sale en el buscador de Atajos, en la sección Automatización. El bloque queda como «Cuando se use…», con tus tarjetas.</li>
                     <li><b>Agregar acción</b> › buscá <b>spnt</b> › <b>Registrar compra de Wallet</b>. En cada campo elegí la variable del pago, para que quede «Registrar <b>Cantidad</b> USD en <b>Comercio</b> con <b>Tarjeta o pase</b>».</li>
                     <li>Tocá la flecha del bloque «Cuando se use…»: Categorías en <b>Cualquier categoría</b>, Comercios en <b>Cualquier comercio</b>, <b>Automatización</b> encendido y <b>Notificar</b> apagado. En la acción, apagá <b>Mostrar al ejecutar</b>.</li>
                     <li><b>ⓘ</b> › <b>Privacidad</b>: encendé <b>Permitir ejecución en dispositivo bloqueado</b> y <b>spnt</b>.</li>
@@ -185,7 +186,7 @@
       <details id="moneda">
         <summary><span class="q"><b>¿Y si pago en otra moneda?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
-          <p>Si la alerta del banco dice la moneda, por ejemplo «EUR 30,00», SPNT la detecta y el formulario la convierte con la tasa del día. En el atajo de Apple Pay, la moneda queda fija en USD: una compra en otra moneda entra como dólares, así que cambiala en el formulario antes de guardar.</p>
+          <p>Si la alerta del banco dice la moneda, por ejemplo «EUR 30,00», SPNT la detecta y el formulario la convierte con la tasa del día. El atajo de Apple Pay, en cambio, siempre manda el monto en dólares (USD), aunque hayas pagado en otra moneda: antes de guardar, tocá el borrador y cambiá la moneda en el formulario.</p>
         </div>
       </details>
       <details id="sms-y-apple-pay">
@@ -226,6 +227,13 @@
         </div>
       </details>
     </div>
+    <section class="get-box" aria-labelledby="descargar">
+      <div>
+        <h2 id="descargar">¿Todavía no tenés SPNT?</h2>
+        <p>Es gratis para empezar y no necesitás crear una cuenta. Para iPhone con iOS 18 o posterior.</p>
+      </div>
+      <a class="badge" href="https://apps.apple.com/app/id6834027908">Descargar en el App Store</a>
+    </section>
   </main>
 
 

@@ -7,13 +7,13 @@
   <meta name="apple-itunes-app" content="app-id=6834027908">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Importer des transactions · SPNT</title>
-  <meta name="description" content="Comment préparer un CSV pour ajouter des transactions à SPNT : colonnes, exemple et instructions pour ton assistant.">
+  <meta name="description" content="Comment préparer un CSV pour ajouter des transactions à SPNT : colonnes, exemple et instructions pour votre assistant.">
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#121216" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="SPNT">
   <meta property="og:title" content="Importer des transactions · SPNT">
-  <meta property="og:description" content="Comment préparer un CSV pour ajouter des transactions à SPNT : colonnes, exemple et instructions pour ton assistant.">
+  <meta property="og:description" content="Comment préparer un CSV pour ajouter des transactions à SPNT : colonnes, exemple et instructions pour votre assistant.">
   <meta property="og:url" content="https://spnt.money/fr/tutoriales/importar/">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:locale:alternate" content="es_LA">
@@ -51,11 +51,11 @@
 
   <main id="contenido" class="wrap doc">
     <h1>Importer des transactions <span class="pronto">Arrive avec la 1.1</span></h1>
-    <p class="date">Comment préparer le fichier pour ajouter des transactions à SPNT.</p>
-    <p class="lead">Dans l’app, Réglages › Données › Importer des transactions ajoute des transactions depuis un CSV sans rien supprimer de ce que tu as déjà. Avant d’ajouter, tu vois ce qui entre, ce qui semble en double et ce qui contient des erreurs.</p>
+    <p class="dek">Comment préparer le fichier pour ajouter des transactions à SPNT.</p>
+    <p class="lead">Dans l’app, Réglages › Données › Importer des transactions ajoute des transactions depuis un CSV sans rien supprimer de ce que vous avez déjà. Avant d’ajouter, vous voyez ce qui entre, ce qui semble en double et ce qui contient des erreurs.</p>
 
     <h2 class="group-title">Le fichier</h2>
-    <p>Un CSV en UTF-8 avec une ligne par transaction. La première ligne est l’en-tête. Virgules ou points-virgules fonctionnent, et l’ordre des colonnes n’a pas d’importance.</p>
+    <p>Un CSV en UTF-8 avec une ligne par transaction. La première ligne est l’en-tête. Virgules ou points-virgules fonctionnent, et l’ordre des colonnes n’a pas d’importance. Les noms de colonnes restent en anglais, comme dans le tableau.</p>
 
     <h2 class="group-title">Colonnes</h2>
     <div class="table-wrap">
@@ -64,36 +64,36 @@
         <tbody>
           <tr><td><code>date</code></td><td>Oui</td><td>La date au format AAAA-MM-JJ, par exemple 2026-11-20.</td></tr>
           <tr><td><code>amount</code></td><td>Oui</td><td>Un nombre avec un point décimal, sans symbole monétaire ni séparateur de milliers. Négatif si l’argent est sorti, positif s’il est entré.</td></tr>
-          <tr><td><code>kind</code></td><td>Non</td><td>Vide : déduit du signe et du fait que c’est un compte ou une carte. Sinon : expense, income, transfer, cardCharge, cardCredit ou cardPayment.</td></tr>
+          <tr><td><code>kind</code></td><td>Non</td><td>Vide : déduit du signe et du fait que c’est un compte ou une carte. Sinon : expense, income, transfer, cardCharge, cardCredit ou cardPayment.</td></tr>
           <tr><td><code>account</code></td><td>Oui</td><td>Le nom d’un compte ou d’une carte, tel qu’il est dans l’app. Majuscules et accents n’ont pas d’importance.</td></tr>
-          <tr><td><code>destination</code></td><td>Pour transfer et cardPayment</td><td>Le compte de destination, ou la carte que tu paies.</td></tr>
-          <tr><td><code>category, subcategory</code></td><td>Non</td><td>Telles qu’elles sont dans l’app. Vides : sans catégorie.</td></tr>
+          <tr><td><code>destination</code></td><td>Pour transfer et cardPayment</td><td>Le compte de destination, ou la carte que vous payez.</td></tr>
+          <tr><td><code>category, subcategory</code></td><td>Non</td><td>Telles qu’elles sont dans l’app. Vides : sans catégorie.</td></tr>
           <tr><td><code>note</code></td><td>Non</td><td>La description, par exemple le commerçant.</td></tr>
           <tr><td><code>tags</code></td><td>Non</td><td>Étiquettes séparées par |.</td></tr>
-          <tr><td><code>currency</code></td><td>Non</td><td>Un code à 3 lettres comme EUR. Vide : ta devise principale.</td></tr>
-          <tr><td><code>statement</code></td><td>Non</td><td>Cartes seulement : la date de clôture du relevé, si tu veux le choisir.</td></tr>
+          <tr><td><code>currency</code></td><td>Non</td><td>Un code à 3 lettres comme EUR. Vide : votre devise principale.</td></tr>
+          <tr><td><code>statement</code></td><td>Non</td><td>Cartes seulement : la date de clôture du relevé, si vous voulez le choisir.</td></tr>
           <tr><td><code>pending</code></td><td>Non</td><td>true si c’est encore à payer.</td></tr>
-          <tr><td><code>external_id</code></td><td>Non, mais conseillé</td><td>Un identifiant stable de la source : l’id de l’e-mail ou le numéro d’autorisation. Avec lui, réimporter le même fichier ne crée aucun doublon.</td></tr>
+          <tr><td><code>external_id</code></td><td>Non, mais conseillé</td><td>Un identifiant stable de la source : l’id de l’e-mail ou le numéro d’autorisation. Avec lui, réimporter le même fichier ne crée aucun doublon.</td></tr>
         </tbody>
       </table>
     </div>
 
     <h2 class="group-title">Exemple</h2>
     <pre class="code"><code>date,amount,kind,account,destination,category,subcategory,note,tags,currency,external_id
-2026-11-20,-12.50,,Visa,,Comida,Restaurantes,Pizza Hut,,,gmail:18c3f2a9b
-2026-11-21,-8.99,,Visa,,Suscripciones,,NETFLIX.COM,,,gmail:18c3f9d01
-2026-11-22,100,transfer,Planilla,Ahorro,,,,,,
-2026-11-23,1200,,Planilla,,Salario,,Quincena,,,</code></pre>
+2026-11-20,-12.50,,Visa,,Alimentation,Restaurants,Pizza Hut,,,gmail:18c3f2a9b
+2026-11-21,-8.99,,Visa,,Loisirs,Streaming,NETFLIX.COM,,,gmail:18c3f9d01
+2026-11-22,100,transfer,Banque principale,Épargne,,,,,,
+2026-11-23,1200,,Banque principale,,Salaire,,Salaire de novembre,,,</code></pre>
 
-    <h2 class="group-title">Avec ton assistant</h2>
-    <p>Si tu as déjà un agent qui lit tes e-mails de banque, ou si tu utilises ChatGPT ou Claude, demande-lui le fichier :</p>
+    <h2 class="group-title">Avec votre assistant</h2>
+    <p>Si vous voulez, votre assistant IA (ChatGPT, Claude…) peut préparer le fichier pour vous. Ce que vous lui transmettez reste chez ce service, selon ses règles :</p>
     <ol class="steps">
-      <li>Dans l’app, ouvre Réglages › Données › Importer des transactions et touche « Laisse ton IA le préparer ». Les indications sont copiées, avec tes comptes, cartes et catégories.</li>
-      <li>Colle-les dans ton assistant avec tes e-mails, relevés ou ce que tu as.</li>
-      <li>Enregistre le CSV qu’il te renvoie et choisis-le dans l’app, ou ouvre-le depuis Fichiers ou Mail avec « Ouvrir avec… › SPNT ».</li>
+      <li>Dans l’app, ouvrez Réglages › Données › Importer des transactions et touchez « Laisse ton IA le préparer ». Les indications sont copiées, avec vos comptes, cartes et catégories.</li>
+      <li>Collez-les dans votre assistant avec vos e-mails, relevés ou ce que vous avez.</li>
+      <li>Enregistrez le CSV qu’il vous renvoie et choisissez-le dans l’app, ou ouvrez-le depuis Fichiers ou Mail avec « Ouvrir avec… › SPNT ».</li>
     </ol>
 
-    <p>Pas l’app sous la main ? Copie les indications, complète tes comptes, cartes et catégories à la fin, et colle-les dans ton assistant :</p>
+    <p>Pas l’app sous la main ? Copiez les indications, complétez vos comptes, cartes et catégories à la fin, et collez-les dans votre assistant :</p>
     <div class="copyable"><button type="button" class="copy-btn" data-done="Copié">Copier</button><pre class="code"><code>Convertis mes transactions en un fichier CSV téléchargeable à importer dans l’app SPNT. Une ligne par transaction, avec exactement cet en-tête :
 date,amount,kind,account,destination,category,subcategory,note,tags,currency,external_id
 
@@ -111,51 +111,58 @@ Règles :
 - N’invente pas de lignes : si ce n’est pas une dépense, un revenu ou un virement, ignore-le.
 - Donne-le-moi sous forme de fichier .csv téléchargeable que je peux enregistrer. Ne le colle pas dans le chat ni dans un bloc de code.
 
-Mes comptes: [tes comptes]
-Mes cartes: [tes cartes]
-Catégories de dépenses: [tes catégories de dépenses]
-Catégories de revenus: [tes catégories de revenus]</code></pre></div>
+Mes comptes : [vos comptes]
+Mes cartes : [vos cartes]
+Catégories de dépenses : [vos catégories de dépenses]
+Catégories de revenus : [vos catégories de revenus]</code></pre></div>
 
 
-    <h2 class="group-title">Si tu importes beaucoup d’historique</h2>
-    <p>Le plus simple est d’importer ce qui manque depuis que tu utilises spnt. Si tu veux ramener des mois ou des années plus anciens, garde deux choses en tête :</p>
-    <p><b>Comptes.</b> Le solde d’un compte, c’est son solde initial plus ses transactions. Si tu as créé le compte avec le solde d’aujourd’hui et que tu importes des mois antérieurs, ces dépenses sont déduites une deuxième fois. Pour un historique complet, mets comme solde initial celui du compte au premier jour de l’historique.</p>
-    <p><b>Cartes.</b> Chaque achat va dans le relevé de sa date, même s’il est déjà clôturé. Ajoute aussi les paiements de carte de ces mois : sans eux, ces relevés affichent un solde dû. Les achats d’un relevé déjà payé sont mis de côté et ne sont ajoutés que si tu les coches : si le relevé est soldé, ils sont très probablement en trop.</p>
-    <p>Avant d’ajouter, l’aperçu te prévient des deux.</p>
+    <h2 class="group-title">Si vous importez beaucoup d’historique</h2>
+    <p>Le plus simple est d’importer ce qui manque depuis que vous utilisez SPNT. Si vous voulez ramener des mois ou des années plus anciens, gardez deux choses en tête :</p>
+    <p><b>Comptes.</b> Le solde d’un compte, c’est son solde initial plus ses transactions. Si vous avez créé le compte avec le solde d’aujourd’hui et que vous importez des mois antérieurs, ces dépenses sont déduites une deuxième fois. Pour un historique complet, indiquez comme solde initial celui du compte au premier jour de l’historique.</p>
+    <p><b>Cartes.</b> Chaque achat va dans le relevé de sa date, même s’il est déjà clôturé. Ajoutez aussi les paiements de carte de ces mois : sans eux, ces relevés affichent un solde dû. Les achats d’un relevé déjà payé sont mis de côté et ne sont ajoutés que si vous les cochez : si le relevé est soldé, ils sont très probablement en trop.</p>
+    <p>Avant d’ajouter, l’aperçu vous prévient des deux.</p>
 
     <h2 class="group-title">Questions</h2>
     <div class="accordion">
-      <details>
-        <summary><span class="q"><b>Est-ce que ça supprime ce que j’ai déjà ?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <details id="borrar">
+        <summary><span class="q"><b>Est-ce que ça supprime ce que j’ai déjà ?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
-          <p>Non. Importer des transactions ne fait qu’ajouter. Et si quelque chose ne va pas, tu peux ouvrir chaque importation pour revoir et modifier ses transactions, ou l’annuler entièrement.</p>
+          <p>Non. Importer des transactions ne fait qu’ajouter. Et si quelque chose ne va pas, vous pouvez ouvrir chaque importation pour revoir et modifier ses transactions, ou l’annuler entièrement.</p>
         </div>
       </details>
-      <details>
-        <summary><span class="q"><b>Et si j’importe deux fois le même fichier ?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <details id="dos-veces">
+        <summary><span class="q"><b>Et si j’importe deux fois le même fichier ?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
-          <p>Les lignes avec le même external_id sont ignorées. Celles qui n’en ont pas et ressemblent à quelque chose de déjà présent (même montant, même compte, dates proches) apparaissent comme doublons possibles et n’entrent que si tu les actives.</p>
+          <p>Les lignes avec le même external_id sont ignorées. Celles qui n’en ont pas et ressemblent à quelque chose de déjà présent (même montant, même compte, dates proches) apparaissent comme doublons possibles et n’entrent que si vous les activez.</p>
         </div>
       </details>
-      <details>
-        <summary><span class="q"><b>Comment annuler une importation ?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <details id="deshacer">
+        <summary><span class="q"><b>Comment annuler une importation ?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
-          <p>Sur le même écran, sous « Importations », chacune a « Annuler », qui supprime les transactions ajoutées.</p>
+          <p>Sur le même écran, sous « Importations », chacune a « Annuler », qui supprime les transactions ajoutées.</p>
         </div>
       </details>
-      <details>
-        <summary><span class="q"><b>Et si un compte ou une catégorie n’existe pas dans l’app ?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <details id="no-existe">
+        <summary><span class="q"><b>Et si un compte ou une catégorie n’existe pas dans l’app ?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
-          <p>L’aperçu te laisse en choisir un existant, le créer ou ignorer ces lignes. L’app retient ton choix pour la prochaine fois.</p>
+          <p>L’aperçu vous laisse en choisir un existant, le créer ou ignorer ces lignes. L’app retient votre choix pour la prochaine fois.</p>
         </div>
       </details>
-      <details>
-        <summary><span class="q"><b>Est-ce payant ?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <details id="precio">
+        <summary><span class="q"><b>Est-ce payant ?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
-          <p>Importer est gratuit. Ce que tu importes suit ton forfait : plus de 2 comptes ou cartes et les autres devises font partie de Premium.</p>
+          <p>Importer est gratuit. Ce que vous importez suit votre forfait : plus de 2 comptes ou cartes et les autres devises font partie de Premium.</p>
         </div>
       </details>
     </div>
+    <section class="get-box" aria-labelledby="descargar">
+      <div>
+        <h2 id="descargar">Vous n’avez pas encore SPNT ?</h2>
+        <p>Gratuit pour commencer, sans créer de compte. Pour iPhone sous iOS 18 ou version ultérieure.</p>
+      </div>
+      <a class="badge" href="https://apps.apple.com/app/id6834027908">Télécharger dans l’App Store</a>
+    </section>
   </main>
 
 

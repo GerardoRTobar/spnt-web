@@ -51,11 +51,12 @@
 
   <main id="contenido" class="wrap doc">
     <h1>Automate transaction entry</h1>
-    <p class="date">Logging every purchase by hand? Ugh. Apple Pay and your bank’s alerts flow into SPNT on their own; you just confirm.</p>
+    <p class="dek">Logging every purchase by hand? Ugh. Apple Pay and your bank’s alerts flow into SPNT on their own; you just confirm.</p>
     <p class="lead">When your bank texts you or you pay with Apple Pay, SPNT reads it on your iPhone and leaves the transaction in “To review” with the amount, merchant, date and card. You confirm it with one tap. Nothing is saved without you seeing it.</p>
 
     <p class="hint">You need SPNT 1.1 or later. Use one, two or all three. The steps are also in the app, under Settings › Data › Automations.</p>
 
+    <h2 class="visually-hidden">Methods</h2>
     <div class="accordion methods">
       <details id="pegar">
         <summary><span class="mnum">1</span><span class="q"><b>Paste the text</b><small>Nothing to set up</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
@@ -111,7 +112,7 @@
                 <div class="body">
                   <ol class="steps">
                     <li>In Shortcuts, tap <b>+</b> for a new shortcut and name it, for example “Apple Pay spnt”.</li>
-                    <li>Add the <b>Wallet</b> trigger (“When I tap my card or pass to pay…”). It also shows up in the Shortcuts search, under Automation. It reads “When <i>your cards</i> is used”.</li>
+                    <li>Add the <b>Wallet</b> trigger (“When I tap my card or pass to pay…”). It also shows up in the Shortcuts search, under Automation. The block reads “When … is used”, with your cards in place of the dots.</li>
                     <li><b>Add Action</b> › search for <b>spnt</b> › <b>Log Wallet purchase</b>. In each field pick the payment’s variable, so it reads “Log <b>Amount</b> USD at <b>Merchant</b> with <b>Card or Pass</b>”.</li>
                     <li>Tap the arrow on the “When … is used” block: Categories to <b>Any Category</b>, Merchants to <b>Any Merchant</b>, <b>Automation</b> on and <b>Notify</b> off. In the action, turn off <b>Show When Run</b>.</li>
                     <li><b>ⓘ</b> › <b>Privacy</b>: turn on <b>Allow Running When Locked</b> and <b>spnt</b>.</li>
@@ -185,7 +186,7 @@
       <details id="moneda">
         <summary><span class="q"><b>What if I pay in another currency?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
-          <p>If the bank’s alert names the currency, for example “EUR 30.00”, SPNT detects it and the form converts it at the day’s rate. In the Apple Pay shortcut the currency is fixed to USD: a purchase in another currency comes in as dollars, so change it in the form before saving.</p>
+          <p>If the bank’s alert names the currency, for example “EUR 30.00”, SPNT detects it and the form converts it at the day’s rate. The Apple Pay shortcut, though, always sends the amount in US dollars (USD), even if you paid in another currency: before saving, tap the draft and change the currency in the form.</p>
         </div>
       </details>
       <details id="sms-y-apple-pay">
@@ -226,6 +227,13 @@
         </div>
       </details>
     </div>
+    <section class="get-box" aria-labelledby="descargar">
+      <div>
+        <h2 id="descargar">Don’t have SPNT yet?</h2>
+        <p>It’s free to start, and you don’t need an account. For iPhone with iOS 18 or later.</p>
+      </div>
+      <a class="badge" href="https://apps.apple.com/app/id6834027908">Download on the App Store</a>
+    </section>
   </main>
 
 
