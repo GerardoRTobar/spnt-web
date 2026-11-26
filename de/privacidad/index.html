@@ -40,7 +40,7 @@
 
   <main id="contenido" class="wrap doc">
     <h1>Datenschutzerklärung</h1>
-    <p class="date">Zuletzt aktualisiert: 12. November 2026</p>
+    <p class="date">Zuletzt aktualisiert: 26. November 2026</p>
 
     <p class="lead">SPNT ist eine App, mit der du deine Ausgaben, Konten und Karten verwaltest. Diese Erklärung beschreibt, welche Daten die App verarbeitet, wo sie gespeichert werden und was du damit tun kannst.</p>
 
@@ -48,7 +48,7 @@
       <h2 id="corta">Die Kurzfassung</h2>
       <ul class="checks">
         <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor" opacity=".15"/><path d="M6 10.2l2.6 2.6L14 7.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Wir verkaufen deine Daten nie und zeigen keine Werbung – ob kostenlos oder mit Premium.</li>
-        <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor" opacity=".15"/><path d="M6 10.2l2.6 2.6L14 7.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Deine Daten werden auf deinem iPhone gespeichert. Wenn du synchronisierst, werden sie verschlüsselt übertragen und nur dein Konto kann sie sehen.</li>
+        <li>Deine Daten bleiben auf deinem iPhone. Wenn du synchronisierst, gehen sie verschlüsselt an unsere Server. Wir schauen sie nicht an, verkaufen sie nicht und nutzen sie nicht für Werbung.</li>
         <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor" opacity=".15"/><path d="M6 10.2l2.6 2.6L14 7.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Wir nutzen kein Tracking und keine Analysetools von Drittanbietern.</li>
         <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor" opacity=".15"/><path d="M6 10.2l2.6 2.6L14 7.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Du kannst dein Konto und deine Daten jederzeit in der App löschen.</li>
       </ul>
@@ -64,7 +64,8 @@
         <summary><span class="num">1</span><span class="q"><b>Was auf deinem iPhone gespeichert wird</b><small>Alles, was du erfasst, wird auf deinem Gerät gespeichert.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>Alles, was du erfasst (Buchungen, Konten, Karten, Kontoauszüge, Kategorien, Tags, Kredite, Reisen, wiederkehrende Ausgaben und Filter), wird auf deinem Gerät gespeichert. Wenn du kein Konto erstellst, verlässt nichts davon dein iPhone.</p>
-          <p>SPNT verbindet sich nicht mit deiner Bank und liest weder deine E-Mails noch deine Mitteilungen. Die App kennt nur, was du selbst erfasst.</p>
+          <p>SPNT verbindet sich nicht mit deiner Bank und liest deine E-Mails nicht. Wenn du die Erfassung einrichtest, werden die Bank-Benachrichtigungen und Apple-Pay-Zahlungen, die du an SPNT weitergibst, auf deinem iPhone gelesen: Die Nachricht verlässt das Gerät nicht, und in deine Daten kommt nur, was du bestätigst.</p>
+          <p>Beim Import wählst du die Datei aus. Wenn du eine KI (etwa ChatGPT oder Claude) zum Erstellen nutzt, passiert das außerhalb von SPNT, nach den Regeln dieser KI: SPNT schickt ihr nichts.</p>
         </div>
       </details>
 
@@ -76,9 +77,10 @@
       </details>
 
       <details id="sincronizacion">
-        <summary><span class="num">3</span><span class="q"><b>Wenn du die Synchronisierung nutzt (Premium)</b><small>Eine verschlüsselte Kopie deiner Daten, die nur dein Konto sehen kann.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <summary><span class="num">3</span><span class="q"><b>Wenn du die Synchronisierung nutzt (Premium)</b><small>Eine Kopie deiner Daten auf unseren Servern, die wir nicht ansehen.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
-          <p>Damit deine Daten auf mehreren Geräten verfügbar sind, wird eine Kopie dessen, was du erfasst, auf unseren Servern gespeichert. Als Anbieter nutzen wir Supabase und PowerSync, mit Servern in den USA. Die Daten werden verschlüsselt übertragen, und nur dein Konto kann sie sehen.</p>
+          <p>Damit deine Daten auf mehreren Geräten verfügbar sind, wird eine Kopie dessen, was du erfasst, auf unseren Servern gespeichert. Als Anbieter nutzen wir Supabase und PowerSync, mit Servern in den USA. Die Daten werden verschlüsselt übertragen, und jedes Konto kann nur seine eigenen lesen.</p>
+          <p>Wir schauen deine Daten nicht an. Wir würden nur darauf zugreifen, wenn du uns für den Support darum bittest oder das Gesetz es verlangt.</p>
         </div>
       </details>
 
@@ -90,24 +92,31 @@
         </div>
       </details>
 
-      <details id="tipos-de-cambio">
-        <summary><span class="num">5</span><span class="q"><b>Wechselkurse</b><small>Sie werden geladen, ohne Daten von dir zu senden.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <details id="sugerencias">
+        <summary><span class="num">5</span><span class="q"><b>Vorschläge</b><small>Was du in der App schreibst oder wofür du abstimmst, wenn du ein Konto hast.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
-          <p>Die App lädt öffentliche Wechselkurse. Bei dieser Abfrage werden keine Daten von dir gesendet.</p>
+          <p>Wenn du ein Konto hast und unter Einstellungen › Vorschläge eine Idee schickst oder abstimmst, speichern wir, was du schreibst, deine Stimmen, deine Sprache und die App-Version zusammen mit deinem Konto. Wir nutzen das nur, um zu entscheiden, was wir verbessern, und es wird mit deinem Konto gelöscht.</p>
+        </div>
+      </details>
+
+      <details id="tipos-de-cambio">
+        <summary><span class="num">6</span><span class="q"><b>Was die App ohne Konto abfragt</b><small>Wechselkurse, Neuigkeiten und Update-Hinweise, ohne Daten von dir zu senden.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <p>Auch ohne Konto lädt die App von unseren Servern öffentliche Wechselkurse, Neuigkeiten zu SPNT und den Hinweis, wenn es eine neue Version gibt. Bei diesen Abfragen werden keine Daten von dir gesendet; wie bei jeder Internetverbindung sieht der Server die IP-Adresse, von der sie kommen.</p>
         </div>
       </details>
 
       <details id="face-id">
-        <summary><span class="num">6</span><span class="q"><b>Face ID</b><small>Das übernimmt dein iPhone. SPNT erhält nie dein Gesicht.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <summary><span class="num">7</span><span class="q"><b>Face ID</b><small>Das übernimmt dein iPhone. SPNT erhält nie dein Gesicht.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>Face ID dient nur dazu, ausgeblendete Beträge anzuzeigen. Das übernimmt dein iPhone, und SPNT erhält nie dein Gesicht oder deine biometrischen Daten.</p>
         </div>
       </details>
 
       <details id="proveedores">
-        <summary><span class="num">7</span><span class="q"><b>Mit wem wir arbeiten</b><small>Die Anbieter, die mit deinen Daten arbeiten, und wofür.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <summary><span class="num">8</span><span class="q"><b>Mit wem wir arbeiten</b><small>Die Anbieter, die mit deinen Daten arbeiten, und wofür.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
-          <p>Sie kommen nur ins Spiel, wenn du ein Konto erstellst, die Synchronisierung nutzt oder Premium kaufst.</p>
+          <p>Supabase beantwortet auch die Abfragen ohne Konto aus Abschnitt 6. Die anderen kommen nur ins Spiel, wenn du ein Konto erstellst, die Synchronisierung nutzt oder Premium kaufst.</p>
           <div class="table-wrap">
             <table class="table">
               <thead><tr><th>Anbieter</th><th>Wofür</th></tr></thead>
@@ -124,7 +133,7 @@
       </details>
 
       <details id="lo-que-no-hacemos">
-        <summary><span class="num">8</span><span class="q"><b>Was wir nicht tun</b><small>Keine Werbung, kein Tracking, kein Datenverkauf.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <summary><span class="num">9</span><span class="q"><b>Was wir nicht tun</b><small>Keine Werbung, kein Tracking, kein Datenverkauf.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <ul>
             <li>Wir verkaufen deine Daten nicht und geben sie nicht an Werbetreibende weiter.</li>
@@ -135,22 +144,32 @@
       </details>
 
       <details id="borrar-datos">
-        <summary><span class="num">9</span><span class="q"><b>Daten löschen oder anfordern</b><small>In den Einstellungen der App oder per E-Mail an uns.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <summary><span class="num">10</span><span class="q"><b>Daten löschen oder anfordern</b><small>In den Einstellungen der App oder per E-Mail an uns.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>Du kannst dein Konto in der App löschen: Tippe in den Einstellungen oben auf dein Profil und wähle „Konto löschen“. Damit werden dein Konto und alle auf unseren Servern gespeicherten Daten gelöscht. Wenn du die App löschst, werden die Daten auf deinem iPhone gelöscht. Wir bewahren nur die Kaufbelege auf, die wir gesetzlich für die Buchhaltung aufbewahren müssen.</p>
           <p>Du kannst uns auch per E-Mail an <a href="mailto:soporte@spnt.money">soporte@spnt.money</a> um eine Kopie deiner Daten oder um ihre Löschung bitten.</p>
         </div>
       </details>
 
+      <details id="derechos">
+        <summary><span class="num">11</span><span class="q"><b>Deine Rechte</b><small>Auskunft, Kopie, Berichtigung und Löschung, und wofür wir welche Daten nutzen.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <p><b>Wofür wir deine Daten nutzen.</b> Um dir zu geben, worum du gebeten hast (dein Konto, die Synchronisierung und Premium; Art. 6 Abs. 1 lit. b DSGVO), um die App zu verbessern (der Tarif-Bildschirm und die Vorschläge; lit. f) und um gesetzliche Pflichten zu erfüllen (Kaufbelege; lit. c).</p>
+          <p><b>Wie lange.</b> Solange du ein Konto hast. Wenn du es löschst, werden deine Daten sofort von unseren Servern entfernt; Kaufbelege bewahren wir so lange auf, wie das Gesetz es verlangt.</p>
+          <p><b>Was du verlangen kannst.</b> Auskunft, eine Kopie, Berichtigung, Löschung oder Widerspruch gegen eine Nutzung, per E-Mail an <a href="mailto:soporte@spnt.money">soporte@spnt.money</a>. Wir antworten innerhalb von 30 Tagen. Du kannst dich außerdem bei der Datenschutzaufsichtsbehörde deines Landes beschweren.</p>
+          <p><b>Wo.</b> Unsere Anbieter haben Server in den USA, deine Daten können also dort verarbeitet werden, mit den Garantien, die diese Anbieter für internationale Übermittlungen bieten (etwa EU-Standardvertragsklauseln).</p>
+        </div>
+      </details>
+
       <details id="menores">
-        <summary><span class="num">10</span><span class="q"><b>Minderjährige</b><small>SPNT richtet sich nicht an Kinder unter 13 Jahren.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <summary><span class="num">12</span><span class="q"><b>Minderjährige</b><small>SPNT richtet sich nicht an Kinder unter 13 Jahren.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>SPNT richtet sich nicht an Kinder unter 13 Jahren, und wir erheben nicht wissentlich Daten von ihnen.</p>
         </div>
       </details>
 
       <details id="cambios">
-        <summary><span class="num">11</span><span class="q"><b>Änderungen dieser Erklärung</b><small>Wir aktualisieren das Datum und informieren dich, wenn es wichtig ist.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <summary><span class="num">13</span><span class="q"><b>Änderungen dieser Erklärung</b><small>Wir aktualisieren das Datum und informieren dich, wenn es wichtig ist.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>Wenn sich diese Erklärung ändert, aktualisieren wir das Datum oben. Ist die Änderung wichtig, informieren wir dich in der App.</p>
         </div>

@@ -40,7 +40,7 @@
 
   <main id="contenido" class="wrap doc">
     <h1>Privacy Policy</h1>
-    <p class="date">Last updated: November 12, 2026</p>
+    <p class="date">Last updated: November 26, 2026</p>
 
     <p class="lead">SPNT is an app for keeping track of your spending, accounts and cards. This policy explains what data the app handles, where it’s stored and what you can do with it.</p>
 
@@ -48,7 +48,7 @@
       <h2 id="corta">The short version</h2>
       <ul class="checks">
         <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor" opacity=".15"/><path d="M6 10.2l2.6 2.6L14 7.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>We never sell your data or show ads, whether you use SPNT free or with Premium.</li>
-        <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor" opacity=".15"/><path d="M6 10.2l2.6 2.6L14 7.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Your data is stored on your iPhone. If you sync, it travels encrypted and only your account can see it.</li>
+        <li>Your data is stored on your iPhone. If you sync, it travels encrypted to our servers. We don’t look at it, sell it or use it for ads.</li>
         <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor" opacity=".15"/><path d="M6 10.2l2.6 2.6L14 7.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>We don’t use tracking or third-party analytics.</li>
         <li><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor" opacity=".15"/><path d="M6 10.2l2.6 2.6L14 7.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>You can delete your account and your data from the app whenever you want.</li>
       </ul>
@@ -64,7 +64,8 @@
         <summary><span class="num">1</span><span class="q"><b>What’s stored on your iPhone</b><small>Everything you record is stored on your device.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>Everything you record (transactions, accounts, cards, statements, categories, tags, loans, trips, recurring expenses and filters) is stored on your device. If you don’t create an account, none of it leaves your iPhone.</p>
-          <p>SPNT doesn’t connect to your bank or read your email or notifications. It only knows what you record.</p>
+          <p>SPNT doesn’t connect to your bank or read your email. If you set up capture, the bank alerts and Apple Pay payments you hand it are read on your iPhone: the message never leaves the device, and only what you confirm becomes part of your data.</p>
+          <p>To import, you choose the file. If you use an AI (like ChatGPT or Claude) to put it together, that happens outside SPNT, under that AI’s rules: SPNT sends it nothing.</p>
         </div>
       </details>
 
@@ -76,9 +77,10 @@
       </details>
 
       <details id="sincronizacion">
-        <summary><span class="num">3</span><span class="q"><b>If you use sync (Premium)</b><small>An encrypted copy of your data that only your account can see.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <summary><span class="num">3</span><span class="q"><b>If you use sync (Premium)</b><small>A copy of your data on our servers, which we don’t look at.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
-          <p>To have your data on multiple devices, a copy of what you record is stored on our servers. We use Supabase and PowerSync as providers, with servers in the United States. Your data is encrypted in transit, and only your account can see it.</p>
+          <p>To have your data on multiple devices, a copy of what you record is stored on our servers. We use Supabase and PowerSync as providers, with servers in the United States. Your data is encrypted in transit, and each account can only read its own.</p>
+          <p>We don’t look at your data. We’d only access it if you ask us to for support, or if the law requires it.</p>
         </div>
       </details>
 
@@ -90,24 +92,31 @@
         </div>
       </details>
 
-      <details id="tipos-de-cambio">
-        <summary><span class="num">5</span><span class="q"><b>Exchange rates</b><small>Downloaded without sending any of your data.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <details id="sugerencias">
+        <summary><span class="num">5</span><span class="q"><b>Suggestions</b><small>What you write or vote for in the app, if you have an account.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
-          <p>The app downloads public exchange rates. None of your data is sent with that request.</p>
+          <p>If you have an account and send an idea or vote in Settings › Suggestions, we store what you write, your votes, your language and the app version, with your account. We use it only to decide what to improve, and it’s deleted with your account.</p>
+        </div>
+      </details>
+
+      <details id="tipos-de-cambio">
+        <summary><span class="num">6</span><span class="q"><b>What the app checks without an account</b><small>Exchange rates, news and update notices, without sending your data.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <p>Even without an account, the app downloads public exchange rates, SPNT news and a notice when there’s a new version from our servers. None of your data is sent with those requests; as with any internet connection, the server sees the IP address they come from.</p>
         </div>
       </details>
 
       <details id="face-id">
-        <summary><span class="num">6</span><span class="q"><b>Face ID</b><small>Handled by your iPhone. SPNT never receives your face.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <summary><span class="num">7</span><span class="q"><b>Face ID</b><small>Handled by your iPhone. SPNT never receives your face.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>Face ID is used only to show hidden amounts. It’s handled by your iPhone, and SPNT never receives your face or your biometric data.</p>
         </div>
       </details>
 
       <details id="proveedores">
-        <summary><span class="num">7</span><span class="q"><b>Who we work with</b><small>The providers that handle your data, and why.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <summary><span class="num">8</span><span class="q"><b>Who we work with</b><small>The providers that handle your data, and why.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
-          <p>They’re only involved if you create an account, use sync or buy Premium.</p>
+          <p>Supabase also answers the requests without an account in section 6. The rest are only involved if you create an account, use sync or buy Premium.</p>
           <div class="table-wrap">
             <table class="table">
               <thead><tr><th>Provider</th><th>Purpose</th></tr></thead>
@@ -124,7 +133,7 @@
       </details>
 
       <details id="lo-que-no-hacemos">
-        <summary><span class="num">8</span><span class="q"><b>What we don’t do</b><small>No ads, no tracking, no selling data.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <summary><span class="num">9</span><span class="q"><b>What we don’t do</b><small>No ads, no tracking, no selling data.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <ul>
             <li>We don’t sell or share your data with advertisers.</li>
@@ -135,22 +144,32 @@
       </details>
 
       <details id="borrar-datos">
-        <summary><span class="num">9</span><span class="q"><b>Delete or request your data</b><small>From Settings in the app, or by emailing us.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <summary><span class="num">10</span><span class="q"><b>Delete or request your data</b><small>From Settings in the app, or by emailing us.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>You can delete your account from the app: in Settings, tap your profile at the top and choose “Delete account”. This deletes your account and all the data stored on our servers. If you delete the app, the data on your iPhone is deleted. We only keep the purchase records that the law requires us to retain for accounting purposes.</p>
           <p>You can also ask us for a copy of your data, or ask us to delete it, by emailing <a href="mailto:soporte@spnt.money">soporte@spnt.money</a>.</p>
         </div>
       </details>
 
+      <details id="derechos">
+        <summary><span class="num">11</span><span class="q"><b>Your rights</b><small>Access, copy, correction and deletion, and why we use each piece of data.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="body">
+          <p><b>Why we use your data.</b> To give you what you asked for (your account, sync and Premium), to improve the app (the plans screen and suggestions) and to comply with the law (purchase records).</p>
+          <p><b>For how long.</b> As long as you have an account. When you delete it, your data is removed from our servers right away; purchase records are kept as long as the law requires.</p>
+          <p><b>What you can ask for.</b> To see your data, get a copy, correct it, delete it or object to a use, by writing to <a href="mailto:soporte@spnt.money">soporte@spnt.money</a>. We reply within 30 days. If you live in the European Union or another country with a data protection law, you can also complain to your country’s authority.</p>
+          <p><b>Where.</b> Our providers have servers in the United States, so your data may be processed there, with the safeguards those providers offer for international transfers.</p>
+        </div>
+      </details>
+
       <details id="menores">
-        <summary><span class="num">10</span><span class="q"><b>Children</b><small>SPNT is not directed at children under 13.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <summary><span class="num">12</span><span class="q"><b>Children</b><small>SPNT is not directed at children under 13.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>SPNT is not directed at children under 13, and we do not knowingly collect data from them.</p>
         </div>
       </details>
 
       <details id="cambios">
-        <summary><span class="num">11</span><span class="q"><b>Changes to this policy</b><small>We update the date and, if it’s important, we let you know.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <summary><span class="num">13</span><span class="q"><b>Changes to this policy</b><small>We update the date and, if it’s important, we let you know.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
           <p>If this policy changes, we’ll update the date above. If the change is important, we’ll let you know in the app.</p>
         </div>

@@ -480,3 +480,10 @@ footer .social svg { width: 16px; height: 16px; flex: none; }
 .copyable pre.code { margin: 0; padding-top: 44px; white-space: pre-wrap; word-break: break-word; }
 .copy-btn { position: absolute; top: 10px; right: 10px; font: inherit; font-size: 13px; font-weight: 600; padding: 6px 12px; border-radius: 999px; border: 0; background: var(--brand); color: var(--brand-ink); cursor: pointer; }
 .copy-btn.done { background: var(--card); color: var(--text); }
+
+/* Not in the App Store yet: shown until 1.1 is out. Launch day: remove every <span class="pronto"> (with its
+   leading space) and this rule. */
+.pronto { display: inline-block; vertical-align: middle; margin-left: 8px; padding: 2px 9px; border-radius: 999px;
+  background: var(--card); color: var(--brand); font-size: 12px; font-weight: 600; line-height: 1.5;
+  letter-spacing: 0; text-transform: none; white-space: nowrap; }
+.q .pronto { margin: 6px 0 2px; }
