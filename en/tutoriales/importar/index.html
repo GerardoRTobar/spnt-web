@@ -82,6 +82,30 @@
       <li>Save the CSV it gives back and choose it in the app, or open it from Files or Mail with “Open with… › SPNT”.</li>
     </ol>
 
+    <p>App not handy? Copy the instructions, fill in your accounts, cards and categories at the end, and paste them into your assistant:</p>
+    <div class="copyable"><button type="button" class="copy-btn" data-done="Copied">Copy</button><pre class="code"><code>Turn my transactions into a downloadable CSV file to import into the SPNT app. One row per transaction, with this exact header:
+date,amount,kind,account,destination,category,subcategory,note,tags,currency,external_id
+
+Rules:
+- date: YYYY-MM-DD.
+- amount: decimal point, no currency symbol or thousands separator. Negative if money went out, positive if it came in.
+- kind: leave it empty, except for transfers between my accounts (transfer, with the destination account in destination) and card payments (cardPayment: the paying account in account and the card in destination).
+- account: the account or card. If it's in the list below, write it exactly like that; if it isn't, write it as it appears in the file (the app will ask me what to do with it).
+- category and subcategory: same thing: from the list when one fits; if the file has one that isn't there, write it as it comes. If the file has no category and you're not sure, leave them empty.
+- note: the merchant or a short description.
+- tags: optional, separated by |.
+- currency: empty if it's my main currency; otherwise the 3-letter code (EUR, MXN…).
+- external_id: a stable identifier for the charge (the email's id or the authorization number), always the same for the same charge.
+- Never drop a transaction because its account, card or category isn't in the list.
+- Don't make up rows: if something isn't a charge, an income or a transfer, skip it.
+- Deliver it as a downloadable .csv file I can save. Don't paste it in the chat or in a code block.
+
+My accounts: [your accounts]
+My cards: [your cards]
+Expense categories: [your expense categories]
+Income categories: [your income categories]</code></pre></div>
+
+
     <h2 class="group-title">If you import a lot of history</h2>
     <p>The simplest is to import what’s missing since you started using spnt. If you want to bring in earlier months or years, keep two things in mind:</p>
     <p><b>Accounts.</b> An account’s balance is its opening balance plus its transactions. If you created the account with today’s balance and import earlier months, those expenses are subtracted again. For a full history, set the opening balance to what the account had on the first day of that history.</p>

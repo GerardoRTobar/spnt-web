@@ -82,6 +82,30 @@
       <li>Salve o CSV que ele devolver e escolha no app, ou abra pelo Arquivos ou Mail com “Abrir com… › SPNT”.</li>
     </ol>
 
+    <p>Sem o app por perto? Copie as instruções, complete suas contas, cartões e categorias no final e cole no seu assistente:</p>
+    <div class="copyable"><button type="button" class="copy-btn" data-done="Copiado">Copiar</button><pre class="code"><code>Converta minhas transações em um arquivo CSV para baixar e importar no app SPNT. Uma linha por transação, com exatamente este cabeçalho:
+date,amount,kind,account,destination,category,subcategory,note,tags,currency,external_id
+
+Regras:
+- date: AAAA-MM-DD.
+- amount: ponto decimal, sem símbolo de moeda nem separador de milhar. Negativo se o dinheiro saiu, positivo se entrou.
+- kind: deixe vazio, exceto em transferências entre minhas contas (transfer, com a conta de destino em destination) e pagamentos de cartão (cardPayment: a conta que paga em account e o cartão em destination).
+- account: a conta ou o cartão. Se estiver na lista abaixo, escreva exatamente assim; se não estiver, escreva como aparece no arquivo (o app vai me perguntar o que fazer).
+- category e subcategory: o mesmo: da lista quando alguma corresponder; se o arquivo trouxer uma que não está, escreva como vem. Se o arquivo não tiver categoria e você não tiver certeza, deixe vazias.
+- note: o estabelecimento ou uma descrição curta.
+- tags: opcional, separadas por |.
+- currency: vazio se for minha moeda principal; senão, o código de 3 letras (EUR, MXN…).
+- external_id: um identificador estável da cobrança (o id do e-mail ou o número de autorização), sempre o mesmo para a mesma cobrança.
+- Não remova nenhuma transação porque a conta, o cartão ou a categoria não está na lista.
+- Não invente linhas: se algo não for uma despesa, uma receita ou uma transferência, ignore.
+- Entregue como um arquivo .csv para baixar e salvar. Não cole no chat nem em um bloco de código.
+
+Minhas contas: [suas contas]
+Meus cartões: [seus cartões]
+Categorias de despesas: [suas categorias de despesas]
+Categorias de receitas: [suas categorias de receitas]</code></pre></div>
+
+
     <h2 class="group-title">Se você importar muito histórico</h2>
     <p>O mais simples é importar o que falta desde que você começou a usar o spnt. Se quiser trazer meses ou anos anteriores, tenha duas coisas em mente:</p>
     <p><b>Contas.</b> O saldo de uma conta é o saldo inicial mais as transações. Se você criou a conta com o saldo de hoje e importa meses anteriores, esses gastos são descontados de novo. Para um histórico completo, use como saldo inicial o que a conta tinha no primeiro dia do histórico.</p>

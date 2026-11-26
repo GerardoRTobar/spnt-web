@@ -82,6 +82,30 @@
       <li>Guardá el CSV que te devuelve y elegilo en la app, o abrilo desde Archivos o Mail con «Abrir con… › SPNT».</li>
     </ol>
 
+    <p>¿Sin la app a mano? Copiá las indicaciones, completá tus cuentas, tarjetas y categorías al final y pegalas en tu asistente:</p>
+    <div class="copyable"><button type="button" class="copy-btn" data-done="Copiado">Copiar</button><pre class="code"><code>Convierte mis movimientos en un archivo CSV descargable para importarlo en la app SPNT. Una fila por movimiento, con este encabezado exacto:
+date,amount,kind,account,destination,category,subcategory,note,tags,currency,external_id
+
+Reglas:
+- date: AAAA-MM-DD.
+- amount: punto decimal, sin símbolo de moneda ni separador de miles. Negativo si salió dinero, positivo si entró.
+- kind: déjalo vacío, salvo en transferencias entre mis cuentas (transfer, con la cuenta de destino en destination) y pagos de tarjeta (cardPayment: la cuenta que paga en account y la tarjeta en destination).
+- account: la cuenta o tarjeta. Si está en la lista de abajo, escríbela exactamente así; si no está, escríbela tal como viene en el archivo (la app me preguntará qué hacer con ella).
+- category y subcategory: lo mismo: de la lista si alguna corresponde; si el archivo trae una que no está, escríbela tal como viene. Si el archivo no trae categoría y no estás seguro, déjalas vacías.
+- note: el comercio o una descripción corta.
+- tags: opcional, separadas por |.
+- currency: vacío si es mi moneda principal; si no, el código de 3 letras (EUR, MXN…).
+- external_id: un identificador estable del cobro (el id del correo o el número de autorización), siempre el mismo para el mismo cobro.
+- No quites ningún movimiento porque su cuenta, tarjeta o categoría no esté en la lista.
+- No inventes filas: si algo no es un cobro, un ingreso o una transferencia, ignóralo.
+- Entrégalo como un archivo .csv descargable que pueda guardar. No lo pegues en el chat ni en un bloque de código.
+
+Mis cuentas: [tus cuentas]
+Mis tarjetas: [tus tarjetas]
+Categorías de gastos: [tus categorías de gastos]
+Categorías de ingresos: [tus categorías de ingresos]</code></pre></div>
+
+
     <h2 class="group-title">Si importás mucho historial</h2>
     <p>Lo más simple es importar lo que falta desde que empezaste a usar spnt. Si querés traer meses o años anteriores, tené en cuenta dos cosas:</p>
     <p><b>Cuentas.</b> El saldo de una cuenta es su saldo inicial más sus movimientos. Si creaste la cuenta con el saldo de hoy e importás meses anteriores, esos gastos se descuentan otra vez. Para un historial completo, poné como saldo inicial el que tenía la cuenta el primer día del historial.</p>

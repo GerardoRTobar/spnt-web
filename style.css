@@ -238,8 +238,8 @@ nav .lang .menu a:hover { color: var(--text); background: var(--card); }
 .accordion .q b { display: block; font-size: 17px; font-weight: 600; line-height: 1.35; transition: color .15s; }
 .accordion .q small { display: block; color: var(--muted); font-size: 14px; line-height: 1.4; margin-top: 2px; }
 .accordion .chev { flex: none; width: 20px; height: 20px; color: var(--muted); transition: transform .34s cubic-bezier(0.16, 1, 0.3, 1); }
-.accordion details[open]:not(.closing) .chev { transform: rotate(180deg); }
-.accordion details[open]:not(.closing) .num { background: var(--brand); color: var(--brand-ink); }
+.accordion details[open]:not(.closing) > summary .chev { transform: rotate(180deg); }
+.accordion details[open]:not(.closing) > summary .num { background: var(--brand); color: var(--brand-ink); }
 .accordion .body { padding: 0 4px 22px 46px; }
 .accordion .body > :first-child { margin-top: 0; }
 .accordion .body > :last-child { margin-bottom: 0; }
@@ -474,3 +474,9 @@ footer .social svg { width: 16px; height: 16px; flex: none; }
 @media (max-width: 600px) {
   nav > a:first-child, nav > a[href$="privacidad/"] { display: none; }
 }
+
+/* Bloque copiable (indicaciones para la IA) */
+.copyable { position: relative; margin: 12px 0 0; }
+.copyable pre.code { margin: 0; padding-top: 44px; white-space: pre-wrap; word-break: break-word; }
+.copy-btn { position: absolute; top: 10px; right: 10px; font: inherit; font-size: 13px; font-weight: 600; padding: 6px 12px; border-radius: 999px; border: 0; background: var(--brand); color: var(--brand-ink); cursor: pointer; }
+.copy-btn.done { background: var(--card); color: var(--text); }

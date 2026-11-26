@@ -82,6 +82,30 @@
       <li>Enregistre le CSV qu’il te renvoie et choisis-le dans l’app, ou ouvre-le depuis Fichiers ou Mail avec « Ouvrir avec… › SPNT ».</li>
     </ol>
 
+    <p>Pas l’app sous la main ? Copie les indications, complète tes comptes, cartes et catégories à la fin, et colle-les dans ton assistant :</p>
+    <div class="copyable"><button type="button" class="copy-btn" data-done="Copié">Copier</button><pre class="code"><code>Convertis mes transactions en un fichier CSV téléchargeable à importer dans l’app SPNT. Une ligne par transaction, avec exactement cet en-tête :
+date,amount,kind,account,destination,category,subcategory,note,tags,currency,external_id
+
+Règles :
+- date : AAAA-MM-JJ.
+- amount : point décimal, sans symbole monétaire ni séparateur de milliers. Négatif si l’argent est sorti, positif s’il est entré.
+- kind : laisse-le vide, sauf pour les virements entre mes comptes (transfer, avec le compte de destination dans destination) et les paiements de carte (cardPayment : le compte qui paie dans account et la carte dans destination).
+- account : le compte ou la carte. S’il est dans la liste ci-dessous, écris-le exactement ainsi ; sinon, écris-le tel qu’il apparaît dans le fichier (l’app me demandera quoi en faire).
+- category et subcategory : pareil : de la liste quand l’une correspond ; si le fichier en contient une qui n’y est pas, écris-la telle quelle. Si le fichier n’a pas de catégorie et que tu as un doute, laisse-les vides.
+- note : le commerçant ou une courte description.
+- tags : facultatif, séparés par |.
+- currency : vide si c’est ma devise principale ; sinon le code à 3 lettres (EUR, MXN…).
+- external_id : un identifiant stable du paiement (l’id de l’e-mail ou le numéro d’autorisation), toujours le même pour le même paiement.
+- Ne supprime aucune transaction parce que son compte, sa carte ou sa catégorie n’est pas dans la liste.
+- N’invente pas de lignes : si ce n’est pas une dépense, un revenu ou un virement, ignore-le.
+- Donne-le-moi sous forme de fichier .csv téléchargeable que je peux enregistrer. Ne le colle pas dans le chat ni dans un bloc de code.
+
+Mes comptes: [tes comptes]
+Mes cartes: [tes cartes]
+Catégories de dépenses: [tes catégories de dépenses]
+Catégories de revenus: [tes catégories de revenus]</code></pre></div>
+
+
     <h2 class="group-title">Si tu importes beaucoup d’historique</h2>
     <p>Le plus simple est d’importer ce qui manque depuis que tu utilises spnt. Si tu veux ramener des mois ou des années plus anciens, garde deux choses en tête :</p>
     <p><b>Comptes.</b> Le solde d’un compte, c’est son solde initial plus ses transactions. Si tu as créé le compte avec le solde d’aujourd’hui et que tu importes des mois antérieurs, ces dépenses sont déduites une deuxième fois. Pour un historique complet, mets comme solde initial celui du compte au premier jour de l’historique.</p>

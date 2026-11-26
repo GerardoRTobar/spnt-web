@@ -166,3 +166,23 @@
   // Al imprimir, todo abierto.
   window.addEventListener('beforeprint', function () { sections.forEach(function (d) { d.open = true; }); });
 })();
+
+// Botón «Copiar» de los bloques copiables.
+document.querySelectorAll('.copy-btn').forEach(function (b) {
+  var label = b.textContent;
+  b.addEventListener('click', function () {
+    var code = b.parentElement.querySelector('code');
+    if (!code) return;
+    var shown = function () {
+      b.textContent = b.dataset.done || label; b.classList.add('done');
+      setTimeout(function () { b.textContent = label; b.classList.remove('done'); }, 1800);
+    };
+    // Sin permiso del portapapeles (o navegador viejo): se selecciona el texto y se copia a la antigua.
+    var fallback = function () {
+      var r = document.createRange(); r.selectNodeContents(code);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      try { if (document.execCommand('copy')) shown(); } catch (e) {}
+    };
+    if (navigator.clipboard) navigator.clipboard.writeText(code.textContent).then(shown, fallback); else fallback();
+  });
+});

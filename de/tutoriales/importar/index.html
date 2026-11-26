@@ -82,6 +82,30 @@
       <li>Speichere die CSV, die er zurückgibt, und wähle sie in der App, oder öffne sie in Dateien oder Mail mit „Öffnen mit… › SPNT“.</li>
     </ol>
 
+    <p>App nicht zur Hand? Kopier die Anleitung, ergänze am Ende deine Konten, Karten und Kategorien und füg sie in deinen Assistenten ein:</p>
+    <div class="copyable"><button type="button" class="copy-btn" data-done="Kopiert">Kopieren</button><pre class="code"><code>Wandle meine Buchungen in eine herunterladbare CSV-Datei für den Import in die App SPNT um. Eine Zeile pro Buchung, mit genau dieser Kopfzeile:
+date,amount,kind,account,destination,category,subcategory,note,tags,currency,external_id
+
+Regeln:
+- date: JJJJ-MM-TT.
+- amount: Dezimalpunkt, ohne Währungssymbol oder Tausendertrennzeichen. Negativ, wenn Geld abging, positiv, wenn es einging.
+- kind: leer lassen, außer bei Überweisungen zwischen meinen Konten (transfer, mit dem Zielkonto in destination) und Kartenzahlungen (cardPayment: das zahlende Konto in account und die Karte in destination).
+- account: das Konto oder die Karte. Steht es in der Liste unten, schreib es genau so; wenn nicht, schreib es so, wie es in der Datei steht (die App fragt mich, was damit passieren soll).
+- category und subcategory: ebenso: aus der Liste, wenn eine passt; hat die Datei eine, die nicht in der Liste steht, übernimm sie so, wie sie ist. Hat die Datei keine Kategorie und bist du dir nicht sicher, lass sie leer.
+- note: der Händler oder eine kurze Beschreibung.
+- tags: optional, getrennt durch |.
+- currency: leer, wenn es meine Hauptwährung ist; sonst der dreistellige Code (EUR, MXN…).
+- external_id: eine feste Kennung der Belastung (die ID der E-Mail oder die Autorisierungsnummer), für dieselbe Belastung immer gleich.
+- Lass keine Buchung weg, nur weil ihr Konto, ihre Karte oder ihre Kategorie nicht in der Liste steht.
+- Erfinde keine Zeilen: Was keine Ausgabe, Einnahme oder Überweisung ist, lass weg.
+- Gib es mir als herunterladbare .csv-Datei, die ich speichern kann. Füg es nicht in den Chat oder in einen Codeblock ein.
+
+Meine Konten: [deine Konten]
+Meine Karten: [deine Karten]
+Ausgabenkategorien: [deine Ausgabenkategorien]
+Einnahmenkategorien: [deine Einnahmenkategorien]</code></pre></div>
+
+
     <h2 class="group-title">Wenn du viel Verlauf importierst</h2>
     <p>Am einfachsten importierst du, was seit deinem Start mit spnt fehlt. Willst du frühere Monate oder Jahre übernehmen, beachte zwei Dinge:</p>
     <p><b>Konten.</b> Der Kontostand ist der Anfangssaldo plus die Buchungen. Hast du das Konto mit dem heutigen Stand angelegt und importierst frühere Monate, werden diese Ausgaben noch einmal abgezogen. Für einen vollständigen Verlauf setz als Anfangssaldo den Stand am ersten Tag des Verlaufs.</p>
