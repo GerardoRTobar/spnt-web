@@ -222,12 +222,18 @@
       running = body.animate([
         { height: from + 'px', opacity: opening ? 0 : 1, transform: 'translateY(' + (opening ? -4 : 0) + 'px)' },
         { height: to + 'px', opacity: opening ? 1 : 0, transform: 'translateY(' + (opening ? 0 : -4) + 'px)' }
-      ], { duration: opening ? 340 : 260, easing: EASE });
+      ], { duration: opening ? 340 : 260, easing: EASE, fill: 'forwards' });
+      // Sin `fill`, el último cuadro suelta la altura antes de que llegue onfinish y el
+      // contenido reaparece entero un instante al cerrar (el «lag»). Se cierra primero y
+      // recién después se quita la animación.
+      var done = running;
       running.onfinish = function () {
+        if (running !== done) return;
         running = null;
-        body.style.overflow = '';
-        d.classList.remove('closing');
         if (!opening) d.open = false;
+        d.classList.remove('closing');
+        body.style.overflow = '';
+        done.cancel();
       };
     });
   });
