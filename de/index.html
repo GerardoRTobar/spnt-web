@@ -2,10 +2,12 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'self'; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="apple-itunes-app" content="app-id=6834027908">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SPNT · Deine Ausgaben und Karten im Blick</title>
-  <meta name="description" content="SPNT ist eine iPhone-App, die dir zeigt, wohin dein Geld geht: Konten, Karten, Kontoauszüge, Kredite, Analysen und mehrere Währungen.">
+  <meta name="description" content="SPNT ist eine iPhone-App, die dir zeigt, wohin dein Geld geht: Konten, Karten, Kreditkartenabrechnungen, Kredite, Analysen und mehrere Währungen.">
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#121216" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
@@ -13,6 +15,12 @@
   <meta property="og:title" content="SPNT · Sieh, wohin dein Geld geht">
   <meta property="og:description" content="Konten, Karten, Kredite und Ausgaben an einem Ort. Einfach, schnell und privat.">
   <meta property="og:url" content="https://spnt.money/de/">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:locale:alternate" content="es_LA">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:locale:alternate" content="ru_RU">
   <meta property="og:image" content="https://spnt.money/og/de.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -30,6 +38,7 @@
   <link rel="stylesheet" href="/style.css">
   <script src="/site.js" defer></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"SPNT","url":"https://spnt.money/","logo":"https://spnt.money/apple-touch-icon.png","email":"hola@spnt.money","sameAs":["https://www.instagram.com/spnt.money/"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"SPNT","operatingSystem":"iOS 18.0 or later","applicationCategory":"FinanceApplication","url":"https://spnt.money/de/","inLanguage":"de","description":"SPNT ist eine iPhone-App, die dir zeigt, wohin dein Geld geht: Konten, Karten, Kreditkartenabrechnungen, Kredite, Analysen und mehrere Währungen.","installUrl":"https://apps.apple.com/app/id6834027908","downloadUrl":"https://apps.apple.com/app/id6834027908","image":"https://spnt.money/apple-touch-icon.png","offers":[{"@type":"Offer","name":"Free","price":"0","priceCurrency":"USD"},{"@type":"Offer","name":"Premium (monthly)","price":"3.99","priceCurrency":"USD"},{"@type":"Offer","name":"Premium (yearly)","price":"29.99","priceCurrency":"USD"}]}</script>
 </head>
 <body>
   <a class="skip" href="#contenido">Zum Inhalt springen</a>
@@ -38,7 +47,7 @@
       <a class="logo" href="/de/" aria-label="SPNT, Startseite">
         <svg class="wordmark" viewBox="0 -335 1022 422" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="58" stroke-linejoin="round"><path d="M142 -195.5A60 48 0 1 0 89 -125A60 48 0 1 1 36 -54.5"/><path d="M247 -250V85M247 -125A96 96 0 1 1 439 -125A96 96 0 1 1 247 -125"/><path d="M537 0V-250M537 -132.68A88.32 88.32 0 0 1 713.64 -132.68V0"/><path d="M857.64 -330V0M782.64 -221H921.39"/></g><circle cx="990.39" cy="-29" r="29" fill="var(--dot)"/></svg>
       </a>
-      <nav><a href="/de/" aria-current="page">Start</a><a href="/de/tutoriales/">Anleitungen</a><a href="/de/soporte/">Support</a><a href="/de/privacidad/">Datenschutz</a><details class="lang"><summary aria-label="Sprache: Deutsch"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><path fill="#000" d="M0 0h30v6.67H0z"/><path fill="#dd0000" d="M0 6.67h30v6.66H0z"/><path fill="#ffce00" d="M0 13.33h30V20H0z"/></svg><span>DE</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="menu"><a href="/" lang="es" hreflang="es"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><path fill="#006847" d="M0 0h10v20H0z"/><path fill="#fff" d="M10 0h10v20H10z"/><path fill="#ce1126" d="M20 0h10v20H20z"/><ellipse cx="15" cy="10" rx="2.6" ry="2.3" fill="#8a5a2b"/><path d="M12.6 11.6q2.4 2.2 4.8 0" fill="none" stroke="#3b7a3b" stroke-width=".9"/></svg><span>Español</span></a><a href="/en/" lang="en" hreflang="en"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><path fill="#fff" d="M0 0h30v20H0z"/><path fill="#b22234" d="M0 0.000h30v1.538H0z"/><path fill="#b22234" d="M0 3.077h30v1.538H0z"/><path fill="#b22234" d="M0 6.154h30v1.538H0z"/><path fill="#b22234" d="M0 9.231h30v1.538H0z"/><path fill="#b22234" d="M0 12.308h30v1.538H0z"/><path fill="#b22234" d="M0 15.385h30v1.538H0z"/><path fill="#b22234" d="M0 18.462h30v1.538H0z"/><path fill="#3c3b6e" d="M0 0h12v10.769H0z"/><g fill="#fff"><circle cx="1.4" cy="1.3" r=".45"/><circle cx="3.6" cy="1.3" r=".45"/><circle cx="5.8" cy="1.3" r=".45"/><circle cx="8.0" cy="1.3" r=".45"/><circle cx="10.2" cy="1.3" r=".45"/><circle cx="1.4" cy="3.4" r=".45"/><circle cx="3.6" cy="3.4" r=".45"/><circle cx="5.8" cy="3.4" r=".45"/><circle cx="8.0" cy="3.4" r=".45"/><circle cx="10.2" cy="3.4" r=".45"/><circle cx="1.4" cy="5.5" r=".45"/><circle cx="3.6" cy="5.5" r=".45"/><circle cx="5.8" cy="5.5" r=".45"/><circle cx="8.0" cy="5.5" r=".45"/><circle cx="10.2" cy="5.5" r=".45"/><circle cx="1.4" cy="7.6" r=".45"/><circle cx="3.6" cy="7.6" r=".45"/><circle cx="5.8" cy="7.6" r=".45"/><circle cx="8.0" cy="7.6" r=".45"/><circle cx="10.2" cy="7.6" r=".45"/><circle cx="1.4" cy="9.7" r=".45"/><circle cx="3.6" cy="9.7" r=".45"/><circle cx="5.8" cy="9.7" r=".45"/><circle cx="8.0" cy="9.7" r=".45"/><circle cx="10.2" cy="9.7" r=".45"/></g></svg><span>English</span></a><a href="/pt/" lang="pt" hreflang="pt"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><path fill="#009c3b" d="M0 0h30v20H0z"/><path fill="#ffdf00" d="M15 1.8 27.6 10 15 18.2 2.4 10z"/><circle cx="15" cy="10" r="5" fill="#002776"/><path d="M10.2 9.1q5-1.6 9.7 1.4" fill="none" stroke="#fff" stroke-width=".9"/></svg><span>Português</span></a><a href="/fr/" lang="fr" hreflang="fr"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><path fill="#0055a4" d="M0 0h10v20H0z"/><path fill="#fff" d="M10 0h10v20H10z"/><path fill="#ef4135" d="M20 0h10v20H20z"/></svg><span>Français</span></a><a href="/de/" lang="de" hreflang="de" aria-current="true"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><path fill="#000" d="M0 0h30v6.67H0z"/><path fill="#dd0000" d="M0 6.67h30v6.66H0z"/><path fill="#ffce00" d="M0 13.33h30V20H0z"/></svg><span>Deutsch</span></a><a href="/ru/" lang="ru" hreflang="ru"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><path fill="#fff" d="M0 0h30v6.67H0z"/><path fill="#0039a6" d="M0 6.67h30v6.66H0z"/><path fill="#d52b1e" d="M0 13.33h30V20H0z"/></svg><span>Русский</span></a></div></details></nav>
+      <nav><a href="/de/" aria-current="page">Start</a><a href="/de/tutoriales/">Anleitungen</a><a href="/de/soporte/">Support</a><a href="/de/privacidad/">Datenschutz</a><details class="lang"><summary aria-label="Sprache: DE, Deutsch"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><path fill="#000" d="M0 0h30v6.67H0z"/><path fill="#dd0000" d="M0 6.67h30v6.66H0z"/><path fill="#ffce00" d="M0 13.33h30V20H0z"/></svg><span>DE</span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary><div class="menu"><a href="/" lang="es" hreflang="es"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><path fill="#006847" d="M0 0h10v20H0z"/><path fill="#fff" d="M10 0h10v20H10z"/><path fill="#ce1126" d="M20 0h10v20H20z"/><ellipse cx="15" cy="10" rx="2.6" ry="2.3" fill="#8a5a2b"/><path d="M12.6 11.6q2.4 2.2 4.8 0" fill="none" stroke="#3b7a3b" stroke-width=".9"/></svg><span>Español</span></a><a href="/en/" lang="en" hreflang="en"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><path fill="#fff" d="M0 0h30v20H0z"/><path fill="#b22234" d="M0 0.000h30v1.538H0z"/><path fill="#b22234" d="M0 3.077h30v1.538H0z"/><path fill="#b22234" d="M0 6.154h30v1.538H0z"/><path fill="#b22234" d="M0 9.231h30v1.538H0z"/><path fill="#b22234" d="M0 12.308h30v1.538H0z"/><path fill="#b22234" d="M0 15.385h30v1.538H0z"/><path fill="#b22234" d="M0 18.462h30v1.538H0z"/><path fill="#3c3b6e" d="M0 0h12v10.769H0z"/><g fill="#fff"><circle cx="1.4" cy="1.3" r=".45"/><circle cx="3.6" cy="1.3" r=".45"/><circle cx="5.8" cy="1.3" r=".45"/><circle cx="8.0" cy="1.3" r=".45"/><circle cx="10.2" cy="1.3" r=".45"/><circle cx="1.4" cy="3.4" r=".45"/><circle cx="3.6" cy="3.4" r=".45"/><circle cx="5.8" cy="3.4" r=".45"/><circle cx="8.0" cy="3.4" r=".45"/><circle cx="10.2" cy="3.4" r=".45"/><circle cx="1.4" cy="5.5" r=".45"/><circle cx="3.6" cy="5.5" r=".45"/><circle cx="5.8" cy="5.5" r=".45"/><circle cx="8.0" cy="5.5" r=".45"/><circle cx="10.2" cy="5.5" r=".45"/><circle cx="1.4" cy="7.6" r=".45"/><circle cx="3.6" cy="7.6" r=".45"/><circle cx="5.8" cy="7.6" r=".45"/><circle cx="8.0" cy="7.6" r=".45"/><circle cx="10.2" cy="7.6" r=".45"/><circle cx="1.4" cy="9.7" r=".45"/><circle cx="3.6" cy="9.7" r=".45"/><circle cx="5.8" cy="9.7" r=".45"/><circle cx="8.0" cy="9.7" r=".45"/><circle cx="10.2" cy="9.7" r=".45"/></g></svg><span>English</span></a><a href="/pt/" lang="pt" hreflang="pt"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><path fill="#009c3b" d="M0 0h30v20H0z"/><path fill="#ffdf00" d="M15 1.8 27.6 10 15 18.2 2.4 10z"/><circle cx="15" cy="10" r="5" fill="#002776"/><path d="M10.2 9.1q5-1.6 9.7 1.4" fill="none" stroke="#fff" stroke-width=".9"/></svg><span>Português</span></a><a href="/fr/" lang="fr" hreflang="fr"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><path fill="#0055a4" d="M0 0h10v20H0z"/><path fill="#fff" d="M10 0h10v20H10z"/><path fill="#ef4135" d="M20 0h10v20H20z"/></svg><span>Français</span></a><a href="/de/" lang="de" hreflang="de" aria-current="true"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><path fill="#000" d="M0 0h30v6.67H0z"/><path fill="#dd0000" d="M0 6.67h30v6.66H0z"/><path fill="#ffce00" d="M0 13.33h30V20H0z"/></svg><span>Deutsch</span></a><a href="/ru/" lang="ru" hreflang="ru"><svg class="flag" viewBox="0 0 30 20" aria-hidden="true"><path fill="#fff" d="M0 0h30v6.67H0z"/><path fill="#0039a6" d="M0 6.67h30v6.66H0z"/><path fill="#d52b1e" d="M0 13.33h30V20H0z"/></svg><span>Русский</span></a></div></details></nav>
     </div>
   </header>
 
@@ -47,25 +56,40 @@
       <p class="eyebrow">App fürs iPhone</p>
       <h1>Sieh, wohin dein Geld geht.</h1>
       <p>Konten, Karten, Kredite und Ausgaben an einem Ort. Einfach, schnell und privat.</p>
-      <a class="badge" href="https://apps.apple.com/app/id6834027908">Laden im App Store ↗</a>
+      <a class="badge" href="https://apps.apple.com/app/id6834027908">Laden im App Store</a>
       <p class="hero-more"><b>Kostenlos</b> starten · <a href="#precios">Pläne ansehen ↓</a></p>
     </section>
 
     <div class="pitch">
-      <video class="pitch-video" data-src="/video/de/pitch" autoplay muted loop playsinline preload="none"
-        poster="/video/de/pitch-h-light.jpg" aria-label="30-Sekunden-Video: was SPNT kann"></video>
+      <div class="pitch-wrap">
+        <video class="pitch-video" data-src="/video/de/pitch" autoplay muted loop playsinline preload="none"
+          poster="/video/de/pitch-h-light.jpg" aria-label="30-Sekunden-Video: was SPNT kann"></video>
+      </div>
+      <details class="pitch-text">
+        <summary>Was das Video zeigt</summary>
+        <ol>
+          <li>„Wo ist dein Geld geblieben?“ Die Frage schrumpft zu einem Punkt, dann erscheint das SPNT-Logo.</li>
+          <li>„Jeder Kauf im richtigen Auszug.“ Ein Kartenkauf landet in der Kreditkartenabrechnung, mit Abschluss- und Zahlungsdatum.</li>
+          <li>„Sieh, was dir noch bleibt.“ Das Budget des Monats und was du noch ausgeben kannst.</li>
+          <li>„Versteh dein Geld.“ Einnahmen und Ausgaben, die Sparquote und das Netto des Monats.</li>
+          <li>„Sondertilgung. Weniger Zinsen.“ Eine Sondertilgung senkt den Kreditsaldo und zeigt die gesparten Zinsen.</li>
+          <li>„Jede Währung, zum Tageskurs.“ Ein Kauf in einer anderen Währung, umgerechnet in deine.</li>
+          <li>„Deine Daten, auf deinem iPhone.“ Die App auf einem iPhone und zum Schluss spnt.money.</li>
+        </ol>
+      </details>
     </div>
 
     <div class="stage" aria-hidden="true">
-      <div class="iphone side"><img src="/img/de/analisis.jpg" width="598" height="1300" alt=""></div>
-      <div class="iphone main"><img src="/img/de/inicio.jpg" width="598" height="1300" alt=""></div>
-      <div class="iphone side"><img src="/img/de/tarjetas.jpg" width="598" height="1300" alt=""></div>
+      <div class="iphone side"><img src="/img/de/analisis.jpg" width="598" height="1300" alt="" loading="lazy"></div>
+      <div class="iphone main"><img src="/img/de/inicio.jpg" width="598" height="1300" alt="" fetchpriority="high"></div>
+      <div class="iphone side"><img src="/img/de/tarjetas.jpg" width="598" height="1300" alt="" loading="lazy"></div>
     </div>
 
     <section class="why wrap-wide">
-      <div class="why-item"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="M2.5 10h19M6.5 15h4"/></g></svg><h3>Gemacht für Kreditkarten</h3><p>Abrechnungstage, Fälligkeiten und Kontoauszüge, so wie deine Bank sie zeigt.</p></div>
+      <h2 class="visually-hidden">Warum SPNT</h2>
+      <div class="why-item"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="M2.5 10h19M6.5 15h4"/></g></svg><h3>Gemacht für Kreditkarten</h3><p>Abschlusstage, Fälligkeiten und Abrechnungen, so wie deine Bank sie zeigt.</p></div>
       <div class="why-item"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2.5 4.5 13.5H12l-1 8 8.5-11H12l1-8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><h3>In Sekunden erfasst</h3><p>Tipp auf +, Betrag rein, fertig. Wiederkehrendes kommt von selbst dazu.</p></div>
-      <div class="why-item"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4.5" rx="1"/><path d="M5 12.5V20a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7.5M12 8v13M12 8S10.5 3.5 8 3.5a2.25 2.25 0 0 0 0 4.5h4Zm0 0s1.5-4.5 4-4.5a2.25 2.25 0 0 1 0 4.5h-4Z"/></g></svg><h3>Kostenlos nutzbar</h3><p>Unbegrenzt Buchungen, keine Werbung, kein Konto nötig.</p></div>
+      <div class="why-item"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4.5" rx="1"/><path d="M5 12.5V20a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7.5M12 8v13M12 8S10.5 3.5 8 3.5a2.25 2.25 0 0 0 0 4.5h4Zm0 0s1.5-4.5 4-4.5a2.25 2.25 0 0 1 0 4.5h-4Z"/></g></svg><h3>Kostenlos nutzbar</h3><p>Unbegrenzt viele Buchungen, keine Werbung, kein Konto nötig.</p></div>
     </section>
 
     <section class="point wrap-wide" id="cuentas">
@@ -81,15 +105,15 @@
       </div>
       <div class="phones">
         <div class="iphone"><img src="/img/de/inicio.jpg" width="598" height="1300" alt="Home: Nettovermögen mit Diagramm sowie Einnahmen und Ausgaben des Monats." loading="lazy"></div>
-        <div class="iphone"><img src="/img/de/tarjetas.jpg" width="598" height="1300" alt="Karten mit ihrem Kontoauszug und ein Kredit mit seinem Fortschritt." loading="lazy"></div>
+        <div class="iphone"><img src="/img/de/tarjetas.jpg" width="598" height="1300" alt="Karten mit ihrer Abrechnung und ein Kredit mit seinem Fortschritt." loading="lazy"></div>
       </div>
     </section>
 
     <section class="point wrap-wide flip" id="estados-de-cuenta">
       <div class="copy">
-        <p class="eyebrow">Kontoauszüge</p>
+        <p class="eyebrow">Kreditkartenabrechnungen</p>
         <h2>Jeder Kauf im richtigen Auszug.</h2>
-        <p>SPNT erstellt die Kontoauszüge deiner Karten mit Abschluss- und Zahlungsdatum. Du weißt, wie viel du zahlen musst, wann – und ob schon alles beglichen ist.</p>
+        <p>SPNT erstellt die Abrechnungen deiner Kreditkarten mit Abschluss- und Zahlungsdatum. Du weißt, wie viel du zahlen musst, wann – und ob schon alles beglichen ist.</p>
         <ul class="ticks">
           <li>Vorheriger Saldo, Käufe und Zahlungen – alles stimmt</li>
           <li>Rückbuchungen und wiederkehrende Abbuchungen</li>
@@ -97,7 +121,7 @@
         </ul>
       </div>
       <div class="phones">
-        <div class="iphone"><img src="/img/de/estado-de-cuenta.jpg" width="598" height="1300" alt="Kontoauszug für Oktober: vorheriger Saldo, Käufe, Zahlungen und Summe." loading="lazy"></div>
+        <div class="iphone"><img src="/img/de/estado-de-cuenta.jpg" width="598" height="1300" alt="Kreditkartenabrechnung für Oktober: vorheriger Saldo, Käufe, Zahlungen und Summe." loading="lazy"></div>
         <div class="iphone"><video class="loop" data-loop="/video/de/loop-cards" poster="/video/de/loop-cards.jpg" width="598" height="1300" muted loop playsinline preload="none" aria-label="Video: Karten mit abgeschlossenem und offenem Saldo und die Monatsauszüge der Mastercard."></video></div>
       </div>
     </section>
@@ -175,7 +199,7 @@
         <h2>Bring deine Buchungen mit.</h2>
         <p>Füge Buchungen aus einer CSV hinzu: von deiner Bank, aus einer Tabelle oder einer anderen App. Vor dem Hinzufügen siehst du, was dazukommt, und nichts Vorhandenes wird gelöscht.</p>
         <ul class="ticks">
-          <li>Deine KI (ChatGPT, Claude…) erstellt die Datei für dich</li>
+          <li>Wenn du magst, erstellt deine KI (ChatGPT, Claude…) die Datei</li>
           <li>Erkennt, was du schon hast, und fragt bei Neuem nach</li>
           <li>Danach prüfen, bearbeiten oder rückgängig machen</li>
         </ul>
@@ -194,7 +218,7 @@
         <ul class="ticks">
           <li>Apple Pay mit einem Kurzbefehl, in einer Minute</li>
           <li>Die SMS-Mitteilungen deiner Bank</li>
-          <li>Alles wird auf deinem iPhone gelesen, ohne KI und Cloud</li>
+          <li>Ohne KI: Alles wird auf deinem iPhone gelesen</li>
         </ul>
         <p class="point-more"><a href="/de/tutoriales/captura/">In 2 Minuten eingerichtet →</a></p>
       </div>
@@ -228,8 +252,8 @@
           <p class="price"><b>0 $</b></p>
           <p class="sub">Für immer.</p>
           <ul class="ticks">
-            <li>Unbegrenzt Buchungen</li>
-            <li>Kategorien, Tags und Daueraufträge</li>
+            <li>Unbegrenzt viele Buchungen</li>
+            <li>Kategorien, Tags und wiederkehrende Buchungen</li>
             <li>2 Konten und 2 Karten</li>
             <li>Analyse für diesen und letzten Monat</li>
             <li>Export als CSV</li>
@@ -243,7 +267,7 @@
           <p class="sub"><strong>Abgerechnet mit 29,99 $ im Jahr.</strong><br>Oder 3,99 $ monatlich.</p>
           <p class="lead">Alles aus Kostenlos, dazu:</p>
           <ul class="ticks">
-            <li>Unbegrenzt Konten und Karten</li>
+            <li>Unbegrenzt viele Konten und Karten</li>
             <li>Kredite und Sondertilgungsrechner</li>
             <li>Analyse deines ganzen Verlaufs</li>
             <li>PDF-Bericht und Excel-Export</li>
@@ -252,7 +276,8 @@
           </ul>
         </div>
       </div>
-      <p class="note">Preise in US-Dollar; der App Store zeigt dir den Preis für dein Land. Abgerechnet über deine Apple-ID, jederzeit kündbar.</p>
+      <p class="note">Preise in US-Dollar; der App Store zeigt dir den Preis für dein Land. Abgerechnet über deinen Apple-Account, jederzeit kündbar.</p>
+      <p class="get"><a class="badge" href="https://apps.apple.com/app/id6834027908">Kostenlos im App Store laden</a></p>
     </section>
 
     <section class="faq wrap" id="preguntas">
@@ -283,16 +308,22 @@
         </details>
         <details id="p6">
           <summary><span class="q"><b>Kann ich mir eine Funktion wünschen?</b> <span class="pronto">Kommt mit 1.1</span></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
-          <div class="body"><p>Ja. In der App unter Einstellungen › Vorschläge: Stimm für die Ideen, die du am meisten willst, oder schick deine eigene. Wir lesen alle.</p></div>
+          <div class="body"><p>Ja. In der App unter Einstellungen › Vorschläge: Stimm für die Ideen ab, die du am meisten willst, oder schick deine eigene. Wir lesen alle.</p></div>
         </details>
       </div>
       <p class="faq-more"><a href="/de/soporte/">Mehr Antworten im Support →</a></p>
+    </section>
+
+    <section class="get-end wrap center" aria-labelledby="descargar">
+      <h2 id="descargar">Starte heute, kostenlos.</h2>
+      <p>Ohne Konto und ohne Werbung. Für iPhone mit iOS 18 oder neuer.</p>
+      <a class="badge" href="https://apps.apple.com/app/id6834027908">Kostenlos im App Store laden</a>
     </section>
   </main>
 
   <footer>
     <div class="wrap">
-      <div class="links"><a href="/de/tutoriales/">Anleitungen</a><a href="/de/soporte/">Support</a><a href="/de/privacidad/">Datenschutz</a><a href="mailto:hola@spnt.money">hola@spnt.money</a><a class="social" href="https://www.instagram.com/spnt.money/" rel="me noopener" target="_blank" aria-label="Instagram @spnt.money"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2.75" y="2.75" width="14.5" height="14.5" rx="4.25" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="10" cy="10" r="3.4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="14.4" cy="5.6" r="1" fill="currentColor"/></svg>@spnt.money</a></div>
+      <div class="links"><a href="/de/tutoriales/">Anleitungen</a><a href="/de/soporte/">Support</a><a href="/de/privacidad/">Datenschutz</a><a href="mailto:soporte@spnt.money">Hilfe: soporte@spnt.money</a><a href="mailto:hola@spnt.money">Kontakt & Presse: hola@spnt.money</a><a class="social" href="https://www.instagram.com/spnt.money/" rel="me noopener" target="_blank" aria-label="Instagram @spnt.money"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="2.75" y="2.75" width="14.5" height="14.5" rx="4.25" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="10" cy="10" r="3.4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="14.4" cy="5.6" r="1" fill="currentColor"/></svg>@spnt.money</a></div>
       <span>© 2026 SPNT</span>
     </div>
   </footer>

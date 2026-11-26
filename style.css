@@ -9,6 +9,7 @@
   --brand-ink: #ffffff;
   --dot: #5b4fe9;
   --ok: #1f9e5c;
+  --ok-ink: #12703d;   /* texto chico sobre fondo claro: 5.2:1 (con --ok daba 2.9:1) */
   --header: rgba(255, 255, 255, 0.82);
   --frame-line: transparent;
   color-scheme: light dark;
@@ -24,6 +25,7 @@
     --brand-ink: #121216;
     --dot: #8f85ff;
     --ok: #4cc488;
+    --ok-ink: #4cc488;
     --header: rgba(18, 18, 22, 0.82);
     --frame-line: #2a2933;
   }
@@ -121,7 +123,8 @@ body { overflow-x: clip; }
 .stage { display: flex; justify-content: center; align-items: flex-end; gap: 28px; padding: 8px 20px 72px; }
 .stage .main { --w: min(300px, 74vw); z-index: 1; }
 .stage .side { --w: 236px; margin-bottom: 36px; }
-@media (max-width: 760px) { .stage .side { display: none; } }
+/* 300 + 2×236 + huecos + márgenes ≈ 870 px: por debajo de eso los laterales se cortaban */
+@media (max-width: 900px) { .stage .side { display: none; } }
 
 /* Secciones de puntos fuertes, alternadas */
 .wrap-wide { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
@@ -207,7 +210,7 @@ nav .lang .menu a:hover { color: var(--text); background: var(--card); }
 /* Documentos */
 .doc { padding-top: 32px; padding-bottom: 64px; }
 .doc h1 { font-size: clamp(32px, 6vw, 42px); letter-spacing: -0.03em; line-height: 1.1; margin: 8px 0; }
-.doc .date { color: var(--muted); margin: 0 0 24px; font-size: 15px; }
+.doc .date, .doc .dek { color: var(--muted); margin: 0 0 24px; font-size: 15px; }
 .doc .lead { font-size: 18px; margin: 0 0 24px; }
 .summary { background: var(--card); border-radius: 18px; padding: 22px; margin: 0 0 36px; }
 .summary h2 { font-size: 13px; margin: 0 0 14px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
@@ -276,8 +279,8 @@ nav .lang .menu a:hover { color: var(--text); background: var(--card); }
 /* Pie */
 footer { border-top: 1px solid var(--line); padding: 28px 0 44px; color: var(--muted); font-size: 14px; }
 footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
-footer .links { display: flex; gap: 18px; flex-wrap: wrap; }
-footer a { color: var(--muted); text-decoration: none; }
+footer .links { display: flex; gap: 4px 18px; flex-wrap: wrap; }
+footer a { color: var(--muted); text-decoration: none; display: inline-block; padding: 3px 0; }  /* zona táctil ≥ 24 px */
 footer a:hover { color: var(--text); }
 footer .wordmark { height: 16px; color: var(--text); }
 
@@ -334,7 +337,7 @@ footer .wordmark { height: 16px; color: var(--text); }
 .plan .price b { font-size: 46px; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; }
 .plan .price span { font-size: 17px; color: var(--muted); margin-left: 2px; }
 .plan .save {
-  font-style: normal; font-size: 13px; font-weight: 700; color: var(--ok); vertical-align: 8px;
+  font-style: normal; font-size: 13px; font-weight: 700; color: var(--ok-ink); vertical-align: 8px;
   background: color-mix(in srgb, var(--ok) 14%, transparent); padding: 4px 9px; border-radius: 999px; margin-left: 10px; white-space: nowrap;
 }
 .plan .sub strong { color: var(--text); font-weight: 600; }
@@ -487,3 +490,76 @@ footer .social svg { width: 16px; height: 16px; flex: none; }
   background: var(--card); color: var(--brand); font-size: 12px; font-weight: 600; line-height: 1.5;
   letter-spacing: 0; text-transform: none; white-space: nowrap; }
 .q .pronto { margin: 6px 0 2px; }
+
+/* Solo para lectores de pantalla */
+.visually-hidden {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* Ruso, francés y alemán tienen enlaces más largos: pasan a dos enlaces antes, para que el logo respire */
+@media (max-width: 700px) {
+  html:lang(ru) nav > a:first-child, html:lang(ru) nav > a[href$="privacidad/"],
+  html:lang(fr) nav > a:first-child, html:lang(fr) nav > a[href$="privacidad/"],
+  html:lang(de) nav > a:first-child, html:lang(de) nav > a[href$="privacidad/"] { display: none; }
+}
+
+/* Botón de pausa/reproducir sobre los videos (WCAG 2.2.2). El ícono se dibuja con CSS. */
+.pitch, .iphone { position: relative; }
+.pitch-wrap { position: relative; max-width: 980px; margin: 0 auto; }
+@media (max-width: 760px) { .pitch-wrap { width: min(100%, calc(min(70svh, 660px) * 9 / 16)); } .pitch-wrap .pitch-video { width: 100%; } }
+.vbtn {
+  position: absolute; right: 14px; bottom: 14px; z-index: 2; width: 40px; height: 40px; border-radius: 50%;
+  border: 0; padding: 0; cursor: pointer; display: grid; place-items: center;
+  background: rgba(18, 18, 22, .62); color: #fff; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  transition: background .15s, transform .15s;
+}
+.vbtn:hover { background: rgba(18, 18, 22, .8); }
+.vbtn:active { transform: scale(.94); }
+.vbtn::before { content: ""; width: 12px; height: 14px; box-sizing: border-box; border-left: 4px solid currentColor; border-right: 4px solid currentColor; }
+.vbtn.paused::before { width: 0; height: 0; border-style: solid; border-width: 8px 0 8px 13px; border-color: transparent transparent transparent currentColor; margin-left: 3px; }
+.iphone .vbtn { right: 7%; bottom: 4.5%; width: 34px; height: 34px; }
+.iphone .vbtn::before { width: 10px; height: 12px; border-left-width: 3.5px; border-right-width: 3.5px; }
+.iphone .vbtn.paused::before { width: 0; height: 0; border-width: 7px 0 7px 11px; }
+@media print { .vbtn { display: none; } }
+
+/* Qué muestra el video (alternativa en texto) */
+.pitch-text { max-width: 980px; margin: 14px auto 0; color: var(--muted); font-size: 15px; }
+.pitch-text summary { cursor: pointer; font-weight: 600; color: var(--brand); width: fit-content; margin: 0 auto; border-radius: 8px; padding: 2px 6px; }
+.pitch-text[open] summary { margin-bottom: 8px; }
+.pitch-text ol { max-width: 36em; margin: 0 auto; padding-left: 22px; }
+.pitch-text li { margin: 4px 0; }
+
+/* Descarga: después de los precios, al final del inicio y en tutoriales y soporte */
+.get { text-align: center; }
+.pricing .get { margin: 28px 0 0; }
+.get-end { padding: 8px 20px 88px; }
+.get-end h2 { font-size: clamp(28px, 4.4vw, 40px); line-height: 1.1; letter-spacing: -0.03em; margin: 0 0 12px; }
+.get-end p { color: var(--muted); margin: 0 auto 24px; max-width: 30em; }
+.get-box {
+  display: flex; align-items: center; justify-content: space-between; gap: 14px 18px; flex-wrap: wrap;
+  border: 1px solid var(--line); border-radius: 18px; padding: 20px 22px; margin: 40px 0 0;
+}
+.get-box h2 { font-size: 17px; margin: 0 0 2px; letter-spacing: -0.01em; }
+.get-box p { margin: 0; color: var(--muted); font-size: 15px; }
+.get-box > div { flex: 1 1 16em; }
+
+/* Sugerencia de idioma (según el navegador; no redirige) */
+.lang-hint { background: var(--card); border-bottom: 1px solid var(--line); font-size: 15px; }
+.lang-hint .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; }
+.lang-hint a { font-weight: 600; text-decoration: none; padding: 8px 0; }
+.lang-hint a:hover { text-decoration: underline; }
+.lang-hint button {
+  flex: none; width: 32px; height: 32px; margin-right: -6px; border: 0; border-radius: 50%; background: none;
+  color: var(--muted); font: inherit; font-size: 20px; line-height: 1; cursor: pointer;
+}
+.lang-hint button:hover { background: var(--bg); color: var(--text); }
+
+/* Botón «Copiar»: aviso para lectores de pantalla y cuando no se puede copiar */
+.copy-msg { margin: 8px 0 0; color: var(--muted); font-size: 14px; min-height: 0; }
+.copy-msg:empty { display: none; }
+
+/* 404 en seis idiomas */
+.nf-langs { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 40px 0 0; font-size: 15px; }
+.nf-langs a { text-decoration: none; font-weight: 600; padding: 4px 0; }
+.nf-langs a:hover { text-decoration: underline; }
