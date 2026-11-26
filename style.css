@@ -446,8 +446,8 @@ footer .social svg { width: 16px; height: 16px; flex: none; }
   flex: none; align-self: center; margin-top: -36px; width: 44px; height: 44px; padding: 10px; border-radius: 50%;
   color: var(--brand-ink); background: var(--brand); box-shadow: 0 6px 18px -6px color-mix(in srgb, var(--brand) 70%, transparent);
 }
-/* Lo que va dentro del marco cuando no es una captura: la ilustración del SMS o el lugar reservado */
-.iphone > .sms-mock, .iphone > span {
+/* Lugar reservado dentro del marco (cuando todavía no hay captura) */
+.iphone > span {
   display: flex; width: 100%; aspect-ratio: 598 / 1300;
   border: calc(var(--w) / 40 * 0.95) solid #050506; border-radius: calc(var(--w) / 40 * 6.3);
 }
@@ -459,31 +459,4 @@ footer .social svg { width: 16px; height: 16px; flex: none; }
   .flow { gap: 10px; }
   .flow-arrow { width: 34px; height: 34px; padding: 7px; margin-top: -30px; }
   .flow-item figcaption { font-size: 12px; }
-}
-.sms-mock {
-  /* Siempre claro, para que haga par con la captura de spnt (que es clara) */
-  --m-bg: #ffffff; --m-text: #121216; --m-muted: #8a8a93; --m-line: #e7e7ee; --m-bubble: #e9e9ee;
-  container-type: inline-size; position: relative; aspect-ratio: 598 / 1300;
-  background: var(--m-bg); color: var(--m-text); display: flex; flex-direction: column; align-items: center;
-  padding: 18% 6% 8%; overflow: hidden;
-}
-.sms-mock::after { /* hora de la barra de estado */
-  content: "8:14"; position: absolute; top: 4.8cqw; left: 14cqw; font-size: 5.2cqw; font-weight: 600;
-}
-.sms-head { display: flex; flex-direction: column; align-items: center; gap: 2cqw; padding-bottom: 5cqw; border-bottom: 1px solid var(--m-line); width: 100%; }
-.sms-avatar {
-  width: 18cqw; height: 18cqw; border-radius: 50%; display: grid; place-items: center;
-  background: linear-gradient(180deg, #a5a5ad, #7d7d86); color: #fff; font-size: 8cqw; font-weight: 600;
-}
-.sms-who { font-size: 6.5cqw; font-weight: 600; }
-.sms-when { margin: 6cqw 0 0; font-size: 5cqw; color: var(--m-muted); }
-.sms-menu {
-  margin: auto 0 3.5cqw; align-self: flex-start; display: flex; align-items: center; justify-content: space-between; gap: 6cqw;
-  min-width: 60cqw; padding: 4.5cqw 6cqw; border-radius: 5cqw; font-size: 7cqw; font-weight: 600;
-  background: #fff; color: #121216; box-shadow: 0 3cqw 10cqw rgba(0, 0, 0, .22); outline: 2px solid #5b4fe9; outline-offset: 1px;
-}
-.sms-menu svg { width: 7.5cqw; height: 7.5cqw; flex: none; color: #5b4fe9; }
-.sms-bubble {
-  align-self: flex-start; margin: 0 0 30cqw; max-width: 92%; padding: 4.5cqw 6cqw; border-radius: 7cqw; border-bottom-left-radius: 2cqw;
-  background: var(--m-bubble); font-size: 6.6cqw; line-height: 1.35; overflow-wrap: anywhere;
 }
