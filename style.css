@@ -460,3 +460,17 @@ footer .social svg { width: 16px; height: 16px; flex: none; }
   .flow-arrow { width: 34px; height: 34px; padding: 7px; margin-top: -30px; }
   .flow-item figcaption { font-size: 12px; }
 }
+
+/* Tutoriales: lista de guías */
+.tuts { display: grid; gap: 12px; margin: 24px 0 8px; }
+.tut { display: grid; gap: 4px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 20px; background: var(--bg); color: var(--text); text-decoration: none; transition: border-color .2s; }
+.tut:hover { border-color: color-mix(in srgb, var(--brand) 45%, var(--line)); }
+.tut b { font-size: 18px; letter-spacing: -0.01em; }
+.tut span { color: var(--muted); font-size: 15px; }
+.tut small { color: var(--brand); font-size: 14px; font-weight: 600; margin-top: 6px; }
+
+/* Cuatro enlaces en el menú: en teléfonos quedan Tutoriales y Soporte. «Inicio» ya es el logo y
+   «Privacidad» sigue en el pie. */
+@media (max-width: 600px) {
+  nav > a:first-child, nav > a[href$="privacidad/"] { display: none; }
+}
