@@ -90,18 +90,35 @@
           <input type="radio" name="ios-ap" id="ios-ap-1"><label for="ios-ap-1">iOS 18 a 26</label>
           <p class="ios-which">Tu versión está en Ajustes › General › Información.</p>
           <div class="panel">
-            <h3>Armá el atajo</h3>
+            <h3>Con el atajo listo</h3>
+            <div class="cta">
+              <a class="button big" href="https://www.icloud.com/shortcuts/53ce6d31ba8344b98512e3786f34ecc8" data-atajo="apple-pay"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Agregar atajo</a>
+              <p class="muted">Abrilo en tu iPhone. Se abre Atajos con «Apple Pay spnt».</p>
+            </div>
             <ol class="steps">
-              <li>En Atajos, tocá <b>+</b> para un atajo nuevo y ponele un nombre, por ejemplo «Apple Pay spnt».</li>
-              <li>Agregá el activador <b>Wallet</b> («Al realizar un pago sin contacto con mi tarjeta o pase…»). También sale en el buscador de Atajos, en la sección Automatización. El bloque queda como «Cuando se use…», con tus tarjetas.</li>
-              <li><b>Agregar acción</b> › buscá <b>spnt</b> › <b>Registrar compra de Wallet</b>. En cada campo elegí la variable del pago, para que quede «Registrar <b>Cantidad</b> en <b>Comercio</b> con <b>Tarjeta o pase</b>».</li>
-              <li>Tocá la flecha del bloque «Cuando se use…»: Categorías en <b>Cualquier categoría</b>, Comercios en <b>Cualquier comercio</b>, <b>Automatización</b> encendido y <b>Notificar</b> apagado. En la acción, apagá <b>Mostrar al ejecutar</b>.</li>
-              <li><b>ⓘ</b> › <b>Privacidad</b>: encendé <b>Permitir ejecución en dispositivo bloqueado</b> y <b>spnt</b>.</li>
+              <li>Tocá <b>Agregar atajo</b> en la app Atajos.</li>
+              <li>Abrí el atajo «Apple Pay spnt» y tocá el bloque <b>Cuando se use…</b> y elegí <b>tus tarjetas</b> (las de Wallet que querés registrar). Dejá <b>Automatización</b> encendido y <b>Notificar</b> apagado.</li>
+              <li>Tocá <b>ⓘ</b> en la barra de abajo › <b>Privacidad</b> y encendé <b>Permitir ejecución en dispositivo bloqueado</b> y <b>spnt</b>.</li>
             </ol>
             <p>Listo. En tu próximo pago con Apple Pay te llega «De Apple Pay: $12.50 en Comercio». La primera vez con cada tarjeta, SPNT te pregunta cuál es; después ya sale sola.</p>
             <div class="shots">
               <figure class="shot"><img src="/img/es/atajos/ios27-tarjetas.jpg" width="598" height="1300" alt="El bloque «Cuando se use…» con las tarjetas elegidas." loading="lazy"><figcaption>El bloque «Cuando se use…» con las tarjetas elegidas.</figcaption></figure>
               <figure class="shot"><img src="/img/es/atajos/ios27-privacidad.jpg" width="598" height="1300" alt="ⓘ › Privacidad, con la ejecución en dispositivo bloqueado encendida." loading="lazy"><figcaption>ⓘ › Privacidad, con la ejecución en dispositivo bloqueado encendida.</figcaption></figure>
+            </div>
+      
+            <div class="accordion sub">
+              <details id="apple-pay-a-mano">
+                <summary><span class="q"><b>Hacerlo a mano en iOS 27</b><small>Si preferís armar el atajo vos.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+                <div class="body">
+                  <ol class="steps">
+                    <li>En Atajos, tocá <b>+</b> para un atajo nuevo y ponele un nombre, por ejemplo «Apple Pay spnt».</li>
+                    <li>Agregá el activador <b>Wallet</b> («Al realizar un pago sin contacto con mi tarjeta o pase…»). También sale en el buscador de Atajos, en la sección Automatización. El bloque queda como «Cuando se use…», con tus tarjetas.</li>
+                    <li><b>Agregar acción</b> › buscá <b>spnt</b> › <b>Registrar compra de Wallet</b>. En cada campo elegí la variable del pago, para que quede «Registrar <b>Cantidad</b> en <b>Comercio</b> con <b>Tarjeta o pase</b>».</li>
+                    <li>Tocá la flecha del bloque «Cuando se use…»: Categorías en <b>Cualquier categoría</b>, Comercios en <b>Cualquier comercio</b>, <b>Automatización</b> encendido y <b>Notificar</b> apagado. En la acción, apagá <b>Mostrar al ejecutar</b>.</li>
+                    <li><b>ⓘ</b> › <b>Privacidad</b>: encendé <b>Permitir ejecución en dispositivo bloqueado</b> y <b>spnt</b>.</li>
+                  </ol>
+                </div>
+              </details>
             </div>
           </div>
           <div class="panel">
@@ -169,7 +186,7 @@
       <details id="moneda">
         <summary><span class="q"><b>¿Y si pago en otra moneda?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
-          <p>Si la alerta del banco dice la moneda, por ejemplo «EUR 30,00», SPNT la detecta y el formulario la convierte con la tasa del día. El atajo de Apple Pay, en cambio, siempre manda el monto en dólares (USD), aunque hayas pagado en otra moneda: antes de guardar, tocá el borrador y cambiá la moneda en el formulario.</p>
+          <p>Si la alerta del banco dice la moneda, por ejemplo «EUR 30,00», SPNT la detecta y el formulario la convierte con la tasa del día. Con Apple Pay, si Wallet manda la moneda con el monto, se usa esa; si no, queda la de tu app, o la de tu viaje si tenés Modo viaje. Cuando también llega la alerta del banco, manda la moneda del banco.</p>
         </div>
       </details>
       <details id="sms-y-apple-pay">

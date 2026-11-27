@@ -90,18 +90,35 @@
           <input type="radio" name="ios-ap" id="ios-ap-1"><label for="ios-ap-1">iOS 18 to 26</label>
           <p class="ios-which">Find your version in Settings › General › About.</p>
           <div class="panel">
-            <h3>Build the shortcut</h3>
+            <h3>With the ready-made shortcut</h3>
+            <div class="cta">
+              <a class="button big" href="https://www.icloud.com/shortcuts/53ce6d31ba8344b98512e3786f34ecc8" data-atajo="apple-pay"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Add shortcut</a>
+              <p class="muted">Open it on your iPhone. Shortcuts opens with “Apple Pay spnt”.</p>
+            </div>
             <ol class="steps">
-              <li>In Shortcuts, tap <b>+</b> for a new shortcut and name it, for example “Apple Pay spnt”.</li>
-              <li>Add the <b>Wallet</b> trigger (“When I tap my card or pass to pay…”). It also shows up in the Shortcuts search, under Automation. The block reads “When … is used”, with your cards in place of the dots.</li>
-              <li><b>Add Action</b> › search for <b>spnt</b> › <b>Log Wallet purchase</b>. In each field pick the payment’s variable, so it reads “Log <b>Amount</b> at <b>Merchant</b> with <b>Card or Pass</b>”.</li>
-              <li>Tap the arrow on the “When … is used” block: Categories to <b>Any Category</b>, Merchants to <b>Any Merchant</b>, <b>Automation</b> on and <b>Notify</b> off. In the action, turn off <b>Show When Run</b>.</li>
-              <li><b>ⓘ</b> › <b>Privacy</b>: turn on <b>Allow Running When Locked</b> and <b>spnt</b>.</li>
+              <li>Tap <b>Add Shortcut</b> in the Shortcuts app.</li>
+              <li>Open the “Apple Pay spnt” shortcut and tap the <b>When … is used</b> block. Pick <b>your cards</b> (the Wallet cards you want to log). Leave <b>Automation</b> on and <b>Notify</b> off.</li>
+              <li>Tap <b>ⓘ</b> in the bottom bar › <b>Privacy</b> and turn on <b>Allow Running When Locked</b> and <b>spnt</b>.</li>
             </ol>
             <p>Done. On your next Apple Pay payment you get “From Apple Pay: $12.50 at Merchant”. The first time with each card, SPNT asks which one it is; after that it’s picked for you.</p>
             <div class="shots">
               <figure class="shot"><img src="/img/es/atajos/ios27-tarjetas.jpg" width="598" height="1300" alt="The “When … is used” block with the cards picked." loading="lazy"><figcaption>The “When … is used” block with the cards picked.</figcaption></figure>
               <figure class="shot"><img src="/img/es/atajos/ios27-privacidad.jpg" width="598" height="1300" alt="ⓘ › Privacy, with running when locked turned on." loading="lazy"><figcaption>ⓘ › Privacy, with running when locked turned on.</figcaption></figure>
+            </div>
+      
+            <div class="accordion sub">
+              <details id="apple-pay-a-mano">
+                <summary><span class="q"><b>Do it by hand on iOS 27</b><small>If you’d rather build the shortcut yourself.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+                <div class="body">
+                  <ol class="steps">
+                    <li>In Shortcuts, tap <b>+</b> for a new shortcut and name it, for example “Apple Pay spnt”.</li>
+                    <li>Add the <b>Wallet</b> trigger (“When I tap my card or pass to pay…”). It also shows up in the Shortcuts search, under Automation. The block reads “When … is used”, with your cards in place of the dots.</li>
+                    <li><b>Add Action</b> › search for <b>spnt</b> › <b>Log Wallet purchase</b>. In each field pick the payment’s variable, so it reads “Log <b>Amount</b> at <b>Merchant</b> with <b>Card or Pass</b>”.</li>
+                    <li>Tap the arrow on the “When … is used” block: Categories to <b>Any Category</b>, Merchants to <b>Any Merchant</b>, <b>Automation</b> on and <b>Notify</b> off. In the action, turn off <b>Show When Run</b>.</li>
+                    <li><b>ⓘ</b> › <b>Privacy</b>: turn on <b>Allow Running When Locked</b> and <b>spnt</b>.</li>
+                  </ol>
+                </div>
+              </details>
             </div>
           </div>
           <div class="panel">
@@ -169,7 +186,7 @@
       <details id="moneda">
         <summary><span class="q"><b>What if I pay in another currency?</b></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
         <div class="body">
-          <p>If the bank’s alert names the currency, for example “EUR 30.00”, SPNT detects it and the form converts it at the day’s rate. The Apple Pay shortcut, though, always sends the amount in US dollars (USD), even if you paid in another currency: before saving, tap the draft and change the currency in the form.</p>
+          <p>If the bank’s alert names the currency, for example “EUR 30.00”, SPNT detects it and the form converts it at the day’s rate. With Apple Pay, if Wallet sends the currency with the amount, that one is used; if not, it takes your app’s currency, or your trip’s if Travel mode is on. When the bank’s alert also arrives, the bank’s currency wins.</p>
         </div>
       </details>
       <details id="sms-y-apple-pay">
