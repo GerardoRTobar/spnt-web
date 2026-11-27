@@ -91,35 +91,18 @@
           <input type="radio" name="ios-ap" id="ios-ap-1"><label for="ios-ap-1">iOS 18 a 26</label>
           <p class="ios-which">Sua versão está em Ajustes › Geral › Sobre.</p>
           <div class="panel">
-            <h3>Com o atalho pronto</h3>
-            <div class="cta">
-              <a class="button big" href="https://www.icloud.com/shortcuts/a22f1f256ad3457688f54f175823e09b" data-atajo="apple-pay"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Adicionar atalho</a>
-              <p class="muted">Abra no seu iPhone. O app Atalhos abre com “Apple Pay spnt”.</p>
-            </div>
+            <h3>Monte o atalho</h3>
             <ol class="steps">
-              <li>Toque em <b>Adicionar Atalho</b> no app Atalhos.</li>
-              <li>Abra o atalho “Apple Pay spnt” e toque no bloco <b>Quando … for usado</b>. Escolha <b>seus cartões</b> (os da Wallet que você quer registrar). Deixe <b>Automação</b> ativado e <b>Notificar</b> desativado.</li>
-              <li>Toque em <b>ⓘ</b> na barra de baixo › <b>Privacidade</b> e ative <b>Permitir execução com o dispositivo bloqueado</b> e <b>spnt</b>.</li>
+              <li>No Atalhos, toque em <b>+</b> para um atalho novo e dê um nome, por exemplo “Apple Pay spnt”.</li>
+              <li>Adicione o gatilho <b>Wallet</b> (“Ao fazer um pagamento por aproximação com meu cartão ou passe…”). Ele também aparece na busca do Atalhos, na seção Automação. O bloco fica como “Quando … for usado”, com os seus cartões no lugar dos pontos.</li>
+              <li><b>Adicionar Ação</b> › busque <b>spnt</b> › <b>Registrar compra da Wallet</b>. Em cada campo escolha a variável do pagamento, para ficar “Registrar <b>Valor</b> em <b>Estabelecimento</b> com <b>Cartão ou Passe</b>”.</li>
+              <li>Toque na seta do bloco “Quando … for usado”: Categorias em <b>Qualquer categoria</b>, Estabelecimentos em <b>Qualquer estabelecimento</b>, <b>Automação</b> ativado e <b>Notificar</b> desativado. Na ação, desative <b>Mostrar ao Executar</b>.</li>
+              <li><b>ⓘ</b> › <b>Privacidade</b>: ative <b>Permitir execução com o dispositivo bloqueado</b> e <b>spnt</b>.</li>
             </ol>
             <p>Pronto. No seu próximo pagamento com Apple Pay chega “Do Apple Pay: $12.50 em Estabelecimento”. Na primeira vez com cada cartão, o SPNT pergunta qual é; depois ele já vem escolhido.</p>
             <div class="shots">
               <figure class="shot"><img src="/img/es/atajos/ios27-tarjetas.jpg" width="598" height="1300" alt="O bloco “Quando … for usado” com os cartões escolhidos." loading="lazy"><figcaption>O bloco “Quando … for usado” com os cartões escolhidos.</figcaption></figure>
               <figure class="shot"><img src="/img/es/atajos/ios27-privacidad.jpg" width="598" height="1300" alt="ⓘ › Privacidade, com a execução com o dispositivo bloqueado ativada." loading="lazy"><figcaption>ⓘ › Privacidade, com a execução com o dispositivo bloqueado ativada.</figcaption></figure>
-            </div>
-      
-            <div class="accordion sub">
-              <details id="apple-pay-a-mano">
-                <summary><span class="q"><b>Fazer à mão no iOS 27</b><small>Se você preferir montar o atalho.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
-                <div class="body">
-                  <ol class="steps">
-                    <li>No Atalhos, toque em <b>+</b> para um atalho novo e dê um nome, por exemplo “Apple Pay spnt”.</li>
-                    <li>Adicione o gatilho <b>Wallet</b> (“Ao fazer um pagamento por aproximação com meu cartão ou passe…”). Ele também aparece na busca do Atalhos, na seção Automação. O bloco fica como “Quando … for usado”, com os seus cartões no lugar dos pontos.</li>
-                    <li><b>Adicionar Ação</b> › busque <b>spnt</b> › <b>Registrar compra da Wallet</b>. Em cada campo escolha a variável do pagamento, para ficar “Registrar <b>Valor</b> USD em <b>Estabelecimento</b> com <b>Cartão ou Passe</b>”.</li>
-                    <li>Toque na seta do bloco “Quando … for usado”: Categorias em <b>Qualquer categoria</b>, Estabelecimentos em <b>Qualquer estabelecimento</b>, <b>Automação</b> ativado e <b>Notificar</b> desativado. Na ação, desative <b>Mostrar ao Executar</b>.</li>
-                    <li><b>ⓘ</b> › <b>Privacidade</b>: ative <b>Permitir execução com o dispositivo bloqueado</b> e <b>spnt</b>.</li>
-                  </ol>
-                </div>
-              </details>
             </div>
           </div>
           <div class="panel">

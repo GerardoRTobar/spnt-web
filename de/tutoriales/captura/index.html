@@ -91,35 +91,18 @@
           <input type="radio" name="ios-ap" id="ios-ap-1"><label for="ios-ap-1">iOS 18 bis 26</label>
           <p class="ios-which">Deine Version steht unter Einstellungen › Allgemein › Info.</p>
           <div class="panel">
-            <h3>Mit dem fertigen Kurzbefehl</h3>
-            <div class="cta">
-              <a class="button big" href="https://www.icloud.com/shortcuts/a22f1f256ad3457688f54f175823e09b" data-atajo="apple-pay"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Kurzbefehl hinzufügen</a>
-              <p class="muted">Öffne den Link auf deinem iPhone. Kurzbefehle öffnet sich mit „Apple Pay spnt“.</p>
-            </div>
+            <h3>Richte den Kurzbefehl ein</h3>
             <ol class="steps">
-              <li>Tippe in der App Kurzbefehle auf <b>Kurzbefehl hinzufügen</b>.</li>
-              <li>Öffne den Kurzbefehl „Apple Pay spnt“ und tippe auf den Block <b>Wenn … verwendet wird</b>. Wähle <b>deine Karten</b> (die Wallet-Karten, die du erfassen willst). Lass <b>Automation</b> an und <b>Mitteilen</b> aus.</li>
-              <li>Tippe unten auf <b>ⓘ</b> › <b>Datenschutz</b> und schalte <b>Ausführen bei gesperrtem Gerät erlauben</b> und <b>spnt</b> ein.</li>
+              <li>Tippe in Kurzbefehle auf <b>+</b> für einen neuen Kurzbefehl und gib ihm einen Namen, zum Beispiel „Apple Pay spnt“.</li>
+              <li>Füge den Auslöser <b>Wallet</b> hinzu („Wenn ich kontaktlos mit meiner Karte oder meinem Pass bezahle …“). Er erscheint auch in der Suche von Kurzbefehle, im Bereich Automation. Der Block lautet dann „Wenn … verwendet wird“, mit deinen Karten anstelle der Punkte.</li>
+              <li><b>Aktion hinzufügen</b> › suche nach <b>spnt</b> › <b>Wallet-Kauf erfassen</b>. Wähle in jedem Feld die Variable der Zahlung, sodass dort steht: „<b>Betrag</b> bei <b>Händler</b> mit <b>Karte oder Pass</b> erfassen“.</li>
+              <li>Tippe auf den Pfeil am Block „Wenn … verwendet wird“: Kategorien auf <b>Beliebige Kategorie</b>, Händler auf <b>Beliebiger Händler</b>, <b>Automation</b> an und <b>Mitteilen</b> aus. Schalte in der Aktion <b>Beim Ausführen anzeigen</b> aus.</li>
+              <li><b>ⓘ</b> › <b>Datenschutz</b>: schalte <b>Ausführen bei gesperrtem Gerät erlauben</b> und <b>spnt</b> ein.</li>
             </ol>
             <p>Fertig. Bei deiner nächsten Apple-Pay-Zahlung kommt „Von Apple Pay: 12,50 $ bei Händler“. Beim ersten Mal mit jeder Karte fragt SPNT, welche es ist; danach ist sie schon gewählt.</p>
             <div class="shots">
               <figure class="shot"><img src="/img/es/atajos/ios27-tarjetas.jpg" width="598" height="1300" alt="Der Block „Wenn … verwendet wird“ mit den gewählten Karten." loading="lazy"><figcaption>Der Block „Wenn … verwendet wird“ mit den gewählten Karten.</figcaption></figure>
               <figure class="shot"><img src="/img/es/atajos/ios27-privacidad.jpg" width="598" height="1300" alt="ⓘ › Datenschutz, mit Ausführen bei gesperrtem Gerät an." loading="lazy"><figcaption>ⓘ › Datenschutz, mit Ausführen bei gesperrtem Gerät an.</figcaption></figure>
-            </div>
-      
-            <div class="accordion sub">
-              <details id="apple-pay-a-mano">
-                <summary><span class="q"><b>Von Hand unter iOS 27</b><small>Wenn du den Kurzbefehl lieber selbst baust.</small></span><svg class="chev" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 7.5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
-                <div class="body">
-                  <ol class="steps">
-                    <li>Tippe in Kurzbefehle auf <b>+</b> für einen neuen Kurzbefehl und gib ihm einen Namen, zum Beispiel „Apple Pay spnt“.</li>
-                    <li>Füge den Auslöser <b>Wallet</b> hinzu („Wenn ich kontaktlos mit meiner Karte oder meinem Pass bezahle …“). Er erscheint auch in der Suche von Kurzbefehle, im Bereich Automation. Der Block lautet dann „Wenn … verwendet wird“, mit deinen Karten anstelle der Punkte.</li>
-                    <li><b>Aktion hinzufügen</b> › suche nach <b>spnt</b> › <b>Wallet-Kauf erfassen</b>. Wähle in jedem Feld die Variable der Zahlung, sodass dort steht: „<b>Betrag</b> USD bei <b>Händler</b> mit <b>Karte oder Pass</b> erfassen“.</li>
-                    <li>Tippe auf den Pfeil am Block „Wenn … verwendet wird“: Kategorien auf <b>Beliebige Kategorie</b>, Händler auf <b>Beliebiger Händler</b>, <b>Automation</b> an und <b>Mitteilen</b> aus. Schalte in der Aktion <b>Beim Ausführen anzeigen</b> aus.</li>
-                    <li><b>ⓘ</b> › <b>Datenschutz</b>: schalte <b>Ausführen bei gesperrtem Gerät erlauben</b> und <b>spnt</b> ein.</li>
-                  </ol>
-                </div>
-              </details>
             </div>
           </div>
           <div class="panel">
